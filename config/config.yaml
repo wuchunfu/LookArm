@@ -1,0 +1,12 @@
+# 服务设置
+server:
+  server_port: :8000
+  jwtKey: 8ue3928nusah867
+# 数据库设置
+database:
+  db_host: 127.0.0.1
+  db_port: 3306
+  db_user: lookarm
+  db_passowrd: admin123
+  db_name: lookarm
+
