@@ -97,6 +97,8 @@ github.com/iris-contrib/httpexpect/v2 v2.0.5 h1:b2Orx2FXRhnmZil4td66C8zzkHnssSoF
 github.com/iris-contrib/httpexpect/v2 v2.0.5/go.mod h1:JpRu+DEVVCA6KHLKUAs72QoaevQESqLHuG5s1CQ+QiA=
 github.com/iris-contrib/jade v1.1.4 h1:WoYdfyJFfZIUgqNAeOyRfTNQZOksSlZ6+FnXR3AEpX0=
 github.com/iris-contrib/jade v1.1.4/go.mod h1:EDqR+ur9piDl6DUgs6qRrlfzmlx/D5UybogqrXvJTBE=
+github.com/iris-contrib/middleware/cors v0.0.0-20210110101738-6d0a4d799b5d h1:s9Oxj8MzXrUnAWVXTpBzkHGO3vlFk/vDjmuAKLISl6U=
+github.com/iris-contrib/middleware/cors v0.0.0-20210110101738-6d0a4d799b5d/go.mod h1:e2S1O+DNOz74yNNTyH4S2+EOx0eoiIw6N0SxPXiLLqA=
 github.com/iris-contrib/schema v0.0.6 h1:CPSBLyx2e91H2yJzPuhGuifVRnZBBJ3pCOMbOvPZaTw=
 github.com/iris-contrib/schema v0.0.6/go.mod h1:iYszG0IOsuIsfzjymw1kMzTL8YQcCWlm65f3wX8J5iA=
 github.com/jinzhu/inflection v1.0.0 h1:K317FqzuhWc8YvSVlFMCCUb36O/S9MCKRDI7QkRKD/E=
@@ -112,6 +114,7 @@ github.com/kataras/blocks v0.0.4 h1:lvp/Yr7WoYJKuHpI8f4Shlsl1lb+PE2Lyt0qta5kYWA=
 github.com/kataras/blocks v0.0.4/go.mod h1:fu8wIPm3TgpiqW1fdPUSR8m/VMcZgj52vBYe1aS1mu0=
 github.com/kataras/golog v0.1.6 h1:jEqEQCm+4B4M4/CgzrEWNj9iUST0hGZXDqAPMVnxWMw=
 github.com/kataras/golog v0.1.6/go.mod h1:jOSQ+C5fUqsNSwurB/oAHq1IFSb0KI3l6GMa7xB6dZA=
+github.com/kataras/iris/v12 v12.2.0-alpha2/go.mod h1:5ibgjbO4kCekMqLCs/yWid7Dr9DRXJVDasAk1xZ8kJg=
 github.com/kataras/iris/v12 v12.2.0-alpha2.0.20210115205746-6d10b014859c h1:FGe8H4EBtyAnM29WgpvWgFlPGNrNV3bp95/GBJn1NUk=
 github.com/kataras/iris/v12 v12.2.0-alpha2.0.20210115205746-6d10b014859c/go.mod h1:5ibgjbO4kCekMqLCs/yWid7Dr9DRXJVDasAk1xZ8kJg=
 github.com/kataras/jwt v0.0.9/go.mod h1:4ss3aGJi58q3YGmhLUiOvNJnL7UlTXD7+Wf+skgsTmQ=
