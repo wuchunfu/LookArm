@@ -45,3 +45,21 @@
 2021-01-19 17:46:04|64.9992ms|200|DELETE|/api/v1/delete_user/1|::1|id=1|44 B|39 B|------WebKitFormBoundaryWUX0MvJeepZ3ITXg--
 |
 2021-01-19 18:00:50|70.0125ms|200|GET|/api/v1/users|::1|pagenum=1 pagesize=2|0 B|469 B||
+2021-01-19 20:14:11|228.166µs|404|GET|/users|::1|0 B|9 B||
+2021-01-19 20:14:41|49.4465ms|200|GET|/api/v1/users|::1|0 B|1.5 KB||
+2021-01-19 20:16:01|269.764042ms|200|GET|/api/v1/users|::1|pagenum=1 pagesize=2|0 B|512 B||
+2021-01-19 20:20:12|258.447458ms|200|GET|/api/v1/users|::1|pagenum=1 pagesize=2|0 B|512 B||
+2021-01-19 20:20:46|27.167µs|404|POST|/adduser|::1|77 B|9 B|{"user_name":"weject2","password":"123456","email":"weject@qq.com"}|
+2021-01-19 20:20:59|158.998292ms|200|POST|/api/v1/adduser|::1|77 B|39 B|{"user_name":"weject2","password":"123456","email":"weject@qq.com"}|
+2021-01-19 20:22:33|53.936416ms|200|PUT|/api/v1/user/9|::1|id=9|80 B|0 B|{"user_name":"weject1111","password":"123456","email":"weject@qq.com"}|
+2021-01-19 20:23:49|13.131833ms|200|PUT|/api/v1/user/9|::1|id=9|83 B|39 B|{"user_name":"weject1221","password":"123456111","email":"weject@qq.com"}|
+2021-01-19 20:28:04|16.377375ms|200|PUT|/api/v1/user/9|::1|id=9|83 B|39 B|{"user_name":"weject1221","password":"123456111","email":"weject@qq.com"}|
+2021-01-19 20:28:13|56.424541ms|200|PUT|/api/v1/user/9|::1|id=9|83 B|39 B|{"user_name":"weject315","password":"123456111","email":"weject@iqq.com"}|
+2021-01-19 20:30:36|268.548416ms|200|PUT|/api/v1/user/9|::1|id=9|83 B|39 B|{"user_name":"weject315","password":"123456111","email":"weject@iqq.com"}|
+2021-01-19 20:31:14|12.976292ms|200|PUT|/api/v1/user/9|::1|id=9|83 B|39 B|{"user_name":"weject315","password":"123456111","email":"weject@iqq.com"}|
+2021-01-19 20:31:35|65.453417ms|200|PUT|/api/v1/user/9|::1|id=9|80 B|39 B|{"user_name":"weject315","password":"123456","email":"weject@iqq.com"}|
+2021-01-19 20:35:10|272.071708ms|200|PUT|/api/v1/user/9|::1|id=9|80 B|39 B|{"user_name":"weject315","password":"123456","email":"weject@iqq.com"}|
+2021-01-19 20:36:37|19.357625ms|200|PUT|/api/v1/user/9|::1|id=9|80 B|39 B|{"user_name":"weject315","password":"123456","email":"weject@iqq.com"}|
+2021-01-19 20:36:55|42.432125ms|200|PUT|/api/v1/user/9|::1|id=9|87 B|39 B|{"user_name":"weject31511","password":"123456111","email":"11weject@iqq.com"}|
+2021-01-19 20:37:15|53.260041ms|200|PUT|/api/v1/user/9|::1|id=9|82 B|39 B|{"user_name":"weject31511","password":"1234","email":"11weject@iqq.com"}|
+2021-01-19 20:37:42|52.435625ms|200|PUT|/api/v1/user/9|::1|id=9|72 B|39 B|{"user_name":"weject3","password":"","email":"weject@iqq.com"}|

@@ -6,7 +6,7 @@ import (
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"
 	"gorm.io/gorm/schema"
-	"lookarm/utils"
+	"lookarm/config"
 	"time"
 )
 
@@ -14,15 +14,13 @@ var db *gorm.DB
 var err error
 
 func InitDatabase() {
-	var config utils.SiteConfig
-	config.LoadCinfig()
 
 	dsn := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?charset=utf8mb4&parseTime=True&loc=Local",
-		config.Database.DBuser,
-		config.Database.DBpassowrd,
-		config.Database.DBhost,
-		config.Database.DBport,
-		config.Database.DBname)
+		config.DbUser,
+		config.DbPassword,
+		config.DbHost,
+		config.DbPort,
+		config.DbName)
 
 	db, err = gorm.Open(mysql.Open(dsn), &gorm.Config{
 		// gorm日志模式：silent
