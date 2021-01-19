@@ -13,14 +13,14 @@ import (
 func InitDatabase() {
 	var config utils.SiteConfig
 	config.LoadCinfig()
-	
+
 	dsn := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?charset=utf8mb4&parseTime=True&loc=Local",
 		config.Database.DBuser,
 		config.Database.DBpassowrd,
 		config.Database.DBhost,
 		config.Database.DBport,
 		config.Database.DBname)
-	
+
 	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{
 		// gorm日志模式：silent
 		Logger: logger.Default.LogMode(logger.Silent),
@@ -32,20 +32,20 @@ func InitDatabase() {
 			// 使用单数表名，启用该选项，此时，`User` 的表名应该是 `user`
 			SingularTable: true},
 	})
-	
+
 	if err != nil {
 		fmt.Println("连接数据库失败，请检查参数：", err)
 	}
-	
-	_ = db.AutoMigrate(&User{},&PostUser{},&Category{},&Tag{},&PostInfo{},&AppInfo{})
-	
+
+	_ = db.AutoMigrate(&User{}, &Category{}, &Tag{}, &PostInfo{}, &AppInfo{})
+
 	sqlDB, _ := db.DB()
 	// SetMaxIdleCons 设置连接池中的最大闲置连接数。
 	sqlDB.SetMaxIdleConns(10)
-	
+
 	// SetMaxOpenCons 设置数据库的最大连接数量。
 	sqlDB.SetMaxOpenConns(100)
-	
+
 	// SetConnMaxLifetiment 设置连接的最大可复用时间。
 	sqlDB.SetConnMaxLifetime(10 * time.Second)
 }
