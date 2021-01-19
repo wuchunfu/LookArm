@@ -24,20 +24,38 @@ func (u User) CreateUser() int {
 }
 
 // 查询用户列表
-func (u User) GetUsers(pageSize int, pageNum int) ([]User, int64) {
+func GetUsers(pageSize int, pageNum int) (int,[]User, int64) {
 	var users []User
 	var total int64
-	err = db.Select("id,user_name,email").Limit(pageSize).Offset((pageNum -1) * pageSize).Find(&users).Error
-	db.Model(&u).Count(&total)
+	err = db.Select("id,user_name,email").Limit(pageSize).Offset((pageNum - 1) * pageSize).Find(&users).Error
+	db.Model(&users).Count(&total)
 	if err != nil {
-		return users,0
+		return message.ERROR,users, 0
 	}
-	return users,total
+	return message.SUCCSES,users, total
 }
 
 // 编辑用户
-func (u User) EditUserInfo(id int)  {
+func (u User) EditUserInfo() int {
+	err = db.Where("id = ?", u.ID).Updates(&u).Error
+	if err != nil {
+		return message.ERROR
+	}
+	return message.SUCCSES
+}
 
+// 删除用户
+func (u User) DeleteUser() int {
+	err = db.Where("id = ?", u.ID).Delete(&u).Error
+	if err != nil {
+		return message.ERROR
+	}
+	return message.SUCCSES
+}
+
+func (u *User) BeforeCreate(*gorm.DB) error {
+	u.Password = SetPassword(u.Password)
+	return nil
 }
 
 // 生成密码

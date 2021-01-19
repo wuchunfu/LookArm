@@ -8,3 +8,40 @@
 2021-01-19 14:50:32|15.823458ms|200|POST|/adduser|::1|76 B|37 B|{"user_name":"weject","password":"123456","email":"weject@qq.com"}|
 2021-01-19 14:52:41|1.454209ms|500|POST|/adduser|::1|0 B|21 B|error(reflect: reflect.Value.Set using unaddressable value /Volumes/workSpace/workSpace/lookarm/api/user.go:12)|
 2021-01-19 14:53:15|18.526042ms|200|POST|/adduser|::1|77 B|39 B|{"user_name":"weject2","password":"123456","email":"weject@qq.com"}|
+2021-01-19 16:50:55|20.0204ms|200|POST|/api/v1/adduser|::1|87 B|39 B|{
+    "user_name":"wejectchan",
+    "password":"123456",
+    "email":"weject@qq.com".
+}|
+2021-01-19 16:52:37|34.0173ms|200|POST|/api/v1/adduser|::1|87 B|39 B|{
+    "user_name":"wejectchan",
+    "password":"123456",
+    "email":"weject@qq.com".
+}|
+2021-01-19 16:52:43|18.0044ms|200|POST|/api/v1/adduser|::1|70 B|39 B|{"user_name":"wejectchan","password":"123456","email":"weject@qq.com"}|
+2021-01-19 16:54:10|97.7486ms|200|POST|/api/v1/adduser|::1|70 B|39 B|{"user_name":"wejectchan","password":"123456","email":"weject@qq.com"}|
+2021-01-19 17:23:45|999.2µs|404|POST|/api/v1/delete_user/1|::1|44 B|9 B|------WebKitFormBoundaryxRLsth7cDmEbmWf8--
+|
+2021-01-19 17:24:09|1.0006ms|404|POST|/api/v1/delete_user/1|::1|44 B|9 B|------WebKitFormBoundaryha4AS0PaB2RjBx4B--
+|
+2021-01-19 17:24:24|0s|404|POST|/api/v1/delete_user/1|::1|44 B|9 B|------WebKitFormBoundaryg4w7foyJUawJgUhO--
+|
+2021-01-19 17:24:58|0s|404|POST|/api/v1//delete_user/1|::1|44 B|9 B|------WebKitFormBoundaryZzAFjJe3l5M2l9td--
+|
+2021-01-19 17:25:18|0s|404|POST|/api/v1/delete_user/1|::1|44 B|9 B|------WebKitFormBoundary4BysweDogY8Ss5ky--
+|
+2021-01-19 17:29:13|985.1µs|404|POST|/api/v1/delete_user/1|::1|44 B|9 B|------WebKitFormBoundaryFe6uBdXFHtZ4CJDW--
+|
+2021-01-19 17:32:25|1.9999ms|404|POST|/api/v1/delete_user/1|::1|44 B|9 B|------WebKitFormBoundary3sKBKZdbenga8gCv--
+|
+2021-01-19 17:35:02|1.9999ms|404|POST|/api/v1/delete_user/1|::1|44 B|9 B|------WebKitFormBoundaryw9hEMBwnJJzNK5RC--
+|
+2021-01-19 17:36:09|2.007ms|404|POST|/api/v1/delete_user/1|::1|44 B|9 B|------WebKitFormBoundaryBB6koxpXAnKwFqn4--
+|
+2021-01-19 17:37:11|79.0182ms|200|DELETE|/api/v1/delete_user/1|::1|id=1|44 B|39 B|------WebKitFormBoundaryhbUoFmwbpDqxdAWq--
+|
+2021-01-19 17:37:51|268.9847ms|200|DELETE|/api/v1/delete_user/1|::1|id=1|44 B|39 B|------WebKitFormBoundaryKA15hy9ACqJBn9Tb--
+|
+2021-01-19 17:46:04|64.9992ms|200|DELETE|/api/v1/delete_user/1|::1|id=1|44 B|39 B|------WebKitFormBoundaryWUX0MvJeepZ3ITXg--
+|
+2021-01-19 18:00:50|70.0125ms|200|GET|/api/v1/users|::1|pagenum=1 pagesize=2|0 B|469 B||
