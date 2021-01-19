@@ -10,6 +10,9 @@ import (
 	"time"
 )
 
+var db *gorm.DB
+var err error
+
 func InitDatabase() {
 	var config utils.SiteConfig
 	config.LoadCinfig()
@@ -21,7 +24,7 @@ func InitDatabase() {
 		config.Database.DBport,
 		config.Database.DBname)
 
-	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{
+	db, err = gorm.Open(mysql.Open(dsn), &gorm.Config{
 		// gorm日志模式：silent
 		Logger: logger.Default.LogMode(logger.Silent),
 		// 外键约束

@@ -4,9 +4,9 @@ server:
   jwtKey: 8ue3928nusah867
 # 数据库设置
 database:
-  db_host: 127.0.0.1
+  db_host: wejectchan.mysql.cn-chengdu.rds.aliyuncs.com
   db_port: 3306
-  db_user: lookarm
-  db_password: admin123
+  db_user: wejectchan
+  db_password: QzgwEhBFx3ibuz
   db_name: lookarm
 

@@ -2,6 +2,7 @@ package router
 
 import (
 	"github.com/kataras/iris/v12"
+	"lookarm/api"
 	"lookarm/middleware"
 )
 
@@ -10,10 +11,7 @@ func InitRouter() {
 	
 	app.Use(middleware.Cors())
 	
-	app.Get("/hello", func(c iris.Context) {
-		c.JSON(iris.Map{
-			"hello": "weject"})
-	})
+	app.Post("/adduser",api.AddUser)
 	
 	_ = app.Listen(":8080")
 	

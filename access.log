@@ -4,3 +4,7 @@
 2021-01-18 20:13:33|124.25µs|200|GET|/hello|::1|0 B|24 B||
 2021-01-18 20:57:13|265.667µs|404|GET|/hello|::1|0 B|9 B||
 2021-01-18 20:57:15|231.875µs|200|GET|/hello1|::1|0 B|24 B||
+2021-01-19 14:40:18|221.049292ms|200|POST|/adduser|::1|76 B|37 B|{"user_name":"weject","password":"123456","email":"weject@qq.com"}|
+2021-01-19 14:50:32|15.823458ms|200|POST|/adduser|::1|76 B|37 B|{"user_name":"weject","password":"123456","email":"weject@qq.com"}|
+2021-01-19 14:52:41|1.454209ms|500|POST|/adduser|::1|0 B|21 B|error(reflect: reflect.Value.Set using unaddressable value /Volumes/workSpace/workSpace/lookarm/api/user.go:12)|
+2021-01-19 14:53:15|18.526042ms|200|POST|/adduser|::1|77 B|39 B|{"user_name":"weject2","password":"123456","email":"weject@qq.com"}|
