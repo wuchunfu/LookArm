@@ -12,14 +12,37 @@ func InitRouter() {
 	app.Use(middleware.Cors())
 
 	v1 := app.Party("api/v1/")
+	v1.Use(middleware.JwtToken())
 	{
 		// 管理员模块
 		v1.Post("adduser", api.AddUser)
 		v1.Delete("delete_user/{id:uint}", api.DeleteUser)
 		v1.Get("users", api.GetUsers)
 		v1.Put("user/{id:uint}", api.EditUser)
+		// 标签管理模块
+		v1.Post("tag/add",api.AddTag)
+		v1.Put("tag/edit/{id:int}",api.EditTag)
+		v1.Delete("tag/delete/{id:int}",api.DeleteTag)
+
+		// 分类管理模块
+		v1.Post("category/add",api.AddCategory)
+		v1.Put("category/edit/{id:int}",api.EditCategory)
+		v1.Delete("category/delete/{id:int}",api.DeleteCategory)
 	}
 
+	pub := app.Party("api/v1/")
+	{
+		// 登录
+		pub.Post("login",api.Login)
+
+		// 标签
+		pub.Get("tag/list",api.GetTagList)
+		pub.Get("tag/info/{id:int}",api.GetTagInfo)
+
+		// 分类
+		pub.Get("category/list",api.GetCategoryList)
+		pub.Get("category/info/{id:int}",api.GetCategory)
+	}
 	_ = app.Listen(":8080")
 
 }

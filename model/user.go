@@ -69,3 +69,21 @@ func SetPassword(password string) string {
 	}
 	return string(HashPw)
 }
+
+// 登录验证
+func CheckLogin(username string, password string) (User,int) {
+	var user User
+	var PasswordErr error
+
+	db.Where("user_name = ?", username).First(&user)
+
+	PasswordErr = bcrypt.CompareHashAndPassword([]byte(user.Password), []byte(password))
+
+	if user.ID == 0 {
+		return user, message.ERROR_USER_NOT_EXIST
+	}
+	if PasswordErr != nil {
+		return user, message.ERROR_PASSWORD_WRONG
+	}
+	return user,message.SUCCSES
+}

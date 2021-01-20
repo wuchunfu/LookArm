@@ -5,7 +5,6 @@ import (
 	"github.com/kataras/iris/v12"
 	"lookarm/config"
 	"lookarm/utils/message"
-	"net/http"
 	"strings"
 	"time"
 )
@@ -27,44 +26,44 @@ func SetToken(username string) (string, int) {
 			Issuer:    "ginblog",
 		},
 	}
-	
+
 	reqClaim := jwt.NewWithClaims(jwt.SigningMethodHS256, SetClaims)
 	token, err := reqClaim.SignedString(JwtKey)
 	if err != nil {
-		return "", errmsg.ERROR
+		return "", message.ERROR
 	}
-	return token, errmsg.SUCCSE
-	
+	return token, message.SUCCSES
+
 }
 
 // 验证token
 
 func CheckToken(token string) (*MyClaims, int) {
 	var claims MyClaims
-	
+
 	setToken, err := jwt.ParseWithClaims(token, &claims, func(token *jwt.Token) (i interface{}, e error) {
 		return JwtKey, nil
 	})
-	
+
 	if err != nil {
 		if ve, ok := err.(*jwt.ValidationError); ok {
 			if ve.Errors&jwt.ValidationErrorMalformed != 0 {
-				return nil, errmsg.ERROR_TOKEN_WRONG
+				return nil, message.ERROR_TOKEN_WRONG
 			} else if ve.Errors&(jwt.ValidationErrorExpired|jwt.ValidationErrorNotValidYet) != 0 {
-				return nil, errmsg.ERROR_TOKEN_RUNTIME
+				return nil, message.ERROR_TOKEN_RUNTIME
 			} else {
-				return nil, errmsg.ERROR_TOKEN_TYPE_WRONG
+				return nil, message.ERROR_TOKEN_TYPE_WRONG
 			}
 		}
 	}
 	if setToken != nil {
 		if key, ok := setToken.Claims.(*MyClaims); ok && setToken.Valid {
-			return key, errmsg.SUCCSE
+			return key, message.SUCCSES
 		} else {
-			return nil, errmsg.ERROR_TOKEN_WRONG
+			return nil, message.ERROR_TOKEN_WRONG
 		}
 	}
-	return nil, errmsg.ERROR_TOKEN_WRONG
+	return nil, message.ERROR_TOKEN_WRONG
 }
 
 // jwt中间件
@@ -76,42 +75,42 @@ func JwtToken() iris.Handler {
 			code = message.ERROR_TOKEN_EXIST
 			c.JSON(iris.Map{
 				"status":  code,
-				"message": errmsg.GetErrMsg(code),
+				"message": message.GetErrMsg(code),
 			})
-			c.
+
 			return
 		}
 		checkToken := strings.Split(tokenHeader, " ")
 		if len(checkToken) == 0 {
-			code = errmsg.ERROR_TOKEN_TYPE_WRONG®
-			c.JSON(http.StatusOK, gin.H{
+			code = message.ERROR_TOKEN_TYPE_WRONG
+			c.JSON(iris.Map{
 				"status":  code,
-				"message": errmsg.GetErrMsg(code),
+				"message": message.GetErrMsg(code),
 			})
-			c.Abort()
+
 			return
 		}
-		
+
 		if len(checkToken) != 2 && checkToken[0] != "Bearer" {
-			code = errmsg.ERROR_TOKEN_TYPE_WRONG
-			c.JSON(http.StatusOK, gin.H{
+			code = message.ERROR_TOKEN_TYPE_WRONG
+			c.JSON(iris.Map{
 				"status":  code,
-				"message": errmsg.GetErrMsg(code),
+				"message": message.GetErrMsg(code),
 			})
-			c.Abort()
+
 			return
 		}
-		key, tCode := CheckToken(checkToken[1])
-		if tCode != errmsg.SUCCSE {
+		_, tCode := CheckToken(checkToken[1])
+		if tCode != message.SUCCSES {
 			code = tCode
-			c.JSON(http.StatusOK, gin.H{
+			c.JSON(iris.Map{
 				"status":  code,
-				"message": errmsg.GetErrMsg(code),
+				"message": message.GetErrMsg(code),
 			})
-			c.Abort()
+
 			return
 		}
-		c.Set("username", key)
+		//c.Set("username", key)
 		c.Next()
 	}
 }

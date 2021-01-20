@@ -63,3 +63,74 @@
 2021-01-19 20:36:55|42.432125ms|200|PUT|/api/v1/user/9|::1|id=9|87 B|39 B|{"user_name":"weject31511","password":"123456111","email":"11weject@iqq.com"}|
 2021-01-19 20:37:15|53.260041ms|200|PUT|/api/v1/user/9|::1|id=9|82 B|39 B|{"user_name":"weject31511","password":"1234","email":"11weject@iqq.com"}|
 2021-01-19 20:37:42|52.435625ms|200|PUT|/api/v1/user/9|::1|id=9|72 B|39 B|{"user_name":"weject3","password":"","email":"weject@iqq.com"}|
+2021-01-20 21:38:44|293.8715ms|200|POST|/api/v1/adduser|::1|70 B|39 B|{"user_name":"wejectchan","password":"123456","email":"weject@qq.com"}|
+2021-01-20 21:40:18|0s|404|PUT|/api/v1user/1|::1|56 B|9 B|{"username":"weject","password":"123456","email":"noce"}|
+2021-01-20 21:40:40|999.6µs|404|PUT|/api/v1user/1|::1|57 B|9 B|{"user_name":"weject","password":"123456","email":"noce"}|
+2021-01-20 21:40:56|246.2125ms|200|PUT|/api/v1/user/1|::1|id=1|57 B|39 B|{"user_name":"weject","password":"123456","email":"noce"}|
+2021-01-20 22:10:18|986.5µs|404|POST|/api/v1login|::1|45 B|9 B|{"username":"wejectchan","password":"123456"}|
+2021-01-20 22:10:40|0s|200|PUT|/api/v1/user/1|::1|id=1|57 B|68 B|{"user_name":"weject","password":"123456","email":"noce"}|
+2021-01-20 22:10:47|54.2917ms|200|POST|/api/v1/login|::1|45 B|93 B|{"username":"wejectchan","password":"123456"}|
+2021-01-20 22:11:01|225.2407ms|200|POST|/api/v1/login|::1|46 B|93 B|{"user_name":"wejectchan","password":"123456"}|
+2021-01-20 22:11:08|4.989ms|200|POST|/api/v1/login|::1|46 B|93 B|{"user_name":"wejectchan","password":"123456"}|
+2021-01-20 22:11:37|75.1315ms|200|POST|/api/v1/login|::1|46 B|248 B|{"user_name":"wejectchan","password":"123456"}|
+2021-01-20 22:11:57|0s|200|POST|/api/v1/adduser|::1|66 B|68 B|{"user_name":"weject","password":"123456","email":"weject@qq.com"}|
+2021-01-20 22:12:30|308.6047ms|200|POST|/api/v1/adduser|::1|66 B|39 B|{"user_name":"weject","password":"123456","email":"weject@qq.com"}|
+2021-01-20 23:28:57|1.0148ms|200|POST|/api/v1/tag/add|::1|26 B|68 B|{"name":"已原生支持"}|
+2021-01-20 23:29:03|323.0113ms|200|POST|/api/v1/login|::1|46 B|248 B|{"user_name":"wejectchan","password":"123456"}|
+2021-01-20 23:29:38|49.5032ms|200|POST|/api/v1/tag/add|::1|26 B|39 B|{"name":"已原生支持"}|
+2021-01-20 23:30:37|48.5193ms|200|POST|/api/v1/tag/add|::1|30 B|39 B|{"tag_name":"已原生支持"}|
+2021-01-20 23:31:56|0s|200|PUT|/api/v1/tag/edit/1|::1|id=1|27 B|68 B|{"tag_name":"尚无信息"}|
+2021-01-20 23:32:08|266.6504ms|200|PUT|/api/v1/tag/edit/1|::1|id=1|27 B|39 B|{"tag_name":"尚无信息"}|
+2021-01-20 23:33:43|0s|200|DELETE|/api/v1/tag/delete/1|::1|id=1|44 B|68 B|------WebKitFormBoundarydBmXqyCr2JIEeYR4--
+|
+2021-01-20 23:33:49|216.4459ms|200|DELETE|/api/v1/tag/delete/1|::1|id=1|44 B|39 B|------WebKitFormBoundaryseY8FKQe2DNPBAhS--
+|
+2021-01-20 23:35:07|240.9122ms|200|GET|/api/v1/tag/list|::1|pagenum=1 pagesize=5|0 B|133 B||
+2021-01-20 23:35:37|0s|404|GET|/api/v1/tag/info/1|::1|0 B|9 B||
+2021-01-20 23:56:02|999.3µs|200|POST|/api/v1/category/add|::1|23 B|68 B|{"name":"影音处理"}|
+2021-01-20 23:56:09|91.5851ms|200|POST|/api/v1/login|::1|46 B|248 B|{"user_name":"wejectchan","password":"123456"}|
+2021-01-20 23:56:22|60.3619ms|200|POST|/api/v1/category/add|::1|23 B|39 B|{"name":"影音处理"}|
+2021-01-20 23:57:48|0s|404|POST|/api/v1/category/edit/1|::1|26 B|9 B|{"name":"生产力工具"}|
+2021-01-20 23:58:01|0s|200|PUT|/api/v1/category/edit/1|::1|id=1|26 B|68 B|{"name":"生产力工具"}|
+2021-01-20 23:58:08|245.2226ms|200|PUT|/api/v1/category/edit/1|::1|id=1|26 B|39 B|{"name":"生产力工具"}|
+2021-01-20 23:59:58|253.5061ms|200|DELETE|/api/v1/category/delete/1|::1|id=1|44 B|39 B|------WebKitFormBoundaryv5Q98gYUzPIP51Nd--
+|
+2021-01-21 00:00:58|231.8765ms|200|GET|/api/v1/category/list|::1|0 B|67 B||
+2021-01-21 00:01:05|11.9957ms|200|POST|/api/v1/category/add|::1|23 B|39 B|{"name":"影音处理"}|
+2021-01-21 00:01:14|33.3412ms|200|POST|/api/v1/category/add|::1|26 B|39 B|{"name":"生产力工具"}|
+2021-01-21 00:01:24|8.998ms|200|POST|/api/v1/category/add|::1|23 B|39 B|{"name":"社交工具"}|
+2021-01-21 00:01:50|65.0732ms|200|GET|/api/v1/category/list|::1|pagenum=1 pagesize=2|0 B|243 B||
+2021-01-21 00:03:01|24.9777ms|200|GET|/api/v1/category/list|::1|pagenum=1 pagesize=2|0 B|241 B||
+2021-01-21 00:11:45|18.0963ms|200|GET|/api/v1/category/list|::1|pagenum=1 pagesize=2|0 B|241 B||
+2021-01-21 00:12:52|7.9986ms|200|GET|/api/v1/category/list|::1|pagenum=1 pagesize=2|0 B|241 B||
+2021-01-21 00:14:29|22.8956ms|200|GET|/api/v1/category/list|::1|pagenum=1 pagesize=2|0 B|241 B||
+2021-01-21 00:16:28|8.9923ms|200|GET|/api/v1/category/list|::1|pagenum=1 pagesize=2|0 B|241 B||
+2021-01-21 00:17:16|22.9919ms|200|GET|/api/v1/category/list|::1|pagenum=1 pagesize=2|0 B|241 B||
+2021-01-21 00:17:20|25.8663ms|200|GET|/api/v1/category/list|::1|pagenum=1 pagesize=1|0 B|241 B||
+2021-01-21 00:17:25|243.3991ms|200|GET|/api/v1/category/list|::1|pagenum=1 pagesize=3|0 B|241 B||
+2021-01-21 00:18:27|245.8427ms|200|GET|/api/v1/category/list|::1|pagenum=1 pagesize=1|0 B|241 B||
+2021-01-21 00:19:59|21.9933ms|200|GET|/api/v1/category/list|::1|pagenum=1 pagesize=1|0 B|241 B||
+2021-01-21 00:20:04|45.8655ms|200|GET|/api/v1/category/list|::1|pagenum=5 pagesize=1|0 B|241 B||
+2021-01-21 00:23:22|20.9931ms|200|GET|/api/v1/category/list|::1|pagenum=5 pagesize=1|0 B|241 B||
+2021-01-21 00:23:32|36.9881ms|200|GET|/api/v1/category/list|::1|pagenum=5 pagesize=1|0 B|241 B||
+2021-01-21 00:26:45|10.2199ms|200|GET|/api/v1/category/list|::1|pagenum=5 pagesize=1|0 B|241 B||
+2021-01-21 00:27:00|56.7685ms|200|GET|/api/v1/category/list|::1|pagenum=1 pagesize=1|0 B|241 B||
+2021-01-21 00:28:47|237.8994ms|200|POST|/api/v1/tag/add|::1|30 B|39 B|{"tag_name":"已原生支持"}|
+2021-01-21 00:28:52|10.0097ms|200|POST|/api/v1/tag/add|::1|30 B|39 B|{"tag_name":"已原生支持"}|
+2021-01-21 00:28:53|9.9967ms|200|POST|/api/v1/tag/add|::1|30 B|39 B|{"tag_name":"已原生支持"}|
+2021-01-21 00:29:00|44.8082ms|200|GET|/api/v1/tag/list|::1|pagenum=1 pagesize=5|0 B|325 B||
+2021-01-21 00:29:04|15.0082ms|200|GET|/api/v1/tag/list|::1|pagenum=1 pagesize=2|0 B|325 B||
+2021-01-21 00:30:52|8.9969ms|200|GET|/api/v1/category/list|::1|pagenum=1 pagesize=1|0 B|124 B||
+2021-01-21 00:32:16|14.9945ms|200|GET|/api/v1/tag/list|::1|pagenum=1 pagesize=2|0 B|323 B||
+2021-01-21 00:32:24|51.9961ms|200|GET|/api/v1/tag/list|::1|pagenum=1 pagesize=2|0 B|323 B||
+2021-01-21 00:33:07|23.0058ms|200|GET|/api/v1/tag/list|::1|pagenum=1 pagesize=2|0 B|195 B||
+2021-01-21 00:36:02|252.4847ms|200|GET|/api/v1/tag/list|::1|pagenum=1 pagesize=2|0 B|195 B||
+2021-01-21 00:36:09|9.0094ms|200|GET|/api/v1/tag/list|::1|pagenum=1 pagesize=2|0 B|197 B||
+2021-01-21 00:36:15|8.0098ms|200|GET|/api/v1/category/list|::1|pagenum=1 pagesize=1|0 B|126 B||
+2021-01-21 00:36:20|65.7614ms|200|GET|/api/v1/category/list|::1|pagenum=1 pagesize=3|0 B|243 B||
+2021-01-21 00:36:22|21.9927ms|200|GET|/api/v1/category/list|::1|pagenum=2 pagesize=3|0 B|67 B||
+2021-01-21 00:36:25|20.997ms|200|GET|/api/v1/category/list|::1|pagenum=1 pagesize=3|0 B|243 B||
+2021-01-21 00:36:50|60.1557ms|200|PUT|/api/v1/tag/edit/1|::1|id=1|27 B|39 B|{"tag_name":"尚无信息"}|
+2021-01-21 00:37:34|55.0605ms|200|PUT|/api/v1/tag/edit/2|::1|id=2|27 B|39 B|{"tag_name":"尚无信息"}|
+2021-01-21 00:38:10|38.0664ms|200|GET|/api/v1/category/info/1|::1|id=1|0 B|86 B||
+2021-01-21 00:38:15|11.996ms|200|GET|/api/v1/category/info/2|::1|id=2|0 B|96 B||
