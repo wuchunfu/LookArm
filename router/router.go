@@ -3,13 +3,14 @@ package router
 import (
 	"github.com/kataras/iris/v12"
 	"lookarm/api"
+	"lookarm/config"
 	"lookarm/middleware"
 )
 
 func InitRouter() {
 	app := iris.Default()
 
-	app.Use(middleware.Cors())
+	app.UseRouter(middleware.Cors())
 
 	v1 := app.Party("api/v1/")
 	v1.Use(middleware.JwtToken())
@@ -61,6 +62,6 @@ func InitRouter() {
 		pub.Get("appinfo/list",api.GetAppInfoList)
 		pub.Get("appinfo/info/{id:int}",api.GetAppInfo)
 	}
-	_ = app.Listen(":8080")
+	_ = app.Listen(config.ServerPort)
 
 }

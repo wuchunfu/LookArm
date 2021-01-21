@@ -12,10 +12,10 @@ import (
 func Login(c iris.Context) {
 	var loginData model.User
 	var token string
-	c.ReadJSON(&loginData)
-
+	_ = c.ReadJSON(&loginData)
+	
 	loginData, code = model.CheckLogin(loginData.UserName, loginData.Password)
-
+	
 	if code == message.SUCCSES {
 		token, code = middleware.SetToken(loginData.UserName)
 	}
@@ -26,5 +26,5 @@ func Login(c iris.Context) {
 		"message": message.GetErrMsg(code),
 		"token":   token,
 	})
-
+	
 }

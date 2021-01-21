@@ -245,3 +245,64 @@
 2021-01-21 14:53:52|33.5121ms|200|PUT|/api/v1/postinfo/edit/1|::1|id=1|196 B|39 B|{"app_name":"goland","app_version":"2020.3.2","app_webpage":"https://jet.com","app_desc":"golang ide","app_developer":"jet","user_name":"weject","email":"weject@qq.com","category_id":1,"tag_id":1}|
 2021-01-21 14:53:57|29.9973ms|200|GET|/api/v1/postinfo/list|::1|pagenum=1 pagesize=10|0 B|651 B||
 2021-01-21 14:54:07|77.9476ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|652 B||
+2021-01-21 16:13:41|2.0165ms|200|POST|/api/v1/adduser|::1|87 B|68 B|{"user_name":"weject","password":"123456","email":"weject@qq.com"}|
+2021-01-21 16:14:38|110.8874ms|200|POST|/api/v1/login|::1|61 B|93 B|{"user_name":"wejectchan","password":"123456"}|
+2021-01-21 16:14:45|21.0563ms|200|POST|/api/v1/login|::1|57 B|93 B|{"user_name":"weject","password":"123456"}|
+2021-01-21 16:15:30|44.538ms|200|POST|/api/v1/login|::1|57 B|93 B|{"user_name":"weject","password":"123456"}|
+2021-01-21 16:15:51|154.3358ms|200|POST|/api/v1/login|::1|46 B|248 B|{"user_name":"wejectchan","password":"123456"}|
+2021-01-21 16:16:08|66.3802ms|200|POST|/api/v1/login|::1|61 B|93 B|{"user_name":"wejectchan","password":"123456"}|
+2021-01-21 16:16:39|121.7135ms|200|POST|/api/v1/login|::1|62 B|248 B|{"user_name":"wejectchan","password":"123456"}|
+2021-01-21 17:09:23|992µs|404|GET|/admin/cd976c17468b69014d27.hot-update.json|::1|0 B|9 B||
+2021-01-21 17:09:23|1.0003ms|301|GET|/admin/|::1|0 B|41 B||
+2021-01-21 17:09:23|0s|404|GET|/admin|::1|0 B|9 B||
+2021-01-21 17:09:23|0s|404|GET|/favicon.ico|::1|0 B|9 B||
+2021-01-21 17:09:28|0s|404|GET|/admin|::1|0 B|9 B||
+2021-01-21 17:09:32|0s|404|GET|/admin|::1|0 B|9 B||
+2021-01-21 17:09:38|0s|404|GET|/admin|::1|0 B|9 B||
+2021-01-21 17:11:01|1.9983ms|404|OPTIONS|/api/v1/login|::1|0 B|9 B||
+2021-01-21 17:11:07|0s|404|OPTIONS|/api/v1/login|::1|0 B|9 B||
+2021-01-21 17:12:17|0s|404|OPTIONS|/api/v1/login|::1|0 B|9 B||
+2021-01-21 17:13:25|1.001ms|404|OPTIONS|/api/v1/login|::1|0 B|9 B||
+2021-01-21 17:14:02|0s|404|OPTIONS|/api/v1/login|::1|0 B|9 B||
+2021-01-21 17:16:44|999.5µs|404|OPTIONS|/api/v1/login|::1|0 B|9 B||
+2021-01-21 17:17:02|130.0675ms|200|POST|/api/v1/login|::1|46 B|248 B|{"user_name":"wejectchan","password":"123456"}|
+2021-01-21 17:17:11|0s|404|OPTIONS|/api/v1/login|::1|0 B|9 B||
+2021-01-21 17:17:37|0s|404|OPTIONS|/api/v1/login|::1|0 B|9 B||
+2021-01-21 17:18:26|0s|404|OPTIONS|/api/v1/login|::1|0 B|9 B||
+2021-01-21 17:20:54|0s|404|OPTIONS|/api/v1/login|::1|0 B|9 B||
+2021-01-21 17:22:55|185.7905ms|200|POST|/api/v1/login|::1|46 B|248 B|{"user_name":"wejectchan","password":"123456"}|
+2021-01-21 17:24:42|0s|404|OPTIONS|/api/v1/login|::1|0 B|9 B||
+2021-01-21 17:26:03|0s|404|OPTIONS|/api/v1/login|::1|0 B|9 B||
+2021-01-21 17:26:08|0s|404|OPTIONS|/api/v1/login|::1|0 B|9 B||
+2021-01-21 17:29:34|0s|404|OPTIONS|/api/v1/login|::1|0 B|9 B||
+2021-01-21 17:30:15|0s|404|OPTIONS|/api/v1/login|::1|0 B|9 B||
+2021-01-21 17:34:47|999.8µs|404|OPTIONS|/api/v1/login|::1|0 B|9 B||
+2021-01-21 17:37:33|1.9847ms|404|OPTIONS|/api/v1/login|::1|0 B|9 B||
+2021-01-21 17:41:31|1.9832ms|200|OPTIONS|/api/v1/login|::1|0 B|0 B||
+2021-01-21 17:41:31|17.1205ms|200|POST|/api/v1/login|::1|50 B|93 B|{"user_name":"123321321321","password":"12312321"}|
+2021-01-21 17:41:52|0s|200|OPTIONS|/api/v1/login|::1|0 B|0 B||
+2021-01-21 17:41:52|31.6917ms|200|POST|/api/v1/login|::1|48 B|93 B|{"user_name":"123123213","password":"321321312"}|
+2021-01-21 17:41:59|0s|200|OPTIONS|/api/v1/login|::1|0 B|0 B||
+2021-01-21 17:41:59|96.9962ms|200|POST|/api/v1/login|::1|48 B|100 B|{"user_name":"wejectchan","password":"1q2w3e4r"}|
+2021-01-21 17:42:05|0s|200|OPTIONS|/api/v1/login|::1|0 B|0 B||
+2021-01-21 17:42:05|123.0129ms|200|POST|/api/v1/login|::1|46 B|248 B|{"user_name":"wejectchan","password":"123456"}|
+2021-01-21 17:42:20|0s|200|OPTIONS|/api/v1/login|::1|0 B|0 B||
+2021-01-21 17:42:20|99.0866ms|200|POST|/api/v1/login|::1|46 B|248 B|{"user_name":"wejectchan","password":"123456"}|
+2021-01-21 17:42:22|0s|200|OPTIONS|/api/v1/admin/users|::1|pagenum=1 pagesize=5 username=|0 B|0 B||
+2021-01-21 17:42:22|0s|404|GET|/api/v1/admin/users|::1|pagenum=1 pagesize=5 username=|0 B|9 B||
+2021-01-21 17:42:57|0s|200|OPTIONS|/api/v1/users|::1|pagenum=1 pagesize=5 username=|0 B|0 B||
+2021-01-21 17:42:57|87.0863ms|200|GET|/api/v1/users|::1|pagenum=1 pagesize=5 username=|0 B|727 B||
+2021-01-21 17:43:23|0s|200|OPTIONS|/api/v1/users|::1|pagenum=1 pagesize=5 username=|0 B|0 B||
+2021-01-21 17:43:23|47.0014ms|200|GET|/api/v1/users|::1|pagenum=1 pagesize=5 username=|0 B|727 B||
+2021-01-21 17:43:31|0s|200|OPTIONS|/api/v1/users|::1|pagenum=1 pagesize=5 username=|0 B|0 B||
+2021-01-21 17:43:31|16.0408ms|200|GET|/api/v1/users|::1|pagenum=1 pagesize=5 username=|0 B|727 B||
+2021-01-21 17:43:38|0s|200|OPTIONS|/api/v1/users|::1|pagenum=1 pagesize=5 username=|0 B|0 B||
+2021-01-21 17:43:38|31.5075ms|200|GET|/api/v1/users|::1|pagenum=1 pagesize=5 username=|0 B|727 B||
+2021-01-21 17:43:58|0s|200|OPTIONS|/api/v1/users|::1|pagenum=1 pagesize=5 username=|0 B|0 B||
+2021-01-21 17:43:59|134.578ms|200|GET|/api/v1/users|::1|pagenum=1 pagesize=5 username=|0 B|727 B||
+2021-01-21 17:44:20|0s|200|OPTIONS|/api/v1/users|::1|pagenum=1 pagesize=5 user_name=|0 B|0 B||
+2021-01-21 17:44:20|52.0445ms|200|GET|/api/v1/users|::1|pagenum=1 pagesize=5 user_name=|0 B|727 B||
+2021-01-21 17:44:26|0s|200|OPTIONS|/api/v1/user/1|::1|0 B|0 B||
+2021-01-21 17:44:26|1.0021ms|404|GET|/api/v1/user/1|::1|0 B|9 B||
+2021-01-21 17:45:05|1.0008ms|200|OPTIONS|/api/v1/users|::1|pagenum=1 pagesize=5 user_name=|0 B|0 B||
+2021-01-21 17:45:06|54.9978ms|200|GET|/api/v1/users|::1|pagenum=1 pagesize=5 user_name=|0 B|727 B||
