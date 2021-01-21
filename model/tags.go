@@ -5,7 +5,7 @@ import (
 )
 
 type Tag struct {
-	Id      int    `gorm:"primaryKey" json:"id"`
+	ID      uint   `gorm:"primaryKey" json:"id"`
 	TagName string `gorm:"type:varchar(200)" json:"tag_name"`
 }
 

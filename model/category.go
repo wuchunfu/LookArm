@@ -3,7 +3,7 @@ package model
 import "lookarm/utils/message"
 
 type Category struct {
-	Id   int    `gorm:"primaryKey" json:"id"`
+	ID   uint    `gorm:"primaryKey" json:"id"`
 	Name string `gorm:"type:varchar(200)" json:"name"`
 }
 

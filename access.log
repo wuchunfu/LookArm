@@ -137,3 +137,111 @@
 2021-01-19 18:02:11|11.9985ms|200|GET|/api/v1/users|::1|pagenum=1 pagesize=2|0 B|473 B||
 2021-01-19 18:02:18|35.0151ms|200|GET|/api/v1/users|::1|pagenum=4 pagesize=2|0 B|294 B||
 2021-01-19 18:02:22|12.0164ms|200|GET|/api/v1/users|::1|pagenum=3 pagesize=2|0 B|496 B||
+2021-01-21 13:41:02|252.7638ms|200|POST|/api/v1/postinfo/add|::1|153 B|39 B|{"app_name":"goland","app_version":"2020.3.2","app_webpage":"https://jet.com","app_desc":"golang ide","app_developer":"jet","app_category":2,"app_tag":2}|
+2021-01-21 13:42:10|279.4346ms|200|POST|/api/v1/postinfo/add|::1|243 B|39 B|{
+    "app_name":"goland",
+    "app_version":"2020.3.2",
+    "app_webpage":"https://jet.com",
+    "app_desc":"golang ide",
+    "app_developer":"jet",
+    "user_name":"weject",
+    "email":"weject@qq.com"
+    "app_category":2,
+    "app_tag":2
+}|
+2021-01-21 13:42:21|51.1077ms|200|POST|/api/v1/postinfo/add|::1|198 B|39 B|{"app_name":"goland","app_version":"2020.3.2","app_webpage":"https://jet.com","app_desc":"golang ide","app_developer":"jet","user_name":"weject","email":"weject@qq.com","app_category":2,"app_tag":2}|
+2021-01-21 13:43:28|267.9358ms|200|GET|/api/v1/postinfo/list|::1|0 B|1.6 KB||
+2021-01-21 13:44:49|8.9971ms|200|GET|/api/v1/postinfo/list|::1|0 B|1.6 KB||
+2021-01-21 13:45:17|12.9957ms|200|GET|/api/v1/postinfo/list|::1|0 B|1.6 KB||
+2021-01-21 13:46:49|22.9167ms|200|GET|/api/v1/postinfo/list|::1|0 B|1.6 KB||
+2021-01-21 13:47:08|13.9955ms|200|GET|/api/v1/postinfo/list|::1|0 B|1.6 KB||
+2021-01-21 13:48:10|1.9995ms|200|GET|/api/v1/postinfo/list|::1|0 B|71 B||
+2021-01-21 13:48:41|9.9964ms|200|GET|/api/v1/postinfo/list|::1|0 B|1.6 KB||
+2021-01-21 13:55:24|241.0118ms|200|POST|/api/v1/postinfo/add|::1|196 B|39 B|{"app_name":"goland","app_version":"2020.3.2","app_webpage":"https://jet.com","app_desc":"golang ide","app_developer":"jet","user_name":"weject","email":"weject@qq.com","category_id":2,"tag_id":2}|
+2021-01-21 13:55:28|18.2703ms|200|GET|/api/v1/postinfo/list|::1|0 B|2.2 KB||
+2021-01-21 13:57:14|45.4106ms|200|POST|/api/v1/postinfo/add|::1|196 B|39 B|{"app_name":"goland","app_version":"2020.3.2","app_webpage":"https://jet.com","app_desc":"golang ide","app_developer":"jet","user_name":"weject","email":"weject@qq.com","category_id":2,"tag_id":2}|
+2021-01-21 13:57:22|14.9952ms|200|GET|/api/v1/postinfo/list|::1|0 B|623 B||
+2021-01-21 13:58:21|15.0079ms|200|GET|/api/v1/postinfo/list|::1|0 B|623 B||
+2021-01-21 13:59:38|12.9961ms|200|GET|/api/v1/postinfo/list|::1|0 B|623 B||
+2021-01-21 14:00:08|61.1985ms|200|POST|/api/v1/category/add|::1|23 B|39 B|{"name":"社交工具"}|
+2021-01-21 14:00:15|19.9934ms|200|POST|/api/v1/tag/add|::1|30 B|39 B|{"tag_name":"已原生支持"}|
+2021-01-21 14:00:24|30.1798ms|200|POST|/api/v1/postinfo/add|::1|196 B|39 B|{"app_name":"goland","app_version":"2020.3.2","app_webpage":"https://jet.com","app_desc":"golang ide","app_developer":"jet","user_name":"weject","email":"weject@qq.com","category_id":1,"tag_id":1}|
+2021-01-21 14:00:27|9.9965ms|200|GET|/api/v1/postinfo/list|::1|0 B|1.1 KB||
+2021-01-21 14:01:07|23.9883ms|200|GET|/api/v1/postinfo/list|::1|0 B|1.1 KB||
+2021-01-21 14:02:32|16.0124ms|200|GET|/api/v1/postinfo/list|::1|0 B|1.1 KB||
+2021-01-21 14:05:35|24.9918ms|200|POST|/api/v1/tag/add|::1|30 B|39 B|{"tag_name":"已原生支持"}|
+2021-01-21 14:05:38|35.2981ms|200|POST|/api/v1/category/add|::1|23 B|39 B|{"name":"社交工具"}|
+2021-01-21 14:05:40|14.0081ms|200|POST|/api/v1/postinfo/add|::1|196 B|39 B|{"app_name":"goland","app_version":"2020.3.2","app_webpage":"https://jet.com","app_desc":"golang ide","app_developer":"jet","user_name":"weject","email":"weject@qq.com","category_id":1,"tag_id":1}|
+2021-01-21 14:05:43|9.9962ms|200|GET|/api/v1/postinfo/list|::1|0 B|1.7 KB||
+2021-01-21 14:08:08|11.3552ms|200|GET|/api/v1/postinfo/list|::1|0 B|1.7 KB||
+2021-01-21 14:08:38|9.9964ms|200|GET|/api/v1/postinfo/list|::1|0 B|1.4 KB||
+2021-01-21 14:09:17|39.1921ms|200|POST|/api/v1/postinfo/add|::1|194 B|41 B|{"app_name":"goland","app_version":"2020.3.2","app_webpage":"https://jet.com","app_desc":"golang ide","app_developer":"jet","user_name":"weject","email":"weject@qq.com","categoryId":1,"tagId":1}|
+2021-01-21 14:09:58|16.0115ms|200|POST|/api/v1/postinfo/add|::1|194 B|39 B|{"app_name":"goland","app_version":"2020.3.2","app_webpage":"https://jet.com","app_desc":"golang ide","app_developer":"jet","user_name":"weject","email":"weject@qq.com","categoryId":1,"tagId":1}|
+2021-01-21 14:10:02|10.015ms|200|GET|/api/v1/postinfo/list|::1|0 B|539 B||
+2021-01-21 14:10:48|16.9848ms|200|GET|/api/v1/postinfo/list|::1|0 B|539 B||
+2021-01-21 14:11:26|31.4407ms|200|GET|/api/v1/postinfo/list|::1|0 B|549 B||
+2021-01-21 14:12:00|20.0097ms|200|GET|/api/v1/postinfo/list|::1|0 B|631 B||
+2021-01-21 14:12:07|47.3005ms|200|POST|/api/v1/postinfo/add|::1|194 B|39 B|{"app_name":"goland","app_version":"2020.3.2","app_webpage":"https://jet.com","app_desc":"golang ide","app_developer":"jet","user_name":"weject","email":"weject@qq.com","categoryId":1,"tagId":1}|
+2021-01-21 14:12:09|45.489ms|200|GET|/api/v1/postinfo/list|::1|0 B|1.2 KB||
+2021-01-21 14:17:18|0s|200|PUT|/api/v1/postinfo/edit/1|::1|id=1|196 B|68 B|{"app_name":"phpstorm","app_version":"2020.3.2","app_webpage":"https://jet.com","app_desc":"golang ide","app_developer":"jet","user_name":"weject","email":"weject@qq.com","categoryId":1,"tagId":1}|
+2021-01-21 14:17:24|288.2194ms|200|POST|/api/v1/login|::1|46 B|248 B|{"user_name":"wejectchan","password":"123456"}|
+2021-01-21 14:17:35|36.9874ms|200|PUT|/api/v1/postinfo/edit/1|::1|id=1|196 B|39 B|{"app_name":"phpstorm","app_version":"2020.3.2","app_webpage":"https://jet.com","app_desc":"golang ide","app_developer":"jet","user_name":"weject","email":"weject@qq.com","categoryId":1,"tagId":1}|
+2021-01-21 14:18:42|282.0049ms|200|GET|/api/v1/postinfo/list|::1|pagenum=1 pagesize=2|0 B|646 B||
+2021-01-21 14:18:52|27.9597ms|200|GET|/api/v1/postinfo/list|::1|pagenum=2 pagesize=2|0 B|67 B||
+2021-01-21 14:18:58|27.6297ms|200|GET|/api/v1/postinfo/list|::1|pagenum=1 pagesize=1|0 B|648 B||
+2021-01-21 14:19:01|7.9988ms|200|GET|/api/v1/postinfo/list|::1|pagenum=1 pagesize=5|0 B|67 B||
+2021-01-21 14:19:41|55.9983ms|200|GET|/api/v1/postinfo/list|::1|pagenum=1 pagesize=5|0 B|1.2 KB||
+2021-01-21 14:19:48|56.6012ms|200|GET|/api/v1/postinfo/list|::1|pagenum=1 pagesize=1|0 B|648 B||
+2021-01-21 14:19:51|268.664ms|200|GET|/api/v1/postinfo/list|::1|pagenum=1 pagesize=5|0 B|1.2 KB||
+2021-01-21 14:21:07|0s|200|DELETE|/api/v1/postinfo/delete/1|::1|id=1|44 B|68 B|------WebKitFormBoundaryEB1dcmrlOIebHKA3--
+|
+2021-01-21 14:21:18|325.821ms|200|POST|/api/v1/login|::1|46 B|248 B|{"user_name":"wejectchan","password":"123456"}|
+2021-01-21 14:21:27|10.996ms|200|DELETE|/api/v1/postinfo/delete/1|::1|id=1|44 B|39 B|------WebKitFormBoundaryhSS0icmQBVLPnrjA--
+|
+2021-01-21 14:22:15|52.0281ms|200|GET|/api/v1/postinfo/info/2|::1|id=2|0 B|553 B||
+2021-01-21 14:22:20|14.9948ms|200|GET|/api/v1/postinfo/info/1|::1|id=1|0 B|474 B||
+2021-01-21 14:22:26|258.8864ms|200|GET|/api/v1/postinfo/info/3|::1|id=3|0 B|474 B||
+2021-01-21 14:22:39|27.4293ms|200|GET|/api/v1/postinfo/info/2|::1|id=2|0 B|553 B||
+2021-01-21 14:22:59|69.9934ms|200|GET|/api/v1/postinfo/list|::1|pagenum=1 pagesize=5|0 B|646 B||
+2021-01-21 14:23:07|14.0085ms|200|POST|/api/v1/postinfo/add|::1|194 B|39 B|{"app_name":"goland","app_version":"2020.3.2","app_webpage":"https://jet.com","app_desc":"golang ide","app_developer":"jet","user_name":"weject","email":"weject@qq.com","categoryId":1,"tagId":1}|
+2021-01-21 14:23:08|14.995ms|200|POST|/api/v1/postinfo/add|::1|194 B|39 B|{"app_name":"goland","app_version":"2020.3.2","app_webpage":"https://jet.com","app_desc":"golang ide","app_developer":"jet","user_name":"weject","email":"weject@qq.com","categoryId":1,"tagId":1}|
+2021-01-21 14:23:09|13.9953ms|200|POST|/api/v1/postinfo/add|::1|194 B|39 B|{"app_name":"goland","app_version":"2020.3.2","app_webpage":"https://jet.com","app_desc":"golang ide","app_developer":"jet","user_name":"weject","email":"weject@qq.com","categoryId":1,"tagId":1}|
+2021-01-21 14:23:10|37.6703ms|200|POST|/api/v1/postinfo/add|::1|194 B|39 B|{"app_name":"goland","app_version":"2020.3.2","app_webpage":"https://jet.com","app_desc":"golang ide","app_developer":"jet","user_name":"weject","email":"weject@qq.com","categoryId":1,"tagId":1}|
+2021-01-21 14:23:11|12.9953ms|200|POST|/api/v1/postinfo/add|::1|194 B|39 B|{"app_name":"goland","app_version":"2020.3.2","app_webpage":"https://jet.com","app_desc":"golang ide","app_developer":"jet","user_name":"weject","email":"weject@qq.com","categoryId":1,"tagId":1}|
+2021-01-21 14:23:12|12.9958ms|200|POST|/api/v1/postinfo/add|::1|194 B|39 B|{"app_name":"goland","app_version":"2020.3.2","app_webpage":"https://jet.com","app_desc":"golang ide","app_developer":"jet","user_name":"weject","email":"weject@qq.com","categoryId":1,"tagId":1}|
+2021-01-21 14:23:17|37.0729ms|200|GET|/api/v1/postinfo/list|::1|pagenum=1 pagesize=5|0 B|2.9 KB||
+2021-01-21 14:23:19|37.0234ms|200|GET|/api/v1/postinfo/list|::1|pagenum=1 pagesize=5|0 B|2.9 KB||
+2021-01-21 14:23:21|63.1658ms|200|GET|/api/v1/postinfo/list|::1|pagenum=1 pagesize=5|0 B|2.9 KB||
+2021-01-21 14:23:22|31.9118ms|200|GET|/api/v1/postinfo/list|::1|pagenum=1 pagesize=5|0 B|2.9 KB||
+2021-01-21 14:23:24|31.7022ms|200|GET|/api/v1/postinfo/list|::1|pagenum=1 pagesize=2|0 B|1.2 KB||
+2021-01-21 14:23:27|30.9913ms|200|GET|/api/v1/postinfo/list|::1|pagenum=1 pagesize=3|0 B|1.8 KB||
+2021-01-21 14:23:30|30.6545ms|200|GET|/api/v1/postinfo/list|::1|pagenum=1 pagesize=4|0 B|2.3 KB||
+2021-01-21 14:23:32|252.0267ms|200|GET|/api/v1/postinfo/list|::1|pagenum=1 pagesize=5|0 B|2.9 KB||
+2021-01-21 14:23:39|42.3118ms|200|GET|/api/v1/postinfo/list|::1|pagenum=1 pagesize=5|0 B|2.9 KB||
+2021-01-21 14:29:16|292.9135ms|200|GET|/api/v1/postinfo/list|::1|pagenum=1 pagesize=5|0 B|2.9 KB||
+2021-01-21 14:29:37|43.0751ms|200|POST|/api/v1/postinfo/add|::1|194 B|39 B|{"app_name":"goland","app_version":"2020.3.2","app_webpage":"https://jet.com","app_desc":"golang ide","app_developer":"jet","user_name":"weject","email":"weject@qq.com","categoryId":1,"tagId":1}|
+2021-01-21 14:29:42|42.0638ms|200|GET|/api/v1/postinfo/list|::1|pagenum=1 pagesize=5|0 B|2.9 KB||
+2021-01-21 14:30:09|58.6059ms|200|GET|/api/v1/postinfo/info/2|::1|id=2|0 B|553 B||
+2021-01-21 14:34:32|56.1967ms|200|POST|/api/v1/postinfo/add|::1|198 B|41 B|{"app_name":"goland","app_version":"2020.3.2","app_webpage":"https://jet.com","app_desc":"golang ide","app_developer":"jet","user_name":"weject","email":"weject@qq.com","app_category":1,"app_tag":1}|
+2021-01-21 14:34:40|18.9938ms|200|GET|/api/v1/postinfo/list|::1|pagenum=1 pagesize=10|0 B|4.4 KB||
+2021-01-21 14:36:17|34.2299ms|200|POST|/api/v1/postinfo/add|::1|196 B|41 B|{"app_name":"goland","app_version":"2020.3.2","app_webpage":"https://jet.com","app_desc":"golang ide","app_developer":"jet","user_name":"weject","email":"weject@qq.com","category_id":1,"tag_id":1}|
+2021-01-21 14:36:19|31.2532ms|200|GET|/api/v1/postinfo/list|::1|pagenum=1 pagesize=10|0 B|4.6 KB||
+2021-01-21 14:36:49|15.0045ms|200|POST|/api/v1/postinfo/add|::1|196 B|39 B|{"app_name":"goland","app_version":"2020.3.2","app_webpage":"https://jet.com","app_desc":"golang ide","app_developer":"jet","user_name":"weject","email":"weject@qq.com","category_id":1,"tag_id":1}|
+2021-01-21 14:36:52|40.5703ms|200|GET|/api/v1/postinfo/list|::1|pagenum=1 pagesize=10|0 B|648 B||
+2021-01-21 14:44:50|1ms|200|POST|/api/v1/appinfo/add|::1|196 B|68 B|{"app_name":"goland","app_version":"2020.3.2","app_webpage":"https://jet.com","app_desc":"golang ide","app_developer":"jet","user_name":"weject","email":"weject@qq.com","category_id":1,"tag_id":1}|
+2021-01-21 14:45:04|103.4915ms|200|POST|/api/v1/login|::1|46 B|248 B|{"user_name":"wejectchan","password":"123456"}|
+2021-01-21 14:45:10|74.976ms|200|POST|/api/v1/login|::1|46 B|248 B|{"user_name":"wejectchan","password":"123456"}|
+2021-01-21 14:45:18|214.5918ms|200|POST|/api/v1/appinfo/add|::1|196 B|41 B|{"app_name":"goland","app_version":"2020.3.2","app_webpage":"https://jet.com","app_desc":"golang ide","app_developer":"jet","user_name":"weject","email":"weject@qq.com","category_id":1,"tag_id":1}|
+2021-01-21 14:46:08|49.9057ms|200|POST|/api/v1/appinfo/add|::1|196 B|41 B|{"app_name":"goland","app_version":"2020.3.2","app_webpage":"https://jet.com","app_desc":"golang ide","app_developer":"jet","user_name":"weject","email":"weject@qq.com","category_id":1,"tag_id":1}|
+2021-01-21 14:46:30|15.9946ms|200|POST|/api/v1/appinfo/add|::1|196 B|39 B|{"app_name":"goland","app_version":"2020.3.2","app_webpage":"https://jet.com","app_desc":"golang ide","app_developer":"jet","user_name":"weject","email":"weject@qq.com","category_id":1,"tag_id":1}|
+2021-01-21 14:47:16|53.6002ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|648 B||
+2021-01-21 14:48:37|212.7744ms|200|PUT|/api/v1/tag/edit/1|::1|id=1|33 B|39 B|{"tag_name":"✅已原生支持"}|
+2021-01-21 14:48:48|51.4469ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|651 B||
+2021-01-21 14:49:58|235.9924ms|200|GET|/api/v1/appinfo/info/2|::1|id=2|0 B|476 B||
+2021-01-21 14:50:03|14.9942ms|200|GET|/api/v1/appinfo/info/1|::1|id=1|0 B|555 B||
+2021-01-21 14:50:34|21.9917ms|200|GET|/api/v1/appinfo/info/1|::1|id=1|0 B|555 B||
+2021-01-21 14:51:01|51.0407ms|200|GET|/api/v1/appinfo/info/1|::1|id=1|0 B|583 B||
+2021-01-21 14:53:21|241.6757ms|200|PUT|/api/v1/appinfo/edit/1|::1|id=1|197 B|39 B|{"app_name":"goland2","app_version":"2020.3.2","app_webpage":"https://jet.com","app_desc":"golang ide","app_developer":"jet","user_name":"weject","email":"weject@qq.com","category_id":1,"tag_id":1}|
+2021-01-21 14:53:52|33.5121ms|200|PUT|/api/v1/postinfo/edit/1|::1|id=1|196 B|39 B|{"app_name":"goland","app_version":"2020.3.2","app_webpage":"https://jet.com","app_desc":"golang ide","app_developer":"jet","user_name":"weject","email":"weject@qq.com","category_id":1,"tag_id":1}|
+2021-01-21 14:53:57|29.9973ms|200|GET|/api/v1/postinfo/list|::1|pagenum=1 pagesize=10|0 B|651 B||
+2021-01-21 14:54:07|77.9476ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|652 B||
