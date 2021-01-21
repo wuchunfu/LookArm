@@ -3,7 +3,7 @@
     <a-card>
       <a-row :gutter="20">
         <a-col :span="4">
-          <a-button type="primary" @click="addCateVisible = true">新增分类</a-button>
+          <a-button type="primary" @click="addTagVisible = true">新增状态</a-button>
         </a-col>
       </a-row>
 
@@ -11,7 +11,7 @@
         rowKey="id"
         :columns="columns"
         :pagination="pagination"
-        :dataSource="Catelist"
+        :dataSource="Taglist"
         bordered
         @change="handleTableChange"
       >
@@ -21,49 +21,49 @@
               type="primary"
               icon="edit"
               style="margin-right: 15px"
-              @click="editCate(data.id)"
+              @click="editTag(data.id)"
             >编辑</a-button>
             <a-button
               type="danger"
               icon="delete"
               style="margin-right: 15px"
-              @click="deleteCate(data.id)"
+              @click="deleteTag(data.id)"
             >删除</a-button>
           </div>
         </template>
       </a-table>
     </a-card>
 
-    <!-- 新增分类区域 -->
+    <!-- 新增状态区域 -->
     <a-modal
       closable
-      title="新增分类"
-      :visible="addCateVisible"
+      title="新增状态"
+      :visible="addTagVisible"
       width="60%"
-      @ok="addCateOk"
-      @cancel="addCateCancel"
+      @ok="addTagOk"
+      @cancel="addTagCancel"
       destroyOnClose
     >
-      <a-form-model :model="newCate" :rules="addCateRules" ref="addCateRef">
-        <a-form-model-item label="分类名称" prop="name">
-          <a-input v-model="newCate.name"></a-input>
+      <a-form-model :model="newTag" :rules="addTagRules" ref="addTagRef">
+        <a-form-model-item label="状态名称" prop="tag_name">
+          <a-input v-model="newTag.tag_name"></a-input>
         </a-form-model-item>
       </a-form-model>
     </a-modal>
 
-    <!-- 编辑分类区域 -->
+    <!-- 编辑状态区域 -->
     <a-modal
       closable
       destroyOnClose
-      title="编辑分类"
-      :visible="editCateVisible"
+      title="编辑状态"
+      :visible="editTagVisible"
       width="60%"
-      @ok="editCateOk"
-      @cancel="editCateCancel"
+      @ok="editTagOk"
+      @cancel="editTagCancel"
     >
-      <a-form-model :model="CateInfo" :rules="CateRules" ref="addCateRef">
-        <a-form-model-item label="分类名称" prop="name">
-          <a-input v-model="CateInfo.name"></a-input>
+      <a-form-model :model="TagInfo" :rules="TagRules" ref="addTagRef">
+        <a-form-model-item label="状态名称" prop="tag_name">
+          <a-input v-model="TagInfo.tag_name"></a-input>
         </a-form-model-item>
       </a-form-model>
     </a-modal>
@@ -80,10 +80,10 @@ const columns = [
     align: 'center',
   },
   {
-    title: '分类名',
-    dataIndex: 'name',
+    title: '状态状态',
+    dataIndex: 'tag_name',
     width: '20%',
-    key: 'name',
+    key: 'tag_name',
     align: 'center',
   },
   {
@@ -105,13 +105,13 @@ export default {
         showSizeChanger: true,
         showTotal: (total) => `共${total}条`,
       },
-      Catelist: [],
-      CateInfo: {
-        name: '',
+      Taglist: [],
+      TagInfo: {
+        tag_name: '',
         id: 0,
       },
-      newCate: {
-        name: '',
+      newTag: {
+        tag_name: '',
       },
       columns,
       queryParam: {
@@ -119,12 +119,12 @@ export default {
         pagenum: 1,
       },
       editVisible: false,
-      CateRules: {
-        name: [
+      TagRules: {
+        tag_name: [
           {
             validator: (rule, value, callback) => {
-              if (this.CateInfo.name === '') {
-                callback(new Error('请输入分类名'))
+              if (this.TagInfo.tag_name === '') {
+                callback(new Error('请输入状态名'))
               } else {
                 callback()
               }
@@ -133,12 +133,12 @@ export default {
           },
         ],
       },
-      addCateRules: {
+      addTagRules: {
         name: [
           {
             validator: (rule, value, callback) => {
-              if (this.newCate.name === '') {
-                callback(new Error('请输入分类名'))
+              if (this.newTag.tag_name === '') {
+                callback(new Error('请输入状态名'))
               } else {
                 callback()
               }
@@ -147,17 +147,17 @@ export default {
           },
         ],
       },
-      editCateVisible: false,
-      addCateVisible: false,
+      editTagVisible: false,
+      addTagVisible: false,
     }
   },
   created() {
-    this.getCateList()
+    this.getTagList()
   },
   methods: {
-    // 获取分类列表
-    async getCateList() {
-      const { data: res } = await this.$http.get('category/list', {
+    // 获取状态列表
+    async getTagList() {
+      const { data: res } = await this.$http.get('tag/list', {
         pagesize: this.queryParam.pagesize,
         pagenum: this.queryParam.pagenum,
       })
@@ -169,7 +169,7 @@ export default {
         }
         this.$message.error(res.message)
       }
-      this.Catelist = res.data
+      this.Taglist = res.data
       this.pagination.total = res.total
     },
     // 更改分页
@@ -185,65 +185,64 @@ export default {
         pager.current = 1
       }
       this.pagination = pager
-      this.getCateList()
+      this.getTagList()
     },
-    // 删除分类
-    deleteCate(id) {
+    // 删除状态
+    deleteTag(id) {
       this.$confirm({
         title: '提示：请再次确认',
-        content: '确定要删除该分类吗？一旦删除，无法恢复',
+        content: '确定要删除该状态吗？一旦删除，无法恢复',
         onOk: async () => {
-          const { data: res } = await this.$http.delete(`category/delete/${id}`)
+          const { data: res } = await this.$http.delete(`tag/delete/${id}`)
           if (res.status != 200) return this.$message.error(res.message)
           this.$message.success('删除成功')
-          this.getCateList()
+          this.getTagList()
         },
         onCancel: () => {
           this.$message.info('已取消删除')
         },
       })
     },
-    // 新增分类
-    addCateOk() {
-      this.$refs.addCateRef.validate(async (valid) => {
+    // 新增状态
+    addTagOk() {
+      this.$refs.addTagRef.validate(async (valid) => {
         if (!valid) return this.$message.error('参数不符合要求，请重新输入')
-        const { data: res } = await this.$http.post('category/add', {
-          name: this.newCate.name,
+        const { data: res } = await this.$http.post('tag/add', {
+          tag_name: this.newTag.tag_name,
         })
         if (res.status != 200) return this.$message.error(res.message)
-        this.$refs.addCateRef.resetFields()
-        this.addCateVisible = false
-        this.$message.success('添加分类成功')
-        await this.getCateList()
+        this.$refs.addTagRef.resetFields()
+        this.addTagVisible = false
+        this.$message.success('添加状态成功')
+        await this.getTagList()
       })
     },
-    addCateCancel() {
-      this.$refs.addCateRef.resetFields()
-      this.addCateVisible = false
-      this.$message.info('新增分类已取消')
+    addTagCancel() {
+      this.$refs.addTagRef.resetFields()
+      this.addTagVisible = false
+      this.$message.info('新增状态已取消')
     },
-    // 编辑分类
-    async editCate(id) {
-      this.editCateVisible = true
-      const { data: res } = await this.$http.get(`category/info/${id}`)
-      this.CateInfo = res.data
-      this.CateInfo.id = id
+    // 编辑状态
+    async editTag(id) {
+      this.editTagVisible = true
+      const { data: res } = await this.$http.get(`tag/info/${id}`)
+      this.TagInfo = res.data
     },
-    editCateOk() {
-      this.$refs.addCateRef.validate(async (valid) => {
+    editTagOk() {
+      this.$refs.addTagRef.validate(async (valid) => {
         if (!valid) return this.$message.error('参数不符合要求，请重新输入')
-        const { data: res } = await this.$http.put(`category/edit/${this.CateInfo.id}`, {
-          name: this.CateInfo.name,
+        const { data: res } = await this.$http.put(`tag/edit/${this.TagInfo.id}`, {
+          tag_name: this.TagInfo.tag_name,
         })
         if (res.status != 200) return this.$message.error(res.message)
-        this.editCateVisible = false
-        this.$message.success('更新分类信息成功')
-        this.getCateList()
+        this.editTagVisible = false
+        this.$message.success('更新状态信息成功')
+        this.getTagList()
       })
     },
-    editCateCancel() {
-      this.$refs.addCateRef.resetFields()
-      this.editCateVisible = false
+    editTagCancel() {
+      this.$refs.addTagRef.resetFields()
+      this.editTagVisible = false
       this.$message.info('编辑已取消')
     },
   },

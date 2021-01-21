@@ -34,6 +34,15 @@ func GetUsers(pageSize int, pageNum int) (int, []User, int64) {
 	}
 	return message.SUCCSES, users, total
 }
+// 查询单个用户
+func GetUserInfo(id int) (User,int) {
+	var user User
+	err = db.Where("id = ?",id).First(&user).Error
+	if err != nil {
+		return user,message.ERROR
+	}
+	return user,message.SUCCSES
+}
 
 // 编辑用户
 func (u User) EditUserInfo() int {

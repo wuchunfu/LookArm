@@ -47,6 +47,20 @@ func GetUsers(c iris.Context) {
 	})
 }
 
+// 查询单个管理员
+func GetUserInfo(c iris.Context) {
+	id, _ := c.Params().GetInt("id")
+
+	data, code := model.GetUserInfo(id)
+
+	c.JSON(iris.Map{
+		"data":    data,
+		"status":  code,
+		"message": message.GetErrMsg(code),
+	})
+
+}
+
 // 编辑管理员
 func EditUser(c iris.Context) {
 

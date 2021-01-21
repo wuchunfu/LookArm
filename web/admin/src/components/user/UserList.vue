@@ -2,15 +2,6 @@
   <div>
     <a-card>
       <a-row :gutter="20">
-        <a-col :span="6">
-          <a-input-search
-            v-model="queryParam.user_name"
-            placeholder="输入用户名查找"
-            enter-button
-            allowClear
-            @search="getUserList"
-          />
-        </a-col>
         <a-col :span="4">
           <a-button type="primary" @click="addUserVisible = true">新增</a-button>
         </a-col>
@@ -58,6 +49,9 @@
         <a-form-model-item label="用户名" prop="user_name">
           <a-input v-model="newUser.user_name"></a-input>
         </a-form-model-item>
+        <a-form-model-item label="电子邮箱">
+          <a-input v-model="newUser.email"></a-input>
+        </a-form-model-item>
         <a-form-model-item has-feedback label="密码" prop="password">
           <a-input-password v-model="newUser.password"></a-input-password>
         </a-form-model-item>
@@ -81,19 +75,14 @@
         <a-form-model-item label="用户名" prop="user_name">
           <a-input v-model="userInfo.user_name"></a-input>
         </a-form-model-item>
-        <a-form-model-item label="是否为管理员">
-          <a-switch
-            :checked="IsAdmin"
-            checked-children="是"
-            un-checked-children="否"
-            @change="adminChange"
-          />
+        <a-form-model-item label="电子邮箱">
+          <a-input v-model="userInfo.email"></a-input>
         </a-form-model-item>
       </a-form-model>
     </a-modal>
 
     <!-- 修改密码 -->
-    <a-modal
+    <!-- <a-modal
       closable
       title="修改密码"
       :visible="changePasswordVisible"
@@ -110,7 +99,7 @@
           <a-input-password v-model="changePassword.checkpass"></a-input-password>
         </a-form-model-item>
       </a-form-model>
-    </a-modal>
+    </a-modal>-->
   </div>
 </template>
 
@@ -160,13 +149,13 @@ export default {
       userInfo: {
         user_name: '',
         password: '',
-        role: 2,
+        email: '',
         checkPass: '',
       },
       newUser: {
         user_name: '',
         password: '',
-        role: 2,
+        email: '',
         checkPass: '',
       },
       changePassword: {
@@ -315,21 +304,11 @@ export default {
   created() {
     this.getUserList()
   },
-  computed: {
-    IsAdmin: function () {
-      if (this.userInfo.role === 1) {
-        return true
-      } else {
-        return false
-      }
-    },
-  },
   methods: {
     // 获取用户列表
     async getUserList() {
       const { data: res } = await this.$http.get('users', {
         params: {
-          user_name: this.queryParam.user_name,
           pagesize: this.queryParam.pagesize,
           pagenum: this.queryParam.pagenum,
         },
@@ -406,7 +385,7 @@ export default {
     // 编辑用户
     async editUser(id) {
       this.editUserVisible = true
-      const { data: res } = await this.$http.get(`user/${id}`)
+      const { data: res } = await this.$http.get(`user/info/${id}`)
       this.userInfo = res.data
       this.userInfo.id = id
     },
@@ -415,7 +394,7 @@ export default {
         if (!valid) return this.$message.error('参数不符合要求，请重新输入')
         const { data: res } = await this.$http.put(`user/${this.userInfo.id}`, {
           user_name: this.userInfo.user_name,
-          role: this.userInfo.role,
+          email: this.userInfo.email,
         })
         if (res.status != 200) return this.$message.error(res.message)
         this.editUserVisible = false
@@ -430,28 +409,28 @@ export default {
     },
 
     // 修改密码
-    async ChangePassword(id) {
-      this.changePasswordVisible = true
-      const { data: res } = await this.$http.get(`user/${id}`)
-      this.changePassword.id = id
-    },
-    changePasswordOk() {
-      this.$refs.changePasswordRef.validate(async (valid) => {
-        if (!valid) return this.$message.error('参数不符合要求，请重新输入')
-        const { data: res } = await this.$http.put(`admin/changepw/${this.changePassword.id}`, {
-          password: this.changePassword.password,
-        })
-        if (res.status != 200) return this.$message.error(res.message)
-        this.changePasswordVisible = false
-        this.$message.success('修改密码成功')
-        this.getUserList()
-      })
-    },
-    changePasswordCancel() {
-      this.$refs.changePasswordRef.resetFields()
-      this.changePasswordVisible = false
-      this.$message.info('已取消')
-    },
+    // async ChangePassword(id) {
+    //   this.changePasswordVisible = true
+    //   const { data: res } = await this.$http.get(`user/${id}`)
+    //   this.changePassword.id = id
+    // },
+    // changePasswordOk() {
+    //   this.$refs.changePasswordRef.validate(async (valid) => {
+    //     if (!valid) return this.$message.error('参数不符合要求，请重新输入')
+    //     const { data: res } = await this.$http.put(`admin/changepw/${this.changePassword.id}`, {
+    //       password: this.changePassword.password,
+    //     })
+    //     if (res.status != 200) return this.$message.error(res.message)
+    //     this.changePasswordVisible = false
+    //     this.$message.success('修改密码成功')
+    //     this.getUserList()
+    //   })
+    // },
+    // changePasswordCancel() {
+    //   this.$refs.changePasswordRef.resetFields()
+    //   this.changePasswordVisible = false
+    //   this.$message.info('已取消')
+    // },
   },
 }
 </script>

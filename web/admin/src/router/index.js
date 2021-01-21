@@ -5,11 +5,12 @@ const Admin = () => import(/* webpackChunkName: "Admin" */ '../views/Admin.vue')
 
 // 页面路由组件
 const Index = () => import(/* webpackChunkName: "Index" */ '../components/admin/Index.vue')
-const ArtList = () => import(/* webpackChunkName: "ArtList" */ '../components/article/ArtList.vue')
+const PostInfo = () => import(/* webpackChunkName: "ArtList" */ '../components/postinfo/postInfo.vue')
+const PostInfoCate = () => import(/* webpackChunkName: "ArtList" */ '../components/postinfo/postInfoCate.vue')
+const PostInfoTag = () => import(/* webpackChunkName: "ArtList" */ '../components/postinfo/postInfoTag.vue')
 const CateList = () => import(/* webpackChunkName: "CateList" */ '../components/category/CateList.vue')
 const UserList = () => import(/* webpackChunkName: "UserList" */ '../components/user/UserList.vue')
-// const Profile = () => import(/* webpackChunkName: "UserList" */ '../components/user/Profile.vue')
-const CommentList = () => import(/* webpackChunkName: "UserList" */ '../components/comment/commentList.vue')
+const Tag = () => import('../components/tag/tagList.vue')
 
 // 路由重复点击捕获错误
 const originalPush = VueRouter.prototype.push
@@ -44,13 +45,28 @@ const routes = [
           title: 'GinBlog 后台管理页面'
         }
       },
-
       {
-        path: 'artlist',
-        component: ArtList,
+        path: 'postinfo',
+        component: PostInfo,
         meta: {
           title: '文章列表'
         }
+      },
+      {
+        path: 'postinfo/catelist/:id',
+        component: PostInfoCate,
+        meta: {
+          title: '分类表单'
+        },
+        props: true
+      },
+      {
+        path: 'postinfo/taglist/:id',
+        component: PostInfoTag,
+        meta: {
+          title: '分类表单'
+        },
+        props: true
       },
       {
         path: 'catelist',
@@ -60,18 +76,17 @@ const routes = [
         }
       },
       {
+        path: 'tag',
+        component: Tag,
+        meta: {
+          title: 'app状态管理'
+        }
+      },
+      {
         path: 'userlist',
         component: UserList,
         meta: {
           title: '用户列表'
-        }
-      },
-
-      {
-        path: 'commentlist',
-        component: CommentList,
-        meta: {
-          title: '评论管理'
         }
       }
     ]

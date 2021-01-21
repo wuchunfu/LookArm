@@ -45,12 +45,31 @@ func PostAppInfo(data *PostInfo) int {
 }
 
 // 查询表单列表
-func GetPostInfoList(pageSize int, pageNum int) ([]PostInfo, int64, int) {
+func GetPostInfoList(appName string, pageSize int, pageNum int) ([]PostInfo, int64, int) {
 	var postInfoList []PostInfo
 	var total int64
+	if appName == "" {
+		err = db.Preload("Category").Preload("Tag").Limit(pageSize).Offset((pageNum - 1) * pageSize).Find(&postInfoList).Error
+		db.Model(&postInfoList).Count(&total)
+	}
+	err = db.Preload("Category").Preload("Tag").Where("app_name LIKE ?", "%"+appName+"%").Limit(pageSize).Offset((pageNum - 1) * pageSize).Find(&postInfoList).Error
+	db.Model(&postInfoList).Where("app_name like ?", "%"+appName+"%").Count(&total)
+	if err != nil {
+		return postInfoList, 0, message.ERROR
+	}
+	return postInfoList, total, message.SUCCSES
+}
 
-	err = db.Preload("Category").Preload("Tag").Limit(pageSize).Offset((pageNum - 1) * pageSize).Find(&postInfoList).Error
-	db.Model(&postInfoList).Count(&total)
+// 查询分类下的表单
+func GetPostInfoCateList(cateID int,appName string, pageSize int, pageNum int) ([]PostInfo, int64, int) {
+	var postInfoList []PostInfo
+	var total int64
+	if appName == "" {
+		err = db.Where("category_id = ?",cateID).Preload("Category").Preload("Tag").Limit(pageSize).Offset((pageNum - 1) * pageSize).Find(&postInfoList).Error
+		db.Model(&postInfoList).Where("category_id = ?",cateID).Count(&total)
+	}
+	err = db.Where("category_id = ?",cateID).Where("app_name LIKE ?", "%"+appName+"%").Preload("Category").Preload("Tag").Limit(pageSize).Offset((pageNum - 1) * pageSize).Find(&postInfoList).Error
+	db.Model(&postInfoList).Where("app_name like ?", "%"+appName+"%").Where("category_id = ?",cateID).Count(&total)
 	if err != nil {
 		return postInfoList, 0, message.ERROR
 	}

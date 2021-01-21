@@ -19,6 +19,7 @@ func InitRouter() {
 		v1.Post("adduser", api.AddUser)
 		v1.Delete("delete_user/{id:uint}", api.DeleteUser)
 		v1.Get("users", api.GetUsers)
+		v1.Get("user/info/{id:int}",api.GetUserInfo)
 		v1.Put("user/{id:uint}", api.EditUser)
 		// 标签管理模块
 		v1.Post("tag/add", api.AddTag)
@@ -33,6 +34,7 @@ func InitRouter() {
 		// 表单管理模块
 		v1.Put("postinfo/edit/{id:int}", api.EditPostInfo)
 		v1.Delete("postinfo/delete/{id:int}", api.DeletePostInfo)
+		v1.Get("postinfo/category/{id}",api.GetPostInfoCateList)
 
 		// App信息管理模块
 		v1.Post("appinfo/add",api.AddAppInfo)
