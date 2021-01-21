@@ -10,19 +10,19 @@ import (
 func GetTagList(c iris.Context) {
 	pageSize, _ := c.URLParamInt("pagesize")
 	pageNum, _ := c.URLParamInt("pagenum")
-
+	
 	switch {
 	case pageSize >= 100:
 		pageSize = 100
 	case pageSize <= 0:
 		pageSize = 10
 	}
-
+	
 	if pageNum == 0 {
 		pageNum = 1
 	}
-
-	data, total,code := model.GetTags(pageSize, pageNum)
+	
+	data, total, code := model.GetTags(pageSize, pageNum)
 	c.JSON(
 		iris.Map{
 			"status":  code,
@@ -36,9 +36,9 @@ func GetTagList(c iris.Context) {
 // 获取单个标签
 func GetTagInfo(c iris.Context) {
 	id, _ := c.Params().GetInt("id")
-
+	
 	data, code := model.GetTag(id)
-
+	
 	c.JSON(
 		iris.Map{
 			"status":  code,
@@ -67,7 +67,7 @@ func EditTag(c iris.Context) {
 	id, _ := c.Params().GetInt("id")
 	_ = c.ReadJSON(&data)
 	code = model.EditTag(id, &data)
-
+	
 	c.JSON(
 		iris.Map{
 			"status":  code,

@@ -134,3 +134,6 @@
 2021-01-21 00:37:34|55.0605ms|200|PUT|/api/v1/tag/edit/2|::1|id=2|27 B|39 B|{"tag_name":"尚无信息"}|
 2021-01-21 00:38:10|38.0664ms|200|GET|/api/v1/category/info/1|::1|id=1|0 B|86 B||
 2021-01-21 00:38:15|11.996ms|200|GET|/api/v1/category/info/2|::1|id=2|0 B|96 B||
+2021-01-19 18:02:11|11.9985ms|200|GET|/api/v1/users|::1|pagenum=1 pagesize=2|0 B|473 B||
+2021-01-19 18:02:18|35.0151ms|200|GET|/api/v1/users|::1|pagenum=4 pagesize=2|0 B|294 B||
+2021-01-19 18:02:22|12.0164ms|200|GET|/api/v1/users|::1|pagenum=3 pagesize=2|0 B|496 B||

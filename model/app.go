@@ -1,6 +1,9 @@
 package model
 
-import "gorm.io/gorm"
+import (
+	"gorm.io/gorm"
+	"lookarm/utils/message"
+)
 
 type AppInfo struct {
 	gorm.Model
@@ -30,4 +33,54 @@ type PostInfo struct {
 	AppTag       int      `gorm:"not null" json:"app_tag"`
 	Category     Category `gorm:"foreignKey:AppCategory"`
 	Tag          Tag      `gorm:"foreignKey:AppTag"`
+}
+
+// 提交表单
+func PostAppInfo(data *PostInfo) int {
+	err = db.Create(&data).Error
+	if err != nil {
+		return message.ERROR
+	}
+	return  message.SUCCSES
+}
+
+// 查询表单列表
+func GetPostInfoList(pageSize int,pageNum int) ([]PostInfo,int64,int) {
+	var postInfoList []PostInfo
+	var total int64
+	
+	err = db.Preload("Category","Tag").Limit(pageSize).Offset((pageSize-1)*pageNum).Find(&postInfoList).Count(&total).Error
+	if err != nil {
+		return postInfoList,0,message.ERROR
+	}
+	return postInfoList,total,message.SUCCSES
+}
+
+// 查询单个表单
+func GetPostInfo(id int) (PostInfo,int) {
+	var postInfo PostInfo
+	err = db.Preload("Category","Tag").Where("id = ?",id).First(&postInfo).Error
+	if err != nil {
+		return postInfo,message.ERROR
+	}
+	return postInfo,message.SUCCSES
+}
+
+// 编辑表单
+func EditPostInfo(id int,data *PostInfo) int {
+	err = db.Where("id = ?",id).Updates(&data).Error
+	if err != nil {
+		return message.ERROR
+	}
+	return message.SUCCSES
+}
+
+// 删除表单
+func DeletePostInfo(id int) int {
+	var postInfo PostInfo
+	err = db.Where("id = ?",id).Delete(&postInfo).Error
+	if err != nil {
+		return message.ERROR
+	}
+	return message.SUCCSES
 }

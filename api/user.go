@@ -45,10 +45,6 @@ func GetUsers(c iris.Context) {
 		"status":  code,
 		"message": message.GetErrMsg(code),
 	})
-	c.JSON(iris.Map{
-		"status":  code,
-		"message": message.GetErrMsg(code),
-	})
 }
 
 // 编辑管理员
