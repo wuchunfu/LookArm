@@ -24,7 +24,7 @@ func InitDatabase() {
 
 	db, err = gorm.Open(mysql.Open(dsn), &gorm.Config{
 		// gorm日志模式：silent
-		Logger: logger.Default.LogMode(logger.Info),
+		Logger: logger.Default.LogMode(logger.Silent),
 		// 外键约束
 		DisableForeignKeyConstraintWhenMigrating: true,
 		// 禁用默认事务（提高运行速度）
