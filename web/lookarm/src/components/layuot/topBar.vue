@@ -15,7 +15,7 @@
         >{{item.name}}</v-btn>
 
         <v-spacer></v-spacer>
-        <v-btn text dark>
+        <v-btn text dark href="https://gitee.com/wejectchan/lookarm/issues" target="blank">
           <v-icon left>mdi-information-outline</v-icon>有建议？提交Issue
         </v-btn>
 
