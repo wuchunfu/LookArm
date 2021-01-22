@@ -124,35 +124,34 @@ func AddAppInfo(data *AppInfo) {
 }
 
 // 查询app信息列表
-func GetAppInfoList(pageSize int, pageNum int) ([]AppInfo, int64, int) {
-	var appInfoList []AppInfo
-	var total int64
-
-	err = db.Preload("Category").Preload("Tag").Order("Updated_At DESC").Limit(pageSize).Offset((pageNum - 1) * pageSize).Find(&appInfoList).Error
-	db.Model(&appInfoList).Count(&total)
-	if err != nil {
-		return appInfoList, 0, message.ERROR
-	}
-	return appInfoList, total, message.SUCCSES
-}
-
-
-// 查询分类下的App信息
-func GetAppInfoCateList(cateID int, appName string, pageSize int, pageNum int) ([]AppInfo, int64, int) {
+func GetAppInfoList(appName string, pageSize int, pageNum int) ([]AppInfo, int64, int) {
 	var appInfoList []AppInfo
 	var total int64
 	if appName == "" {
-		err = db.Where("category_id = ?", cateID).Order("Updated_At DESC").Preload("Category").Preload("Tag").Limit(pageSize).Offset((pageNum - 1) * pageSize).Find(&appInfoList).Error
-		db.Model(&appInfoList).Where("category_id = ?", cateID).Count(&total)
+		err = db.Preload("Category").Preload("Tag").Order("Updated_At DESC").Limit(pageSize).Offset((pageNum - 1) * pageSize).Find(&appInfoList).Error
+		db.Model(&appInfoList).Count(&total)
 	}
-	err = db.Where("category_id = ?", cateID).Where("app_name LIKE ?", "%"+appName+"%").Order("Updated_At DESC").Preload("Category").Preload("Tag").Limit(pageSize).Offset((pageNum - 1) * pageSize).Find(&appInfoList).Error
-	db.Model(&appInfoList).Where("app_name like ?", "%"+appName+"%").Where("category_id = ?", cateID).Count(&total)
+	err = db.Preload("Category").Preload("Tag").Order("Updated_At DESC").Where("app_name LIKE ?", "%"+appName+"%").Limit(pageSize).Offset((pageNum - 1) * pageSize).Find(&appInfoList).Error
+	db.Model(&appInfoList).Where("app_name LIKE ?", "%"+appName+"%").Count(&total)
 	if err != nil {
 		return appInfoList, 0, message.ERROR
 	}
 	return appInfoList, total, message.SUCCSES
 }
 
+// 查询分类下的App信息
+func GetAppInfoCateList(cateID int, pageSize int, pageNum int) ([]AppInfo, int64, int) {
+	var appInfoList []AppInfo
+	var total int64
+
+	err = db.Where("category_id = ?", cateID).Order("Updated_At DESC").Preload("Category").Preload("Tag").Limit(pageSize).Offset((pageNum - 1) * pageSize).Find(&appInfoList).Error
+	db.Model(&appInfoList).Where("category_id = ?", cateID).Count(&total)
+
+	if err != nil {
+		return appInfoList, 0, message.ERROR
+	}
+	return appInfoList, total, message.SUCCSES
+}
 
 // 查询单个表单
 func GetAppInfo(id int) (AppInfo, int) {

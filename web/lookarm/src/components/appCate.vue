@@ -1,5 +1,11 @@
 <template>
   <div class="mt-2" app>
+    <div v-if="total == 0 && isLoad" class="d-flex justify-center align-center">
+      <div>
+        <v-alert class="ma-5" dense outlined type="error">抱歉，该分类还未收录APP，提交个表单告诉我们吧！</v-alert>
+      </div>
+    </div>
+
     <v-row justify="center" align="center">
       <v-col cols="6">
         <v-card outlined elevation="2" class="my-4" v-for="item in appInfoList" :key="item.id">
@@ -49,6 +55,7 @@
 </template>
 <script>
 export default {
+  props: ['id'],
   data() {
     return {
       appInfoList: [],
@@ -57,22 +64,27 @@ export default {
         pagenum: 1,
       },
       total: 0,
+      isLoad: false,
     }
   },
   created() {
-    this.getAppInfoList()
+    this.getAppInfoCateList()
   },
   methods: {
     // 获取app信息列表
-    async getAppInfoList() {
-      const { data: res } = await this.$http.get('appinfo/list', {
-        params: {
-          pagesize: this.queryParam.pagesize,
-          pagenum: this.queryParam.pagenum,
-        },
-      })
+    async getAppInfoCateList() {
+      const { data: res } = await this.$http.get(
+        `appinfo/category/${this.id}`,
+        {
+          params: {
+            pagesize: this.queryParam.pagesize,
+            pagenum: this.queryParam.pagenum,
+          },
+        }
+      )
       this.appInfoList = res.data
       this.total = res.total
+      this.isLoad = true
     },
   },
 }

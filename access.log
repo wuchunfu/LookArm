@@ -2004,3 +2004,674 @@
 2021-01-22 14:53:43|49.381ms|200|GET|/api/v1/tag/list|::1|0 B|137 B||
 2021-01-22 14:53:43|50.3679ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
 2021-01-22 14:53:43|54.0188ms|200|GET|/api/v1/appinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|67 B||
+2021-01-22 16:58:27|75.5914ms|200|GET|/api/v1/appinfo/list|::1|0 B|67 B||
+2021-01-22 16:58:55|220.2751ms|200|GET|/api/v1/appinfo/list|::1|0 B|67 B||
+2021-01-22 16:59:03|13.9949ms|200|GET|/api/v1/appinfo/list|::1|0 B|67 B||
+2021-01-22 16:59:56|242.6006ms|200|GET|/api/v1/appinfo/list|::1|0 B|67 B||
+2021-01-22 17:00:01|17.9972ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|67 B||
+2021-01-22 17:00:06|61.5906ms|200|POST|/api/v1/appinfo/add|::1|196 B|39 B|{"app_name":"goland","app_version":"2020.3.2","app_webpage":"https://jet.com","app_desc":"golang ide","app_developer":"jet","user_name":"weject","email":"weject@qq.com","category_id":1,"tag_id":1}|
+2021-01-22 17:00:07|21.9535ms|200|POST|/api/v1/appinfo/add|::1|196 B|53 B|{"app_name":"goland","app_version":"2020.3.2","app_webpage":"https://jet.com","app_desc":"golang ide","app_developer":"jet","user_name":"weject","email":"weject@qq.com","category_id":1,"tag_id":1}|
+2021-01-22 17:00:08|14.9924ms|200|POST|/api/v1/appinfo/add|::1|196 B|53 B|{"app_name":"goland","app_version":"2020.3.2","app_webpage":"https://jet.com","app_desc":"golang ide","app_developer":"jet","user_name":"weject","email":"weject@qq.com","category_id":1,"tag_id":1}|
+2021-01-22 17:00:10|42.592ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|641 B||
+2021-01-22 17:00:14|48.8778ms|200|GET|/api/v1/appinfo/list|::1|0 B|641 B||
+2021-01-22 17:00:34|63.0004ms|200|GET|/api/v1/appinfo/list|::1|0 B|641 B||
+2021-01-22 17:00:35|34.3408ms|200|GET|/api/v1/appinfo/list|::1|0 B|641 B||
+2021-01-22 17:00:48|73.4068ms|200|POST|/api/v1/appinfo/add|::1|197 B|39 B|{"app_name":"goland1","app_version":"2020.3.2","app_webpage":"https://jet.com","app_desc":"golang ide","app_developer":"jet","user_name":"weject","email":"weject@qq.com","category_id":1,"tag_id":1}|
+2021-01-22 17:00:52|17.9939ms|200|POST|/api/v1/appinfo/add|::1|197 B|53 B|{"app_name":"goland1","app_version":"2020.3.2","app_webpage":"https://jet.com","app_desc":"golang ide","app_developer":"jet","user_name":"weject","email":"weject@qq.com","category_id":1,"tag_id":1}|
+2021-01-22 17:00:56|36.3975ms|200|POST|/api/v1/appinfo/add|::1|197 B|39 B|{"app_name":"goland2","app_version":"2020.3.2","app_webpage":"https://jet.com","app_desc":"golang ide","app_developer":"jet","user_name":"weject","email":"weject@qq.com","category_id":1,"tag_id":1}|
+2021-01-22 17:01:00|310.6494ms|200|GET|/api/v1/appinfo/list|::1|0 B|1.7 KB||
+2021-01-22 17:04:48|277.7557ms|200|GET|/api/v1/appinfo/list|::1|0 B|1.7 KB||
+2021-01-22 17:05:20|70.0007ms|200|GET|/api/v1/appinfo/list|::1|0 B|1.7 KB||
+2021-01-22 17:05:55|251.5307ms|200|GET|/api/v1/appinfo/list|::1|0 B|1.7 KB||
+2021-01-22 17:07:00|290.3468ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=5|0 B|1.7 KB||
+2021-01-22 17:07:02|59.121ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=5|0 B|1.7 KB||
+2021-01-22 17:08:34|266.2579ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|1.7 KB||
+2021-01-22 17:11:26|324.8621ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 17:15:52|255.1841ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 17:15:55|43.7845ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 17:16:09|54.4361ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 17:18:56|270.1688ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 17:19:05|53.8404ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 17:22:01|237.1349ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 17:22:35|117.7781ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 17:23:08|284.5935ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 17:26:13|250.3847ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 17:27:27|282.7059ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 17:28:50|219.6331ms|200|GET|/api/v1/tag/list|::1|0 B|137 B||
+2021-01-22 17:28:50|243.1451ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 17:34:20|239.9591ms|200|GET|/api/v1/tag/list|::1|0 B|209 B||
+2021-01-22 17:34:20|275.6322ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 17:34:55|27.7827ms|200|GET|/api/v1/tag/list|::1|0 B|209 B||
+2021-01-22 17:34:55|67.5437ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 17:35:11|52.9963ms|200|GET|/api/v1/tag/list|::1|0 B|209 B||
+2021-01-22 17:35:11|55.992ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 17:35:42|230.0057ms|200|GET|/api/v1/tag/list|::1|0 B|209 B||
+2021-01-22 17:35:43|252.38ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 17:35:56|49.0017ms|200|GET|/api/v1/tag/list|::1|0 B|209 B||
+2021-01-22 17:35:56|95.8053ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 17:36:08|35.6869ms|200|GET|/api/v1/tag/list|::1|0 B|209 B||
+2021-01-22 17:36:08|87.0316ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 17:38:22|235.1601ms|200|GET|/api/v1/tag/list|::1|0 B|209 B||
+2021-01-22 17:38:22|297.9424ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 17:40:23|221.0712ms|200|GET|/api/v1/tag/list|::1|0 B|209 B||
+2021-01-22 17:40:23|234.5593ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 17:40:24|13.9959ms|200|GET|/api/v1/tag/list|::1|0 B|209 B||
+2021-01-22 17:40:24|30.456ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 17:40:51|55.9184ms|200|GET|/api/v1/tag/list|::1|0 B|209 B||
+2021-01-22 17:40:51|101.8293ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 17:40:56|20.2719ms|200|GET|/api/v1/tag/list|::1|0 B|209 B||
+2021-01-22 17:40:56|55.0474ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 17:44:09|252.9224ms|200|GET|/api/v1/tag/list|::1|0 B|209 B||
+2021-01-22 17:44:09|305.5465ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 17:45:05|46.8611ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 17:45:05|47.3912ms|200|GET|/api/v1/tag/list|::1|0 B|209 B||
+2021-01-22 17:45:22|230.1602ms|200|GET|/api/v1/tag/list|::1|0 B|209 B||
+2021-01-22 17:45:22|286.1989ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 17:45:37|46.815ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 17:45:37|65.4444ms|200|GET|/api/v1/tag/list|::1|0 B|209 B||
+2021-01-22 17:45:49|27.4279ms|200|GET|/api/v1/tag/list|::1|0 B|209 B||
+2021-01-22 17:45:49|55.4052ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 17:46:03|59.107ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 17:46:03|60.1064ms|200|GET|/api/v1/tag/list|::1|0 B|209 B||
+2021-01-22 17:46:05|15.0283ms|200|GET|/api/v1/tag/list|::1|0 B|209 B||
+2021-01-22 17:46:05|39.012ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 17:46:44|209.725ms|200|GET|/api/v1/tag/list|::1|0 B|209 B||
+2021-01-22 17:46:44|234.7175ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 17:46:50|9.9305ms|200|GET|/api/v1/tag/list|::1|0 B|209 B||
+2021-01-22 17:46:50|28.0377ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 17:46:53|25.3414ms|200|GET|/api/v1/tag/list|::1|0 B|209 B||
+2021-01-22 17:46:53|10.3577ms|200|GET|/api/v1/tag/list|::1|0 B|209 B||
+2021-01-22 17:46:53|41.7ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 17:47:17|52.5905ms|200|GET|/api/v1/tag/list|::1|0 B|209 B||
+2021-01-22 17:47:17|66.5844ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 17:47:17|19.9923ms|200|GET|/api/v1/tag/list|::1|0 B|209 B||
+2021-01-22 17:47:34|34.1076ms|200|GET|/api/v1/tag/list|::1|0 B|209 B||
+2021-01-22 17:47:34|15.3274ms|200|GET|/api/v1/tag/list|::1|0 B|209 B||
+2021-01-22 17:47:34|68.7026ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 17:48:12|219.2876ms|200|GET|/api/v1/tag/list|::1|0 B|209 B||
+2021-01-22 17:48:12|9.8535ms|200|GET|/api/v1/tag/list|::1|0 B|209 B||
+2021-01-22 17:48:12|261.919ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 17:49:17|245.5394ms|200|GET|/api/v1/tag/list|::1|0 B|209 B||
+2021-01-22 17:49:17|221.3037ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 17:49:17|19.9964ms|200|GET|/api/v1/tag/list|::1|0 B|209 B||
+2021-01-22 17:49:17|12.1383ms|200|GET|/api/v1/tag/list|::1|0 B|209 B||
+2021-01-22 17:49:17|12.4453ms|200|GET|/api/v1/tag/list|::1|0 B|209 B||
+2021-01-22 17:49:59|49.8713ms|200|GET|/api/v1/tag/list|::1|0 B|209 B||
+2021-01-22 17:49:59|16.8437ms|200|GET|/api/v1/tag/list|::1|0 B|209 B||
+2021-01-22 17:49:59|112.2071ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 17:50:11|46.5627ms|200|GET|/api/v1/tag/list|::1|0 B|209 B||
+2021-01-22 17:50:11|13.7628ms|200|GET|/api/v1/tag/list|::1|0 B|209 B||
+2021-01-22 17:50:11|64.0341ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 17:51:56|255.0467ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 17:52:02|30.9911ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 17:52:10|110.0881ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 17:52:23|82.6879ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 17:53:09|268.588ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 17:53:50|101.1656ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 17:54:04|69.8197ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 17:54:25|317.9201ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 17:54:49|57.4186ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 17:55:07|81.7268ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 17:58:14|253.483ms|200|GET|/api/v1/tag/list|::1|0 B|209 B||
+2021-01-22 17:58:14|281.6472ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 17:58:32|27.9942ms|200|GET|/api/v1/tag/list|::1|0 B|297 B||
+2021-01-22 17:58:32|51.8162ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 18:01:05|246.0242ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 18:01:05|270.0162ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 18:01:43|48.684ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 18:01:43|64.0859ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 19:38:26|264.7414ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 19:39:24|47.1708ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 19:39:24|87.9591ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 19:39:36|291.8473ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 19:39:36|336.3067ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 19:40:29|48.6073ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 19:40:29|100.5978ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 19:41:53|413.7994ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 19:41:53|433.3979ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 19:43:08|240.1285ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 19:43:08|284.0197ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 19:43:35|35.9271ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 19:43:35|80.9027ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 19:44:24|217.1694ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 19:44:24|262.2462ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 19:45:53|227.1442ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 19:45:53|270.0632ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 19:46:07|27.9523ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 19:46:07|47.9802ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 19:47:50|246.8946ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 19:47:50|283.0908ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 19:48:17|56.0585ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 19:48:17|101.0259ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 19:49:47|234.8751ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 19:49:47|261.9478ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 19:49:55|16.8869ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 19:49:55|54.4303ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 19:51:43|245.2773ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 19:51:43|313.2886ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 19:51:50|21.4993ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 19:51:50|33.5129ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 19:52:39|47.9842ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 19:52:39|93.2106ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 19:53:06|249.0716ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 19:53:06|263.0506ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 19:53:44|119.517ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 19:53:46|35.3898ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 19:53:47|77.2907ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 19:54:27|262.1082ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 19:54:27|273.9433ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 19:54:28|9.9973ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 19:54:28|37.3545ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 19:54:53|67.9775ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 19:54:53|86.9407ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 19:55:00|9.996ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 19:55:00|60.4158ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 19:55:13|53.4096ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 19:55:13|75.2235ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 19:55:16|15.291ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 19:55:16|48.4641ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 19:57:33|236.8908ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 19:57:33|270.892ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 19:57:43|87.9712ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 19:57:43|135.9549ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 19:57:56|55.6812ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 19:57:56|61.6807ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 19:58:07|56.9789ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 19:58:07|86.978ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 19:58:34|246.2801ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 19:58:34|261.2733ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 19:58:51|81.4491ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 19:58:51|99.4434ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 20:00:13|245.2241ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 20:00:13|278.0926ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 20:02:01|338.7099ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 20:02:11|56.711ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 20:02:11|91.093ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 20:02:36|70.693ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 20:02:36|81.3961ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 20:02:39|22.9922ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 20:02:39|55.1513ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 20:02:46|24.6648ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 20:02:46|127.0362ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 20:15:28|272.0408ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 20:15:28|284.0443ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 20:17:38|271.5047ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 20:17:38|284.0446ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 20:17:54|51.0015ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 20:17:54|97.6416ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 20:17:58|36.9888ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 20:17:58|68.9776ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 20:18:32|80.5649ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 20:18:32|93.56ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 20:18:58|251.2793ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 20:18:58|301.7773ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 20:19:59|262.2381ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 20:19:59|299.662ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 20:20:00|25.8635ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 20:20:00|52.8703ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 20:22:01|267.8106ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 20:22:01|326.925ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 20:22:16|57.0419ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 20:22:16|94.6022ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 20:22:23|14.9954ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 20:22:23|62.1135ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 20:22:39|47.6432ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 20:22:40|94.5946ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 20:22:44|26.0053ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 20:22:44|42.0303ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 20:23:09|267.5041ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 20:23:09|312.125ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 20:23:23|63.8271ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 20:23:23|86.8227ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 20:26:17|322.1724ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 20:27:49|261.432ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 20:27:49|291.8223ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 20:33:42|290.7159ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 20:33:42|321.5689ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 20:34:50|254.0151ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 20:34:50|328.3974ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 20:34:58|23.1839ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 20:34:58|36.5418ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 20:35:01|55.7521ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 20:35:02|116.1796ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 20:35:05|24.9994ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 20:35:05|76.638ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 20:36:02|267.4698ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 20:36:02|273.998ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 20:36:46|35.5933ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 20:36:46|77.2439ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 20:36:55|17.9946ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 20:36:55|41.6046ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 20:36:58|71.9761ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 20:36:58|72.9756ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 20:38:33|322.9081ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 20:38:58|82.4561ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 20:45:10|250.3692ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 20:45:10|272.834ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 20:45:38|77.8125ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 20:45:38|92.6944ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 20:45:40|14.4865ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 20:45:41|60.7676ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 20:46:47|345.0557ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 20:47:42|56.0224ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 20:48:45|310.4946ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 20:51:20|288.3053ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 20:51:53|119.2961ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 20:53:15|248.7699ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 20:54:50|265.5667ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 20:55:01|37.9929ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 20:55:02|102.6719ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 20:55:40|56.2935ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 20:55:41|13.9915ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 20:55:41|75.3013ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 20:58:33|427.7377ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 21:04:02|239.0901ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 21:04:02|292.2018ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 21:04:45|61.0454ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 21:07:40|252.923ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 21:07:40|16.6325ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 21:07:40|316.592ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 21:07:40|54.5645ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 21:14:30|259.8591ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 21:17:02|221.0991ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 21:17:02|236.5643ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 21:21:04|248.0908ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 21:21:04|278.903ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 21:22:08|252.8037ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 21:22:08|298.5179ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 21:22:27|56.6322ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 21:22:27|78.6666ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 21:22:38|34.9878ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 21:22:38|94.2643ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 21:23:42|236.6668ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 21:23:42|250.129ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 21:23:56|55.9978ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 21:23:56|98.9997ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 21:24:06|22.7902ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 21:24:06|93.4823ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 21:24:39|59.2602ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 21:24:39|106.7988ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 21:26:02|267.586ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 21:26:02|290.1144ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 21:32:17|302.8598ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 21:38:05|278.9252ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 21:38:39|52.9567ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 21:38:39|55.9462ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 21:40:13|75.9738ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 21:40:13|97.9668ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 21:46:27|261.0111ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 21:48:26|254.9266ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 21:48:26|275.9703ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 21:48:58|58.6267ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 21:48:58|86.0377ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 21:50:13|566.5675ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 21:50:29|56.0344ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 21:50:29|61.0058ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 21:51:16|236.7192ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 21:51:16|253.2261ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 21:51:34|58.8523ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 21:51:34|85.7354ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 21:59:29|270.2174ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 21:59:29|291.7054ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 22:08:38|297.2369ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 22:08:38|322.23ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 22:08:58|54.0718ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-22 22:10:11|261.6956ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-22 22:10:41|69.6632ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-22 22:22:24|302.3077ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 22:25:29|236.3265ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-22 22:29:46|257.5337ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-22 22:30:50|240.3576ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-22 22:33:14|295.192ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 22:35:06|253.7532ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 22:35:06|288.4155ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-22 22:35:06|286.754ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 22:43:18|284.693ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 22:43:21|45.1054ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 22:43:54|74.5741ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 22:48:01|35.3258ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-22 22:48:01|49.308ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 22:48:01|88.3647ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 22:49:06|297.0036ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 22:51:21|242.6025ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-22 22:54:17|246.5207ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-22 22:54:17|16.9701ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-22 22:54:43|44.7159ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 22:54:43|54.7246ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-22 22:54:43|64.2099ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 22:55:50|270.9167ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-22 22:55:50|22.9995ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-22 22:56:51|227.6191ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-22 22:56:57|12.6848ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 22:56:57|67.3448ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-22 22:56:57|82.1047ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 22:57:28|49.9712ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-22 23:07:22|232.0015ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-22 23:07:22|240.9928ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 23:07:22|283.1865ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 23:08:10|31.0613ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-22 23:13:53|275.0909ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-22 23:14:54|227.2096ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-22 23:18:40|245.0383ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 23:18:40|264.5137ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 23:18:40|265.5132ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-22 23:21:09|260.5416ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-22 23:21:15|25.2958ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-22 23:21:15|59.3888ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 23:21:44|29.0332ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-22 23:21:44|50.9529ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 23:22:28|216.4886ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 23:22:28|237.7108ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-22 23:23:20|46.3409ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-22 23:23:20|68.2893ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 23:24:51|232.1301ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 23:24:51|232.7537ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-22 23:25:05|30.8665ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 23:25:05|34.8661ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-22 23:25:47|39.8263ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-22 23:25:47|53.8939ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 23:26:35|267.4569ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-22 23:26:35|284.4516ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 23:30:04|230.2941ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-22 23:30:04|246.3778ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 23:30:29|47.2601ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-22 23:30:29|56.2906ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 23:30:41|49.0733ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 23:30:41|50.0555ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-22 23:32:02|243.9948ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-22 23:32:02|264.9416ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 23:32:02|20.5411ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 23:32:02|285.4526ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 23:32:20|56.0786ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-22 23:32:20|63.2147ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 23:33:30|244.0838ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-22 23:33:30|245.0835ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 23:33:52|56.5615ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 23:33:52|57.5599ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-22 23:34:19|52.0727ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-22 23:34:19|52.0727ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 23:34:38|227.1553ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-22 23:34:38|236.0535ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 23:35:36|48.7763ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-22 23:35:36|54.7592ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 23:35:44|15.0382ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-22 23:35:44|16.0371ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 23:38:22|251.9579ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 23:38:22|286.2465ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-22 23:38:49|33.3258ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-22 23:38:49|40.3397ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 23:39:43|245.4282ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-22 23:39:43|247.4292ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 23:42:28|230.4129ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-22 23:42:28|273.3042ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 23:42:28|273.7629ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 23:42:28|20.0066ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 23:42:42|47.6768ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 23:42:42|48.6762ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-22 23:43:09|27.9951ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-22 23:43:09|60.5734ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 23:44:40|249.2113ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-22 23:44:40|251.2131ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 23:44:40|16.4242ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-22 23:44:40|16.434ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 23:44:40|15.5978ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-22 23:44:40|15.9545ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 23:45:05|41.7544ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-22 23:45:06|55.1275ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 23:45:50|279.9626ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-22 23:45:50|278.9646ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 23:46:32|73.6429ms|200|POST|/api/v1/postinfo/add|::1|4 B|39 B|true|
+2021-01-22 23:48:50|269.4341ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-22 23:48:50|277.4319ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 23:50:05|241.1873ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-22 23:50:05|244.1845ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 23:50:15|19.0482ms|200|POST|/api/v1/postinfo/add|::1|4 B|39 B|true|
+2021-01-22 23:51:33|237.8139ms|200|POST|/api/v1/postinfo/add|::1|193 B|39 B|{"app_name":"web","app_version":"2020.3.2","app_webpage":"https://jet.com","app_desc":"golang ide","app_developer":"jet","user_name":"weject","email":"weject@qq.com","category_id":3,"tag_id":2}|
+2021-01-22 23:53:03|214.6947ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-22 23:53:03|238.9562ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 23:53:20|33.2472ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 23:53:20|43.032ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-22 23:54:31|233.7142ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 23:54:31|11.6413ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 23:54:31|254.997ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-22 23:54:31|276.9745ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 23:54:48|73.1556ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 23:56:21|239.8627ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 23:56:21|25.9982ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 23:56:21|265.8609ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-22 23:56:21|289.9917ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 23:57:35|243.9516ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-22 23:57:35|252.9958ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 23:57:39|16.2125ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 23:57:39|18.2123ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-22 23:57:39|13.995ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 23:57:39|75.9742ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-22 23:59:12|252.3896ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-22 23:59:12|271.3866ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 23:59:55|55.2121ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 23:59:55|59.2072ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-22 23:59:55|14.9945ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-22 23:59:55|62.6627ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-23 00:05:09|233.0847ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-23 00:05:09|244.9493ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 00:06:10|246.6246ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 00:06:10|256.6127ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-23 00:06:22|54.6821ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-23 00:06:22|64.6568ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 00:06:46|48.1044ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-23 00:06:46|66.7805ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 00:07:35|223.4054ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 00:07:35|242.5704ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-23 00:08:26|42.6942ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-23 00:08:26|46.6795ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 00:12:05|228.0362ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-23 00:12:05|237.8461ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 00:12:05|10.8128ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-23 00:12:05|13.009ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 00:13:04|0s|200|OPTIONS|/api/v1/postinfo/add|::1|0 B|0 B||
+2021-01-23 00:13:04|63.3295ms|200|POST|/api/v1/postinfo/add|::1|175 B|39 B|{"app_name":"1","app_version":"1","app_webpage":"http://jet.com","app_desc":"1","app_developer":"1","user_name":"","email":"1@2.com","category_id":2,"tag_id":5,"username":"1"}|
+2021-01-23 00:14:06|74.7639ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-23 00:14:06|75.773ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 00:15:34|246.7378ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-23 00:15:34|245.7297ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 00:16:49|266.1557ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 00:16:49|271.1559ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-23 00:18:14|242.0129ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 00:18:14|257.127ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-23 00:19:08|46.3766ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-23 00:19:08|60.0224ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 00:19:55|236.3873ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-23 00:19:55|246.8214ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 00:20:10|0s|200|OPTIONS|/api/v1/postinfo/add|::1|0 B|0 B||
+2021-01-23 00:20:10|44.2418ms|200|POST|/api/v1/postinfo/add|::1|163 B|39 B|{"app_name":"1","app_version":"1","app_webpage":"http://q","app_desc":"1","app_developer":"1","user_name":"Unkown","email":"Unknow@any","category_id":2,"tag_id":5}|
+2021-01-23 00:22:01|232.27ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 00:22:01|247.0209ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-23 00:24:26|270.1945ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 00:24:26|274.1776ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-23 00:24:57|49.504ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-23 00:24:57|49.504ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 00:41:45|253.076ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-23 00:41:45|278.4467ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 00:42:05|43.186ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-23 00:42:05|56.5426ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 00:42:05|17.6097ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 00:42:05|82.3996ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-23 00:42:55|250.9229ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-23 00:42:55|256.9301ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 00:42:58|9.9967ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 00:42:58|11.9947ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-23 00:42:58|14.6544ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 00:42:58|37.3452ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-23 00:43:35|34.4225ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 00:43:35|42.4199ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-23 00:43:38|10.9954ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-23 00:43:38|14.9937ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 00:43:38|12.9956ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 00:43:38|67.863ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-23 00:43:58|0s|200|OPTIONS|/api/v1/postinfo/add|::1|0 B|0 B||
+2021-01-23 00:43:59|232.2074ms|200|POST|/api/v1/postinfo/add|::1|168 B|39 B|{"app_name":"w","app_version":"w","app_webpage":"http://1","app_desc":"1","app_developer":"w","user_name":"Unkown","email":"Unkown@anywhere","category_id":2,"tag_id":1}|
+2021-01-23 00:46:10|249.9835ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 00:46:10|251.9845ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-23 00:46:14|27.5228ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 00:46:14|28.5213ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-23 00:46:14|25.7764ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 00:46:14|103.4206ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-23 00:46:27|0s|200|OPTIONS|/api/v1/postinfo/add|::1|0 B|0 B||
+2021-01-23 00:46:27|52.0712ms|200|POST|/api/v1/postinfo/add|::1|168 B|39 B|{"app_name":"1","app_version":"1","app_webpage":"http://1","app_desc":"1","app_developer":"1","user_name":"Unkown","email":"Unkown@anywhere","category_id":2,"tag_id":4}|
+2021-01-23 00:51:40|238.1998ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 00:51:40|245.0514ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-23 00:51:40|16.1329ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 00:51:40|314.5051ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-23 00:52:54|244.4742ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 00:52:54|243.4805ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-23 00:52:54|21.2168ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 00:52:54|21.2168ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-23 00:52:54|10.6051ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 00:52:54|14.8816ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 00:52:54|336.7006ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-23 00:52:54|86.0114ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-23 00:53:42|56.0993ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 00:53:42|74.0927ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-23 00:53:42|26.9911ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 00:53:42|163.6648ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-23 00:54:42|246.8966ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 00:54:42|257.8953ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-23 00:54:42|16.9946ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 00:54:42|348.8822ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-23 00:56:03|234.9241ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 00:56:03|232.9236ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-23 00:56:03|10.0099ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 00:56:03|329.0457ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-23 00:58:01|225.5978ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 00:58:01|230.598ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-23 00:58:01|8.5276ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 00:58:01|303.0738ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-23 00:58:06|8.9974ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 00:58:06|15.9961ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-23 00:58:06|15.9953ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 00:58:06|87.97ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-23 00:58:38|33.8131ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-23 00:58:38|44.805ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 00:58:39|17.1071ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 00:58:39|166.0314ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-23 00:58:46|13.9955ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 00:58:46|26.0823ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-23 00:58:46|24.0057ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 00:58:46|90.9732ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-23 00:58:48|110.711ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-23 00:59:33|308.5812ms|200|GET|/api/v1/appinfo/list|::1|app_name=ss pagenum=1 pagesize=10|0 B|67 B||
+2021-01-23 01:00:02|62.518ms|200|GET|/api/v1/appinfo/list|::1|app_name=ssss pagenum=1 pagesize=10|0 B|67 B||
+2021-01-23 01:00:12|66.7569ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 01:00:12|69.754ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-23 01:00:12|20.8261ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 01:00:12|102.9199ms|200|GET|/api/v1/appinfo/list|::1|app_name=ssss pagenum=1 pagesize=10|0 B|67 B||
+2021-01-23 01:00:27|44.3267ms|200|GET|/api/v1/appinfo/list|::1|app_name=ssss pagenum=1 pagesize=10|0 B|67 B||
+2021-01-23 01:02:33|246.9688ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-23 01:02:33|246.9688ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 01:02:33|12.9956ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 01:02:33|251.9567ms|200|GET|/api/v1/appinfo/list|::1|app_name=ssss pagenum=1 pagesize=10|0 B|67 B||
+2021-01-23 01:02:45|32.9927ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-23 01:02:45|33.9924ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 01:02:45|9.9966ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 01:02:45|130.1843ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-23 01:03:34|248.3953ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 01:03:34|254.4342ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-23 01:03:38|10.0049ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-23 01:03:38|13.9938ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 01:11:16|229.133ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 01:11:16|234.3597ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-23 01:12:03|52.6878ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 01:12:03|53.6877ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-23 01:12:43|252.7388ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-23 01:12:43|259.7369ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 01:12:43|17.3185ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 01:12:43|343.7227ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-23 01:13:22|60.7565ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 01:13:22|63.7552ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-23 01:13:22|18.9935ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 01:13:22|154.16ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-23 01:13:50|253.4671ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-23 01:13:56|8.0236ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 01:13:56|12.6856ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 01:13:56|48.4582ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-23 01:13:56|151.5192ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-23 01:14:08|30.0347ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 01:14:08|45.033ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-23 01:14:16|8.8566ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-23 01:14:16|16.8531ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 01:14:16|16.1294ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 01:14:17|94.5078ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-23 01:14:18|0s|404|GET|/api/v1/appinfo/category/undefined|::1|pagenum=1 pagesize=10|0 B|0 B||
+2021-01-23 01:14:57|0s|404|GET|/api/v1/appinfo/category/undefined|::1|pagenum=1 pagesize=10|0 B|0 B||
+2021-01-23 01:14:58|255.9798ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-23 01:14:58|257.9804ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 01:14:58|21.8329ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 01:15:20|0s|404|GET|/api/v1/appinfo/category/undefined|::1|pagenum=1 pagesize=10|0 B|0 B||
+2021-01-23 01:15:20|38.9624ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 01:15:20|9.9974ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 01:15:20|55.9562ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-23 01:15:57|0s|404|GET|/api/v1/appinfo/category/undefined|::1|pagenum=1 pagesize=10|0 B|0 B||
+2021-01-23 01:15:57|18.6144ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-23 01:15:57|80.0085ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 01:15:57|16.4748ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 01:16:03|0s|404|GET|/api/v1/appinfo/category/undefined|::1|pagenum=1 pagesize=10|0 B|0 B||
+2021-01-23 01:16:03|17.0107ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-23 01:16:03|37.9792ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 01:16:03|27.2611ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 01:16:35|254.9802ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-23 01:16:35|273.4842ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 01:16:35|15.0219ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 01:16:35|380.0098ms|200|GET|/api/v1/appinfo/category/2|::1|cid=2 pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-23 01:17:29|48.8718ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-23 01:17:29|53.8647ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 01:17:38|0s|404|GET|/api/v1/appinfo/category/undefined|::1|pagenum=1 pagesize=10|0 B|0 B||
+2021-01-23 01:17:38|15.9947ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-23 01:17:38|18.9939ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 01:17:38|13.8827ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 01:17:45|300.9796ms|200|GET|/api/v1/appinfo/category/3|::1|cid=3 pagenum=1 pagesize=10|0 B|67 B||
+2021-01-23 01:18:18|25.992ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 01:18:18|22.9918ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 01:18:18|77.9744ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-23 01:18:18|160.8103ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-23 01:18:19|57.169ms|200|GET|/api/v1/appinfo/category/2|::1|cid=2 pagenum=1 pagesize=10|0 B|67 B||
+2021-01-23 01:18:33|86.9106ms|200|GET|/api/v1/appinfo/category/2|::1|cid=2 pagenum=1 pagesize=10|0 B|67 B||
+2021-01-23 01:21:32|274.2105ms|200|GET|/api/v1/appinfo/category/2|::1|id=2|0 B|67 B||
+2021-01-23 01:21:37|40.8654ms|200|GET|/api/v1/appinfo/category/3|::1|id=3|0 B|67 B||
+2021-01-23 01:22:14|87.806ms|200|GET|/api/v1/appinfo/category/3|::1|id=3|0 B|67 B||
+2021-01-23 01:22:36|493.1348ms|200|GET|/api/v1/appinfo/category/3|::1|id=3 pagenum=1 pagesize=5|0 B|67 B||
+2021-01-23 01:23:40|72.9066ms|200|GET|/api/v1/appinfo/category/3|::1|id=3 pagenum=1 pagesize=5|0 B|67 B||
+2021-01-23 01:24:51|64.2576ms|200|GET|/api/v1/appinfo/category/3|::1|id=3 pagenum=1 pagesize=5|0 B|67 B||
+2021-01-23 01:25:21|213.0902ms|200|GET|/api/v1/appinfo/category/2|::1|id=2 pagenum=1 pagesize=5|0 B|2.3 KB||
+2021-01-23 01:25:33|67.0652ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-23 01:25:33|81.0615ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 01:25:33|23.8431ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 01:25:33|161.3768ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-23 01:25:34|136.5889ms|200|GET|/api/v1/appinfo/category/2|::1|id=2 pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-23 01:25:57|240.3859ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-23 01:25:57|270.5ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 01:25:57|17.3471ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 01:25:57|329.3465ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-23 01:25:59|68.9207ms|200|GET|/api/v1/appinfo/category/3|::1|id=3 pagenum=1 pagesize=10|0 B|67 B||
+2021-01-23 01:26:05|22.427ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-23 01:26:05|22.427ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 01:26:05|34.739ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 01:26:05|134.5989ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-23 01:26:07|125.3564ms|200|GET|/api/v1/appinfo/category/2|::1|id=2 pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-23 01:26:32|38.5845ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-23 01:26:32|38.5845ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 01:26:36|31.9013ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-23 01:26:36|31.9013ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 01:26:36|13.0125ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 01:26:36|93.7365ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-23 01:26:37|76.8763ms|200|GET|/api/v1/appinfo/category/2|::1|id=2 pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-23 01:27:28|296.4411ms|200|GET|/api/v1/appinfo/category/3|::1|id=3 pagenum=1 pagesize=10|0 B|67 B||
+2021-01-23 01:27:33|13.8258ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 01:27:33|20.2044ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 01:27:33|73.8295ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-23 01:27:33|125.0049ms|200|GET|/api/v1/appinfo/category/3|::1|id=3 pagenum=1 pagesize=10|0 B|67 B||
+2021-01-23 01:27:35|20.5291ms|200|GET|/api/v1/category/list|::1|0 B|183 B||
+2021-01-23 01:27:35|21.5285ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 01:27:35|18.9879ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
+2021-01-23 01:27:35|127.1079ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
+2021-01-23 01:27:37|75.3166ms|200|GET|/api/v1/appinfo/category/3|::1|id=3 pagenum=1 pagesize=10|0 B|67 B||
+2021-01-23 01:27:45|116.0603ms|200|GET|/api/v1/appinfo/category/3|::1|id=3 pagenum=1 pagesize=5|0 B|67 B||

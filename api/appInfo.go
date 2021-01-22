@@ -28,6 +28,7 @@ func AddAppInfo(c iris.Context) {
 func GetAppInfoList(c iris.Context) {
 	pageSize, _ := c.URLParamInt("pagesize")
 	pageNum, _ := c.URLParamInt("pagenum")
+	appName := c.URLParam("app_name")
 
 	switch {
 	case pageSize >= 100:
@@ -40,7 +41,7 @@ func GetAppInfoList(c iris.Context) {
 		pageNum = 1
 	}
 
-	data, total, code := model.GetAppInfoList(pageSize, pageNum)
+	data, total, code := model.GetAppInfoList(appName,pageSize, pageNum)
 
 	c.JSON(iris.Map{
 		"data":    data,
@@ -48,6 +49,34 @@ func GetAppInfoList(c iris.Context) {
 		"status":  code,
 		"message": message.GetErrMsg(code),
 	})
+}
+
+// 查询分类下的APP信息
+func GetAppInfoCateList(c iris.Context)  {
+	categoryId,_ := c.Params().GetInt("id")
+	pageSize, _ := c.URLParamInt("pagesize")
+	pageNum, _ := c.URLParamInt("pagenum")
+
+	switch {
+	case pageSize >= 100:
+		pageSize = 100
+	case pageSize <= 0:
+		pageSize = 10
+	}
+
+	if pageNum == 0 {
+		pageNum = 1
+	}
+
+	data, total, code := model.GetAppInfoCateList(categoryId,pageSize,pageNum)
+
+	c.JSON(iris.Map{
+		"data":    data,
+		"total":   total,
+		"status":  code,
+		"message": message.GetErrMsg(code),
+	})
+
 }
 
 // 查询单个表单

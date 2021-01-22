@@ -63,6 +63,7 @@ func InitRouter() {
 		// app信息
 		pub.Get("appinfo/list",api.GetAppInfoList)
 		pub.Get("appinfo/info/{id:int}",api.GetAppInfo)
+		pub.Get("appinfo/category/{id:int}",api.GetAppInfoCateList)
 	}
 	_ = app.Listen(config.ServerPort)
 
