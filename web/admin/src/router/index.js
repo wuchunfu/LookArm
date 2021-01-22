@@ -5,9 +5,10 @@ const Admin = () => import(/* webpackChunkName: "Admin" */ '../views/Admin.vue')
 
 // 页面路由组件
 const Index = () => import(/* webpackChunkName: "Index" */ '../components/admin/Index.vue')
-const PostInfo = () => import(/* webpackChunkName: "ArtList" */ '../components/postinfo/postInfo.vue')
-const PostInfoCate = () => import(/* webpackChunkName: "ArtList" */ '../components/postinfo/postInfoCate.vue')
-const PostInfoTag = () => import(/* webpackChunkName: "ArtList" */ '../components/postinfo/postInfoTag.vue')
+const PostInfo = () => import(/* webpackChunkName: "AppList" */ '../components/postinfo/postInfo.vue')
+const PostInfoCate = () => import(/* webpackChunkName: "AppList" */ '../components/postinfo/postInfoCate.vue')
+const PostInfoTag = () => import(/* webpackChunkName: "AppList" */ '../components/postinfo/postInfoTag.vue')
+const AppInfo = () => import(/* webpackChunkName: "AppInfoList" */ '../components/appinfo/appInfo.vue')
 const CateList = () => import(/* webpackChunkName: "CateList" */ '../components/category/CateList.vue')
 const UserList = () => import(/* webpackChunkName: "UserList" */ '../components/user/UserList.vue')
 const Tag = () => import('../components/tag/tagList.vue')
@@ -46,10 +47,17 @@ const routes = [
         }
       },
       {
+        path: 'appinfo',
+        component: AppInfo,
+        meta: {
+          title: 'App信息列表'
+        }
+      },
+      {
         path: 'postinfo',
         component: PostInfo,
         meta: {
-          title: '文章列表'
+          title: '表单列表'
         }
       },
       {

@@ -15,8 +15,8 @@ type User struct {
 }
 
 // 增加管理员
-func (u User) CreateUser() int {
-	err = db.Create(&u).Error
+func CreateUser(data *User) int {
+	err = db.Create(&data).Error
 	if err != nil {
 		return message.ERROR
 	}

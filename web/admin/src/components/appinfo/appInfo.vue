@@ -8,11 +8,11 @@
             placeholder="输入App名查找"
             enter-button
             allowClear
-            @search="getPostInfoList"
+            @search="getAppInfoList"
           />
         </a-col>
         <a-col :span="4">
-          <a-button type="primary" @click="addPostInfoVisible = true">新增</a-button>
+          <a-button type="primary" @click="addAppInfoVisible = true">新增</a-button>
         </a-col>
 
         <a-col :span="3">
@@ -25,7 +25,7 @@
           </a-select>
         </a-col>
         <a-col :span="1">
-          <a-button type="info" @click="router.push('postinfo')">显示全部</a-button>
+          <a-button type="info" @click="router.push('/appinfo')">显示全部</a-button>
         </a-col>
 
         <a-col :span="3" :offset="2">
@@ -38,7 +38,7 @@
           </a-select>
         </a-col>
         <a-col :span="1">
-          <a-button type="info" @click="router.push('postinfo')">显示全部</a-button>
+          <a-button type="info" @click="router.push('AppInfo')">显示全部</a-button>
         </a-col>
       </a-row>
 
@@ -46,7 +46,7 @@
         rowKey="ID"
         :columns="columns"
         :pagination="pagination"
-        :dataSource="PostInfolist"
+        :dataSource="AppInfolist"
         bordered
         @change="handleTableChange"
       >
@@ -54,49 +54,42 @@
           <div class="actionSlot">
             <a-button
               size="small"
-              type="danger"
-              icon="edit"
-              style="margin-right: 15px"
-              @click="appPost(data.ID)"
-            >提交</a-button>
-            <a-button
-              size="small"
               type="primary"
               icon="edit"
               style="margin-right: 15px"
-              @click="editPostInfo(data.ID)"
+              @click="editAppInfo(data.ID)"
             >编辑</a-button>
             <a-button
               size="small"
               type="danger"
               icon="delete"
               style="margin-right: 15px"
-              @click="deletePostInfo(data.ID)"
+              @click="deleteAppInfo(data.ID)"
             >删除</a-button>
           </div>
         </template>
       </a-table>
     </a-card>
 
-    <!-- 新增表单区域 -->
+    <!-- 新增AppInfo区域 -->
     <a-modal
       closable
-      :visible="addPostInfoVisible"
+      :visible="addAppInfoVisible"
       width="60%"
-      @ok="addPostInfoOk"
-      @cancel="addPostInfoCancel"
+      @ok="addAppInfoOk"
+      @cancel="addAppInfoCancel"
       destroyOnClose
     >
-      <a-form-model v-model="newPostInfo">
+      <a-form-model v-model="newAppInfo">
         <a-row :gutter="20">
           <a-col :span="6">
             <a-form-model-item label="提供人">
-              <a-input v-model="newPostInfo.user_name"></a-input>
+              <a-input v-model="newAppInfo.user_name"></a-input>
             </a-form-model-item>
           </a-col>
           <a-col :span="6" :offset="4">
             <a-form-model-item label="提供人邮箱">
-              <a-input v-model="newPostInfo.email"></a-input>
+              <a-input v-model="newAppInfo.email"></a-input>
             </a-form-model-item>
           </a-col>
         </a-row>
@@ -104,7 +97,7 @@
         <a-row :gutter="20">
           <a-col :span="6">
             <a-form-model-item label="App分类">
-              <a-select v-model="newPostInfo.category_id" @change="cateChange">
+              <a-select v-model="newAppInfo.category_id" @change="cateChange">
                 <a-select-option v-for="item in Catelist" :key="item.id">{{item.name}}</a-select-option>
               </a-select>
             </a-form-model-item>
@@ -112,26 +105,26 @@
 
           <a-col :span="6" :offset="4">
             <a-form-model-item label="状态">
-              <a-select v-model="newPostInfo.tag_id" @change="tagChange">
+              <a-select v-model="newAppInfo.tag_id" @change="tagChange">
                 <a-select-option v-for="item in Taglist" :key="item.id">{{item.tag_name}}</a-select-option>
               </a-select>
             </a-form-model-item>
           </a-col>
         </a-row>
         <a-form-model-item label="App名称">
-          <a-input v-model="newPostInfo.app_name"></a-input>
+          <a-input v-model="newAppInfo.app_name"></a-input>
         </a-form-model-item>
         <a-form-model-item label="App版本">
-          <a-input v-model="newPostInfo.app_verison"></a-input>
+          <a-input v-model="newAppInfo.app_verison"></a-input>
         </a-form-model-item>
         <a-form-model-item label="App网站">
-          <a-input v-model="newPostInfo.app_website"></a-input>
+          <a-input v-model="newAppInfo.app_website"></a-input>
         </a-form-model-item>
         <a-form-model-item label="开发者">
-          <a-input v-model="newPostInfo.app_developer"></a-input>
+          <a-input v-model="newAppInfo.app_developer"></a-input>
         </a-form-model-item>
         <a-form-model-item label="App描述">
-          <a-input type="textarea" v-model="newPostInfo.app_desc"></a-input>
+          <a-input type="textarea" v-model="newAppInfo.app_desc"></a-input>
         </a-form-model-item>
       </a-form-model>
     </a-modal>
@@ -139,22 +132,22 @@
     <!-- 编辑表单区域 -->
     <a-modal
       closable
-      :visible="editPostInfoVisible"
+      :visible="editAppInfoVisible"
       width="60%"
-      @ok="editPostInfoOk"
-      @cancel="editPostInfoCancel"
+      @ok="editAppInfoOk"
+      @cancel="editAppInfoCancel"
       destroyOnClose
     >
-      <a-form-model v-model="PostInfo">
+      <a-form-model v-model="AppInfo">
         <a-row :gutter="20">
           <a-col :span="6">
             <a-form-model-item label="提供人">
-              <a-input v-model="PostInfo.user_name"></a-input>
+              <a-input v-model="AppInfo.user_name"></a-input>
             </a-form-model-item>
           </a-col>
           <a-col :span="6" :offset="4">
             <a-form-model-item label="提供人邮箱">
-              <a-input v-model="PostInfo.email"></a-input>
+              <a-input v-model="AppInfo.email"></a-input>
             </a-form-model-item>
           </a-col>
         </a-row>
@@ -162,7 +155,7 @@
         <a-row :gutter="20">
           <a-col :span="6">
             <a-form-model-item label="App分类">
-              <a-select v-model="PostInfo.category_id" @change="cateChange">
+              <a-select v-model="AppInfo.category_id" @change="cateChange">
                 <a-select-option v-for="item in Catelist" :key="item.id">{{item.name}}</a-select-option>
               </a-select>
             </a-form-model-item>
@@ -170,26 +163,26 @@
 
           <a-col :span="6" :offset="4">
             <a-form-model-item label="状态">
-              <a-select v-model="PostInfo.tag_id" @change="tagChange">
+              <a-select v-model="AppInfo.tag_id" @change="tagChange">
                 <a-select-option v-for="item in Taglist" :key="item.id">{{item.tag_name}}</a-select-option>
               </a-select>
             </a-form-model-item>
           </a-col>
         </a-row>
         <a-form-model-item label="App名称">
-          <a-input v-model="PostInfo.app_name"></a-input>
+          <a-input v-model="AppInfo.app_name"></a-input>
         </a-form-model-item>
         <a-form-model-item label="App版本">
-          <a-input v-model="PostInfo.app_verison"></a-input>
+          <a-input v-model="AppInfo.app_verison"></a-input>
         </a-form-model-item>
         <a-form-model-item label="App网站">
-          <a-input v-model="PostInfo.app_website"></a-input>
+          <a-input v-model="AppInfo.app_website"></a-input>
         </a-form-model-item>
         <a-form-model-item label="开发者">
-          <a-input v-model="PostInfo.app_developer"></a-input>
+          <a-input v-model="AppInfo.app_developer"></a-input>
         </a-form-model-item>
         <a-form-model-item label="App描述">
-          <a-input type="textarea" v-model="PostInfo.app_desc"></a-input>
+          <a-input type="textarea" v-model="AppInfo.app_desc"></a-input>
         </a-form-model-item>
       </a-form-model>
     </a-modal>
@@ -278,18 +271,18 @@ export default {
         showSizeChanger: true,
         showTotal: (total) => `共${total}条`,
       },
-      PostInfolist: [],
+      AppInfolist: [],
       Catelist: [],
       Taglist: [],
       columns,
-      addPostInfoVisible: false,
-      editPostInfoVisible: false,
+      addAppInfoVisible: false,
+      editAppInfoVisible: false,
       queryParam: {
         app_name: '',
         pagesize: 10,
         pagenum: 1,
       },
-      newPostInfo: {
+      newAppInfo: {
         app_name: '',
         app_version: '',
         app_webpage: '',
@@ -311,7 +304,7 @@ export default {
         category_id: 2,
         tag_id: 1,
       },
-      PostInfo: {
+      AppInfo: {
         app_name: '',
         app_version: '',
         app_webpage: '',
@@ -325,14 +318,14 @@ export default {
     }
   },
   created() {
-    this.getPostInfoList()
+    this.getAppInfoList()
     this.getCateList()
     this.getTaglist()
   },
   methods: {
     // 获取表单列表
-    async getPostInfoList() {
-      const { data: res } = await this.$http.get('postinfo/list', {
+    async getAppInfoList() {
+      const { data: res } = await this.$http.get('appinfo/list', {
         params: {
           app_name: this.queryParam.app_name,
           pagesize: this.queryParam.pagesize,
@@ -347,7 +340,7 @@ export default {
         this.$message.error(res.message)
       }
 
-      this.PostInfolist = res.data
+      this.AppInfolist = res.data
       this.pagination.total = res.total
     },
     // 获取分类
@@ -375,43 +368,43 @@ export default {
         pager.current = 1
       }
       this.pagination = pager
-      this.getPostInfoList()
+      this.getAppInfoList()
     },
 
     // 新增表单
     //  this.$refs.addTagRef.validate(async (valid) => {
     //     if (!valid) return this.$message.error('参数不符合要求，请重新输入'）
     //   })
-    async addPostInfoOk() {
-      const { data: res } = await this.$http.post('postinfo/add', this.newPostInfo)
+    async addAppInfoOk() {
+      const { data: res } = await this.$http.post('appinfo/add', this.newAppInfo)
       if (res.status != 200) return this.$message.error(res.message)
-      this.addPostInfoVisible = false
+      this.addAppInfoVisible = false
       this.$message.success('添加表单成功')
-      await this.getPostInfoList()
+      await this.getAppInfoList()
     },
-    addPostInfoCancel() {
-      this.addPostInfoVisible = false
+    addAppInfoCancel() {
+      this.addAppInfoVisible = false
       this.$message.info('新增表单已取消')
     },
 
     cateChange(value) {
-      this.newPostInfo.category_id = value
+      this.newAppInfo.category_id = value
     },
 
     tagChange(value) {
-      this.newPostInfo.tag_id = value
+      this.newAppInfo.tag_id = value
     },
 
     // 删除表单
-    deletePostInfo(id) {
+    deleteAppInfo(id) {
       this.$confirm({
         title: '提示：请再次确认',
         content: '确定要删除该文章吗？一旦删除，无法恢复',
         onOk: async () => {
-          const { data: res } = await this.$http.delete(`postinfo/delete/${id}`)
+          const { data: res } = await this.$http.delete(`appinfo/delete/${id}`)
           if (res.status != 200) return this.$message.error(res.message)
           this.$message.success('删除成功')
-          this.getPostInfoList()
+          this.getAppInfoList()
         },
         onCancel: () => {
           this.$message.info('已取消删除')
@@ -419,51 +412,31 @@ export default {
       })
     },
 
-    // 提交表单
-    async appPost(id) {
-      const { data: res } = await this.$http.get(`postinfo/info/${id}`)
-      this.appInfo = res.data
-      this.$confirm({
-        title: '提示：请再次确认',
-        content: '确定要提交该表单到appinfo吗？',
-        onOk: async () => {
-          const { data: res } = await this.$http.post('appinfo/add', this.appInfo)
-          if (res.status != 200) return this.$message.error(res.message)
-          this.$message.success('提交成功')
-          await this.$http.delete(`postinfo/delete/${id}`)
-          this.getPostInfoList()
-        },
-        onCancel: () => {
-          this.$message.info('已取消提交')
-        },
-      })
-    },
-
     // 编辑分类
-    async editPostInfo(id) {
-      this.editPostInfoVisible = true
-      const { data: res } = await this.$http.get(`postinfo/info/${id}`)
-      this.PostInfo = res.data
-      this.PostInfo.id = id
+    async editAppInfo(id) {
+      this.editAppInfoVisible = true
+      const { data: res } = await this.$http.get(`appinfo/info/${id}`)
+      this.AppInfo = res.data
+      this.AppInfo.id = id
     },
-    async editPostInfoOk() {
-      const { data: res } = await this.$http.put(`postinfo/edit/${this.PostInfo.id}`, this.PostInfo)
+    async editAppInfoOk() {
+      const { data: res } = await this.$http.put(`appinfo/edit/${this.AppInfo.id}`, this.AppInfo)
       if (res.status != 200) return this.$message.error(res.message)
-      this.editPostInfoVisible = false
+      this.editAppInfoVisible = false
       this.$message.success('更新分类信息成功')
-      this.getPostInfoList()
+      this.getAppInfoList()
     },
-    editPostInfoCancel() {
-      this.editPostInfoVisible = false
+    editAppInfoCancel() {
+      this.editAppInfoVisible = false
       this.$message.info('编辑已取消')
     },
     // 查询分类下的表单
     gotoCatePage(value) {
-      this.$router.push(`/postinfo/catelist/${value}`)
+      this.$router.push(`/appinfo/catelist/${value}`)
     },
     // 查询状态下的表单
     gotoTagPage(value) {
-      this.$router.push(`/postinfo/taglist/${value}`)
+      this.$router.push(`/appinfo/taglist/${value}`)
     },
   },
 }
@@ -474,12 +447,12 @@ export default {
   display: flex;
   justify-content: center;
 }
-.PostInfoImg {
+.AppInfoImg {
   height: 100%;
   width: 100%;
 }
 
-.PostInfoImg img {
+.AppInfoImg img {
   width: 100px;
   height: 80px;
 }

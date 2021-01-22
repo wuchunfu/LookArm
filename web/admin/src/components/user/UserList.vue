@@ -358,13 +358,12 @@ export default {
     addUserOk() {
       this.$refs.addUserRef.validate(async (valid) => {
         if (!valid) return this.$message.error('参数不符合要求，请重新输入')
-        const { data: res } = await this.$http.post('user/add', {
+        const { data: res } = await this.$http.post('adduser', {
           user_name: this.newUser.user_name,
           password: this.newUser.password,
-          role: this.newUser.role,
+          email: this.newUser.email,
         })
         if (res.status != 200) return this.$message.error(res.message)
-        this.$refs.addUserRef.resetFields()
         this.addUserVisible = false
         this.$message.success('添加用户成功')
         this.getUserList()

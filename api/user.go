@@ -13,7 +13,7 @@ func AddUser(c iris.Context) {
 	var data model.User
 	_ = c.ReadJSON(&data)
 
-	code = model.User.CreateUser(data)
+	code = model.CreateUser(&data)
 
 	c.JSON(iris.Map{
 		"status":  code,

@@ -1,6 +1,7 @@
 package api
 
 import (
+	"fmt"
 	"github.com/kataras/iris/v12"
 	"lookarm/model"
 	"lookarm/utils/message"
@@ -11,7 +12,12 @@ func AddAppInfo(c iris.Context) {
 	var data model.AppInfo
 	_ = c.ReadJSON(&data)
 
-	code = model.AddAppInfo(&data)
+	code = model.CheckAppName(data.AppName)
+	fmt.Println(data.AppName)
+	if code == message.SUCCSES {
+		model.AddAppInfo(&data)
+	}
+
 	c.JSON(iris.Map{
 		"status":  code,
 		"message": message.GetErrMsg(code),
