@@ -1,109 +1,117 @@
 <template>
   <div>
     <v-app-bar mobile-breakpoint="sm" flat app color="grey darken-4">
-      <v-container class="py-0 fill-height">
-        <v-avatar class="mr-15" size="46">
-          <v-img src="../../assets/CPU.png"></v-img>
-        </v-avatar>
-        <v-btn href="/" dark text>HOME</v-btn>
+      <v-avatar class="mr-15" size="46">
+        <v-img src="../../assets/CPU.png"></v-img>
+      </v-avatar>
+      <div class="d-flex justify-center align-center">
+        <v-btn href="/" dark text><v-icon small>mdi-home</v-icon>首页</v-btn>
         <v-btn
           dark
           v-for="item in CateList"
           :key="item.id"
           text
           @click="gotoCate(item.id)"
-        >{{item.name}}</v-btn>
+          >{{ item.name }}</v-btn
+        >
+      </div>
 
-        <v-spacer></v-spacer>
-        <v-btn text dark href="https://gitee.com/wejectchan/lookarm/issues" target="blank">
-          <v-icon left>mdi-information-outline</v-icon>有建议？提交Issue
-        </v-btn>
+      <v-spacer></v-spacer>
+      <v-btn
+        text
+        dark
+        href="https://gitee.com/wejectchan/lookarm/issues"
+        target="blank"
+      >
+        <v-icon left>mdi-information-outline</v-icon>有建议？提交Issue
+      </v-btn>
 
-        <v-dialog max-width="800" v-model="dialog">
-          <template v-slot:activator="{ on, attrs }">
-            <v-btn text dark v-bind="attrs" v-on="on">
-              <v-icon left>mdi-post-outline</v-icon>找不到？点此提交App需求
-            </v-btn>
-          </template>
-          <template v-slot:default="dialog">
-            <v-form ref="postInfoformRef" v-model="valid">
-              <v-card flat>
-                <v-toolbar flat color="grey darken-3" dark>欢迎提交App表单，如通过，该条信息将标识由您提供</v-toolbar>
-                <v-card-text class="mt-5">
-                  <v-row>
-                    <v-col cols="6">
-                      <v-text-field
-                        v-model="postInfo.user_name"
-                        hint="可以不输入，空为‘匿名’"
-                        :rules="user_nameRules"
-                        label="请输入您的昵称"
-                      ></v-text-field>
-                    </v-col>
-                    <v-col cols="6">
-                      <v-text-field
-                        v-model="postInfo.email"
-                        hint="可以不输入，空为‘匿名’"
-                        :rules="emailRules"
-                        label="请输入您的email"
-                      ></v-text-field>
-                    </v-col>
-                  </v-row>
-                  <v-text-field
-                    v-model="postInfo.app_name"
-                    hint="不能为空"
-                    :rules="app_nameRules"
-                    label="请输入APP名"
-                  ></v-text-field>
-                  <v-text-field
-                    v-model="postInfo.app_version"
-                    :rules="app_versionRules"
-                    hint="不能为空"
-                    label="请输入APP版本"
-                  ></v-text-field>
-                  <v-select
-                    v-model="postInfo.category_id"
-                    label="请选择APP分类"
-                    :items="CateList"
-                    :rules="category_idRules"
-                    item-text="name"
-                    item-value="id"
-                  ></v-select>
-                  <v-select
-                    v-model="postInfo.tag_id"
-                    label="请选择APP分类"
-                    :items="TagList"
-                    :rules="tag_idRules"
-                    item-text="tag_name"
-                    item-value="id"
-                  ></v-select>
-                  <v-text-field
-                    v-model="postInfo.app_developer"
-                    :rules="app_developerRules"
-                    hint="不能为空"
-                    label="APP开发商/开发者"
-                  ></v-text-field>
-                  <v-text-field
-                    v-model="postInfo.app_webpage"
-                    :rules="app_webpageRules"
-                    hint="不能为空，以http:// 或 https:// 开头"
-                    label="APP官网或下载地址"
-                  ></v-text-field>
-                  <v-text-field
-                    v-model="postInfo.app_desc"
-                    :rules="app_descRules"
-                    hint="不能为空"
-                    label="APP用途的简短介绍"
-                  ></v-text-field>
-                </v-card-text>
-                <v-card-actions class="justify-end">
-                  <v-btn text @click="postInfoForm">确定</v-btn>
-                  <v-btn text @click="dialog.value = false">取消</v-btn>
-                </v-card-actions>
-              </v-card>
-            </v-form>
-          </template>
-        </v-dialog>
-      </v-container>
+      <v-dialog max-width="800" v-model="dialog">
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn text dark v-bind="attrs" v-on="on">
+            <v-icon left>mdi-post-outline</v-icon>找不到？点此提交App需求
+          </v-btn>
+        </template>
+        <template v-slot:default="dialog">
+          <v-form ref="postInfoformRef" v-model="valid">
+            <v-card flat>
+              <v-toolbar flat color="grey darken-3" dark
+                >欢迎提交App表单，如通过，该条信息将标识由您提供</v-toolbar
+              >
+              <v-card-text class="mt-5">
+                <v-row>
+                  <v-col cols="6">
+                    <v-text-field
+                      v-model="postInfo.user_name"
+                      hint="可以不输入，空为‘匿名’"
+                      :rules="user_nameRules"
+                      label="请输入您的昵称"
+                    ></v-text-field>
+                  </v-col>
+                  <v-col cols="6">
+                    <v-text-field
+                      v-model="postInfo.email"
+                      hint="可以不输入，空为‘匿名’"
+                      :rules="emailRules"
+                      label="请输入您的email"
+                    ></v-text-field>
+                  </v-col>
+                </v-row>
+                <v-text-field
+                  v-model="postInfo.app_name"
+                  hint="不能为空"
+                  :rules="app_nameRules"
+                  label="请输入APP名"
+                ></v-text-field>
+                <v-text-field
+                  v-model="postInfo.app_version"
+                  :rules="app_versionRules"
+                  hint="不能为空"
+                  label="请输入APP版本"
+                ></v-text-field>
+                <v-select
+                  v-model="postInfo.category_id"
+                  label="请选择APP分类"
+                  :items="CateList"
+                  :rules="category_idRules"
+                  item-text="name"
+                  item-value="id"
+                ></v-select>
+                <v-select
+                  v-model="postInfo.tag_id"
+                  label="请选择APP分类"
+                  :items="TagList"
+                  :rules="tag_idRules"
+                  item-text="tag_name"
+                  item-value="id"
+                ></v-select>
+                <v-text-field
+                  v-model="postInfo.app_developer"
+                  :rules="app_developerRules"
+                  hint="不能为空"
+                  label="APP开发商/开发者"
+                ></v-text-field>
+                <v-text-field
+                  v-model="postInfo.app_webpage"
+                  :rules="app_webpageRules"
+                  hint="不能为空，以http:// 或 https:// 开头"
+                  label="APP官网或下载地址"
+                ></v-text-field>
+                <v-text-field
+                  v-model="postInfo.app_desc"
+                  :rules="app_descRules"
+                  hint="不能为空"
+                  label="APP用途的简短介绍"
+                ></v-text-field>
+              </v-card-text>
+              <v-card-actions class="justify-end">
+                <v-btn text @click="postInfoForm">确定</v-btn>
+                <v-btn text @click="dialog.value = false">取消</v-btn>
+              </v-card-actions>
+            </v-card>
+          </v-form>
+        </template>
+      </v-dialog>
     </v-app-bar>
   </div>
 </template>

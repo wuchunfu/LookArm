@@ -17,7 +17,9 @@
       </v-card-text>
       <v-divider color="grey"></v-divider>
       <v-card-text>
-        <p class="mt-3 title text-center white--text">Made By ❤️ For Look Arm 🎉</p>
+        <p class="mt-3 title text-center white--text">
+          Made With ❤️ By ©LookArm 🎉
+        </p>
       </v-card-text>
     </v-card>
   </v-footer>
