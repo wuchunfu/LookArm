@@ -1,15 +1,17 @@
 <template>
   <v-app>
-    <router-view></router-view>
+    <Home></Home>
   </v-app>
 </template>
 
 <script>
+import Home from './views/Home'
 export default {
-  name: "App",
+  components: { Home },
+  name: 'App',
 
   data: () => ({
     //
   }),
-};
+}
 </script>

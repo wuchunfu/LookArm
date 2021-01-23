@@ -38,16 +38,16 @@
 
           <v-divider class="mx-3"></v-divider>
           <v-card-actions>
-            <v-row align="center" justify="center">
+            <v-row align="center" justify="space-around">
               <v-col cols="6">
                 <v-btn :href="item.app_webpage" target="_blank" outlined
                   >下载地址</v-btn
                 >
               </v-col>
-              <v-col cols="4">
-                <v-btn text
-                  >本条信息由{{ item.user_name }}({{ item.email }})提供</v-btn
-                >
+              <v-col cols="6">
+                <v-card-text>
+                  本条信息由{{ item.user_name }}({{ item.email }})提供
+                </v-card-text>
               </v-col>
             </v-row>
           </v-card-actions>

@@ -1,9 +1,12 @@
 <template>
   <div>
     <v-app-bar mobile-breakpoint="sm" flat app color="grey darken-4">
-      <v-avatar class="mr-15" size="46">
-        <v-img src="../../assets/CPU.png"></v-img>
-      </v-avatar>
+      <v-toolbar-title dark>
+        <v-avatar class="mx-15" size="43">
+          <v-img src="../../assets/CPU.png"></v-img>
+        </v-avatar>
+      </v-toolbar-title>
+
       <div class="d-flex justify-center align-center">
         <v-btn href="/" dark text><v-icon small>mdi-home</v-icon>首页</v-btn>
         <v-btn

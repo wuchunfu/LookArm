@@ -11,5 +11,8 @@ Vue.use(Vuetify)
 export default new Vuetify({
   icons: {
     iconfont: 'mdi'
-  }
+  },
+  breakpoint: {
+    mobileBreakpoint: 'sm' // 这个值等于960
+  },
 })

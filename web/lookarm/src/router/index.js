@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)
 
@@ -12,44 +11,42 @@ VueRouter.prototype.push = function push(location) {
 }
 
 const routes = [
+
+
   {
     path: '/',
-    component: Home,
-    children: [
-      {
-        path: '/',
-        name: 'appInfo',
-        component: () => import('../components/appList.vue')
-      },
-      {
-        path: '/appinfo/:title',
-        name: 'search',
-        meta: {
-          title: '搜索结果'
-        },
-        component: () => import('../components/search.vue'),
-        props: true
-      },
-      {
-        path: '/appinfo/category/:id',
-        name: 'category',
-        meta: {
-          title: 'APP分类'
-        },
-        component: () => import('../components/appCate.vue'),
-        props: true
-      }
-    ]
+    name: 'appInfo',
+    component: () => import('../components/appList.vue')
+  },
+  {
+    path: '/appinfo/:title',
+    name: 'search',
+    meta: {
+      title: '搜索结果'
+    },
+    component: () => import('../components/search.vue'),
+    props: true
+  },
+  {
+    path: '/appinfo/category/:id',
+    name: 'category',
+    meta: {
+      title: 'APP分类'
+    },
+    component: () => import('../components/appCate.vue'),
+    props: true
   }
-  // {
-  //   path: '/about',
-  //   name: 'About',
-  //   // route level code-splitting
-  //   // this generates a separate chunk (about.[hash].js) for this route
-  //   // which is lazy-loaded when the route is visited.
-  //   component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  // }
 ]
+
+// {
+//   path: '/about',
+//   name: 'About',
+//   // route level code-splitting
+//   // this generates a separate chunk (about.[hash].js) for this route
+//   // which is lazy-loaded when the route is visited.
+//   component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+// }
+
 
 const router = new VueRouter({
   mode: 'history',

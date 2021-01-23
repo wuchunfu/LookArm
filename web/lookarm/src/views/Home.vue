@@ -1,19 +1,32 @@
 <template>
-  <div app>
+  <v-app app>
     <TopBar></TopBar>
-    <v-main mobile-breakpoint="sm">
-      <div class="mt-16 text-center justify-center text-h3">
-        <p>快速查看哪些应用支持</p>
-        <p>Apple Silicon - m1</p>
-      </div>
+    <v-main>
+      <v-row align="center" justify="center">
+        <v-col cols="12" sm="4">
+          <div class="mt-16 text-center text-h3">
+            <p>快速查看哪些应用支持</p>
+            <p>Apple Silicon - m1</p>
+          </div>
+        </v-col>
+      </v-row>
 
-      <div class="d-flex justify-center align-center" mobile-breakpoint="sm">
-        <div v-for="item in tagList" :key="item.id">
-          <v-btn large text>{{item.tag_name}}</v-btn>
-        </div>
-      </div>
+      <v-row align="center" justify="center">
+        <v-col cols="12">
+          <div class="d-flex justify-center align-center">
+            <div v-for="item in tagList" :key="item.id">
+              <v-btn text>{{ item.tag_name }}</v-btn>
+            </div>
+          </div>
+        </v-col>
+      </v-row>
 
-      <v-row class="mt-6" justify="center" align="center" align-content="center">
+      <v-row
+        class="mt-6"
+        justify="center"
+        align="center"
+        align-content="center"
+      >
         <v-col cols="6">
           <v-text-field
             color="indigo"
@@ -32,7 +45,7 @@
     </v-main>
 
     <Footer></Footer>
-  </div>
+  </v-app>
 </template>
 
 <script>
