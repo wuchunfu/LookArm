@@ -442,6 +442,7 @@ export default {
     async appPost(id) {
       const { data: res } = await this.$http.get(`postinfo/info/${id}`)
       this.appInfo = res.data
+      this.appInfo.ID = 0
       this.$confirm({
         title: '提示：请再次确认',
         content: '确定要提交该表单到appinfo吗？',

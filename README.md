@@ -4,15 +4,21 @@
 如有任何建议或需求，欢迎提交issue
 
 OH！快速查看哪些应用支持Apple Silicon - m1芯片
+
 ![img.png](img.png)
+
+
+
+![admin](F:\WorkSpace\lookarm\admin.png)
+
 #### 特色
-- 逻辑清晰的表单系统
+
+- **逻辑清晰的表单系统**
 - 高性能
 - 全域搜索
 
-#### 参与贡献
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
 
+
+## 问题提交
+
+工期比较赶，很多代码感觉考虑不够，可能会有bug，有任何问题，烦请提交issue。
