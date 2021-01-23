@@ -2732,3 +2732,8 @@
 2021-01-23 01:48:29|34.4152ms|200|GET|/api/v1/tag/list|::1|0 B|434 B||
 2021-01-23 01:48:29|365.4114ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|2.3 KB||
 2021-01-23 01:55:30|315.7727ms|200|POST|/api/v1/adduser|::1|68 B|39 B|{"user_name":"weject","password":"1q2w3e4r","email":"weject@qq.com"}|
+2021-01-23 17:28:52|71.545542ms|200|GET|/api/v1/tag/list|::1|0 B|448 B||
+2021-01-23 17:28:52|82.226334ms|200|GET|/api/v1/category/list|::1|0 B|363 B||
+2021-01-23 17:28:52|21.007333ms|200|GET|/api/v1/tag/list|::1|0 B|448 B||
+2021-01-23 17:28:52|208.405417ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|4.7 KB||
+2021-01-23 17:29:20|228.835167ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|4.7 KB||
