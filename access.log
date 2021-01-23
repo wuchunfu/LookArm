@@ -3296,3 +3296,236 @@
 2021-01-23 22:15:43|88.260875ms|200|PUT|/api/v1/postinfo/edit/2|::1|id=2|360 B|39 B|{"ID":2,"CreatedAt":"2021-01-23T22:09:59.31+08:00","UpdatedAt":"2021-01-23T22:10:11.891+08:00","DeletedAt":null,"app_name":"ww","app_version":"","app_webpage":"","app_desc":"ww","app_developer":"ww","user_name":"weject","email":"w@w","category_id":2,"tag_id":2,"Category":{"id":2,"name":"摄影与录像"},"Tag":{"id":1,"tag_name":"✅已原生支持"},"id":2}|
 2021-01-23 22:15:43|10.917µs|200|OPTIONS|/api/v1/postinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|0 B||
 2021-01-23 22:15:44|194.631375ms|200|GET|/api/v1/postinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|607 B||
+2021-01-23 22:31:05|1.0034ms|200|OPTIONS|/api/v1/login|::1|0 B|0 B||
+2021-01-23 22:31:05|346.4686ms|200|POST|/api/v1/login|::1|44 B|238 B|{"user_name":"weject","password":"1q2w3e4r"}|
+2021-01-23 22:31:07|0s|200|OPTIONS|/api/v1/appinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|0 B||
+2021-01-23 22:31:07|0s|200|OPTIONS|/api/v1/category/list|::1|0 B|0 B||
+2021-01-23 22:31:07|0s|200|OPTIONS|/api/v1/tag/list|::1|0 B|0 B||
+2021-01-23 22:31:07|27.9917ms|200|GET|/api/v1/category/list|::1|0 B|480 B||
+2021-01-23 22:31:07|39.9867ms|200|GET|/api/v1/tag/list|::1|0 B|524 B||
+2021-01-23 22:31:07|94.9696ms|200|GET|/api/v1/appinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|7.9 KB||
+2021-01-23 22:31:08|0s|200|OPTIONS|/api/v1/appinfo/info/10|::1|0 B|0 B||
+2021-01-23 22:31:08|36.9891ms|200|GET|/api/v1/appinfo/info/10|::1|id=10|0 B|643 B||
+2021-01-23 22:31:12|0s|200|OPTIONS|/api/v1/appinfo/edit/10|::1|0 B|0 B||
+2021-01-23 22:31:12|37.7536ms|200|PUT|/api/v1/appinfo/edit/10|::1|id=10|465 B|39 B|{"ID":10,"CreatedAt":"2021-01-23T21:50:41.292+08:00","UpdatedAt":"2021-01-23T22:08:46.971+08:00","DeletedAt":null,"app_name":"Golang","app_version":"1.16beta1","app_webpage":"https://golang.org/dl/#go1.16beta1","app_developer":"Google","app_desc":"Golang language,预览版原生支持。","user_name":"weject","email":"weject@gmail.com","category_id":1,"tag_id":2,"Category":{"id":1,"name":"开发者工具"},"Tag":{"id":1,"tag_name":"✅已原生支持"},"id":10}|
+2021-01-23 22:31:12|0s|200|OPTIONS|/api/v1/appinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|0 B||
+2021-01-23 22:31:12|87.6634ms|200|GET|/api/v1/appinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|7.9 KB||
+2021-01-23 22:31:23|0s|200|OPTIONS|/api/v1/postinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|0 B||
+2021-01-23 22:31:23|0s|200|OPTIONS|/api/v1/category/list|::1|0 B|0 B||
+2021-01-23 22:31:23|0s|200|OPTIONS|/api/v1/tag/list|::1|0 B|0 B||
+2021-01-23 22:31:23|54.953ms|200|GET|/api/v1/tag/list|::1|0 B|524 B||
+2021-01-23 22:31:23|68.9634ms|200|GET|/api/v1/category/list|::1|0 B|480 B||
+2021-01-23 22:31:23|205.7605ms|200|GET|/api/v1/postinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|607 B||
+2021-01-23 22:31:25|0s|200|OPTIONS|/api/v1/postinfo/info/2|::1|0 B|0 B||
+2021-01-23 22:31:25|63.9644ms|200|GET|/api/v1/postinfo/info/2|::1|id=2|0 B|539 B||
+2021-01-23 22:31:28|0s|200|OPTIONS|/api/v1/postinfo/edit/2|::1|0 B|0 B||
+2021-01-23 22:31:28|64.6892ms|200|PUT|/api/v1/postinfo/edit/2|::1|id=2|360 B|39 B|{"ID":2,"CreatedAt":"2021-01-23T22:09:59.31+08:00","UpdatedAt":"2021-01-23T22:15:43.771+08:00","DeletedAt":null,"app_name":"ww","app_version":"","app_webpage":"","app_desc":"ww","app_developer":"ww","user_name":"weject","email":"w@w","category_id":2,"tag_id":2,"Category":{"id":2,"name":"摄影与录像"},"Tag":{"id":1,"tag_name":"✅已原生支持"},"id":2}|
+2021-01-23 22:31:28|0s|200|OPTIONS|/api/v1/postinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|0 B||
+2021-01-23 22:31:28|145.8529ms|200|GET|/api/v1/postinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|607 B||
+2021-01-23 22:32:15|0s|200|OPTIONS|/api/v1/postinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|0 B||
+2021-01-23 22:32:15|0s|200|OPTIONS|/api/v1/category/list|::1|0 B|0 B||
+2021-01-23 22:32:15|0s|200|OPTIONS|/api/v1/tag/list|::1|0 B|0 B||
+2021-01-23 22:32:15|249.8653ms|200|GET|/api/v1/tag/list|::1|0 B|524 B||
+2021-01-23 22:32:15|266.8544ms|200|GET|/api/v1/category/list|::1|0 B|480 B||
+2021-01-23 22:32:16|346.9184ms|200|GET|/api/v1/postinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|607 B||
+2021-01-23 22:33:00|0s|200|OPTIONS|/api/v1/postinfo/add|::1|0 B|0 B||
+2021-01-23 22:33:01|34.9605ms|200|POST|/api/v1/postinfo/add|::1|193 B|39 B|{"app_name":"1212","app_version":"","app_webpage":"","app_desc":"2121","app_developer":"2121","user_name":"12","email":"212","category_id":3,"tag_id":2,"app_verison":"212","app_website":"2121"}|
+2021-01-23 22:33:01|0s|200|OPTIONS|/api/v1/postinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|0 B||
+2021-01-23 22:33:01|73.7582ms|200|GET|/api/v1/postinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|1.1 KB||
+2021-01-23 22:33:09|0s|200|OPTIONS|/api/v1/appinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|0 B||
+2021-01-23 22:33:09|0s|200|OPTIONS|/api/v1/category/list|::1|0 B|0 B||
+2021-01-23 22:33:09|0s|200|OPTIONS|/api/v1/tag/list|::1|0 B|0 B||
+2021-01-23 22:33:09|45.4936ms|200|GET|/api/v1/category/list|::1|0 B|480 B||
+2021-01-23 22:33:09|53.5049ms|200|GET|/api/v1/tag/list|::1|0 B|524 B||
+2021-01-23 22:33:09|76.6871ms|200|GET|/api/v1/appinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|7.9 KB||
+2021-01-23 22:33:10|0s|200|OPTIONS|/api/v1/appinfo/info/10|::1|0 B|0 B||
+2021-01-23 22:33:10|44.9758ms|200|GET|/api/v1/appinfo/info/10|::1|id=10|0 B|643 B||
+2021-01-23 22:33:13|0s|200|OPTIONS|/api/v1/appinfo/edit/10|::1|0 B|0 B||
+2021-01-23 22:33:13|51.0548ms|200|PUT|/api/v1/appinfo/edit/10|::1|id=10|465 B|39 B|{"ID":10,"CreatedAt":"2021-01-23T21:50:41.292+08:00","UpdatedAt":"2021-01-23T22:31:12.695+08:00","DeletedAt":null,"app_name":"Golang","app_version":"1.16beta1","app_webpage":"https://golang.org/dl/#go1.16beta1","app_developer":"Google","app_desc":"Golang language,预览版原生支持。","user_name":"weject","email":"weject@gmail.com","category_id":1,"tag_id":2,"Category":{"id":1,"name":"开发者工具"},"Tag":{"id":1,"tag_name":"✅已原生支持"},"id":10}|
+2021-01-23 22:33:13|113.4298ms|200|GET|/api/v1/appinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|7.9 KB||
+2021-01-23 22:33:14|0s|200|OPTIONS|/api/v1/postinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|0 B||
+2021-01-23 22:33:14|0s|200|OPTIONS|/api/v1/category/list|::1|0 B|0 B||
+2021-01-23 22:33:14|0s|200|OPTIONS|/api/v1/tag/list|::1|0 B|0 B||
+2021-01-23 22:33:14|24.3825ms|200|GET|/api/v1/category/list|::1|0 B|480 B||
+2021-01-23 22:33:14|38.3797ms|200|GET|/api/v1/tag/list|::1|0 B|524 B||
+2021-01-23 22:33:14|96.5081ms|200|GET|/api/v1/postinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|1.1 KB||
+2021-01-23 22:34:44|0s|200|OPTIONS|/api/v1/category/list|::1|0 B|0 B||
+2021-01-23 22:34:44|0s|200|OPTIONS|/api/v1/tag/list|::1|0 B|0 B||
+2021-01-23 22:34:44|0s|200|OPTIONS|/api/v1/postinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|0 B||
+2021-01-23 22:34:45|252.0031ms|200|GET|/api/v1/tag/list|::1|0 B|524 B||
+2021-01-23 22:34:45|269.0216ms|200|GET|/api/v1/category/list|::1|0 B|480 B||
+2021-01-23 22:34:45|415.4527ms|200|GET|/api/v1/postinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|1.1 KB||
+2021-01-23 22:34:47|0s|200|OPTIONS|/api/v1/postinfo/info/3|::1|0 B|0 B||
+2021-01-23 22:34:47|61.8595ms|200|GET|/api/v1/postinfo/info/3|::1|id=3|0 B|551 B||
+2021-01-23 22:34:51|61.2863ms|200|GET|/api/v1/postinfo/info/3|::1|id=3|0 B|551 B||
+2021-01-23 22:34:55|0s|200|OPTIONS|/api/v1/postinfo/edit/3|::1|0 B|0 B||
+2021-01-23 22:34:55|96.7483ms|200|PUT|/api/v1/postinfo/edit/3|::1|id=3|372 B|39 B|{"ID":3,"CreatedAt":"2021-01-23T22:33:00.988+08:00","UpdatedAt":"2021-01-23T22:33:00.988+08:00","DeletedAt":null,"app_name":"1212","app_version":"","app_webpage":"","app_desc":"2121","app_developer":"2121","user_name":"12","email":"212","category_id":3,"tag_id":3,"Category":{"id":3,"name":"生产力工具"},"Tag":{"id":2,"tag_name":"❇️预览版原生支持"},"id":3}|
+2021-01-23 22:34:55|0s|200|OPTIONS|/api/v1/postinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|0 B||
+2021-01-23 22:34:55|124.5316ms|200|GET|/api/v1/postinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|1.1 KB||
+2021-01-23 22:35:51|0s|200|OPTIONS|/api/v1/postinfo/info/2|::1|0 B|0 B||
+2021-01-23 22:35:51|287.0406ms|200|GET|/api/v1/postinfo/info/2|::1|id=2|0 B|539 B||
+2021-01-23 22:35:54|43.797ms|200|GET|/api/v1/postinfo/info/2|::1|id=2|0 B|539 B||
+2021-01-23 22:35:57|0s|200|OPTIONS|/api/v1/postinfo/edit/2|::1|0 B|0 B||
+2021-01-23 22:35:57|42.6061ms|200|PUT|/api/v1/postinfo/edit/2|::1|id=2|360 B|39 B|{"ID":2,"CreatedAt":"2021-01-23T22:09:59.31+08:00","UpdatedAt":"2021-01-23T22:31:28.198+08:00","DeletedAt":null,"app_name":"ww","app_version":"","app_webpage":"","app_desc":"ww","app_developer":"ww","user_name":"weject","email":"w@w","category_id":1,"tag_id":1,"Category":{"id":2,"name":"摄影与录像"},"Tag":{"id":1,"tag_name":"✅已原生支持"},"id":2}|
+2021-01-23 22:35:57|0s|200|OPTIONS|/api/v1/postinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|0 B||
+2021-01-23 22:35:57|100.0746ms|200|GET|/api/v1/postinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|1.1 KB||
+2021-01-23 22:36:02|0s|200|OPTIONS|/api/v1/postinfo/info/2|::1|0 B|0 B||
+2021-01-23 22:36:02|128.0152ms|200|GET|/api/v1/postinfo/info/2|::1|id=2|0 B|538 B||
+2021-01-23 22:36:05|0s|200|OPTIONS|/api/v1/postinfo/edit/2|::1|0 B|0 B||
+2021-01-23 22:36:06|75.0577ms|200|PUT|/api/v1/postinfo/edit/2|::1|id=2|359 B|39 B|{"ID":2,"CreatedAt":"2021-01-23T22:09:59.31+08:00","UpdatedAt":"2021-01-23T22:35:57.58+08:00","DeletedAt":null,"app_name":"ww","app_version":"","app_webpage":"","app_desc":"ww","app_developer":"ww","user_name":"weject","email":"w@w","category_id":3,"tag_id":1,"Category":{"id":2,"name":"摄影与录像"},"Tag":{"id":1,"tag_name":"✅已原生支持"},"id":2}|
+2021-01-23 22:36:06|0s|200|OPTIONS|/api/v1/postinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|0 B||
+2021-01-23 22:36:06|181.3109ms|200|GET|/api/v1/postinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|1.1 KB||
+2021-01-23 22:37:58|0s|200|OPTIONS|/api/v1/postinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|0 B||
+2021-01-23 22:37:58|0s|200|OPTIONS|/api/v1/category/list|::1|0 B|0 B||
+2021-01-23 22:37:58|0s|200|OPTIONS|/api/v1/tag/list|::1|0 B|0 B||
+2021-01-23 22:37:59|265.0039ms|200|GET|/api/v1/category/list|::1|0 B|480 B||
+2021-01-23 22:37:59|273.0219ms|200|GET|/api/v1/tag/list|::1|0 B|524 B||
+2021-01-23 22:37:59|375.9596ms|200|GET|/api/v1/postinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|1.1 KB||
+2021-01-23 22:38:01|0s|200|OPTIONS|/api/v1/postinfo/info/2|::1|0 B|0 B||
+2021-01-23 22:38:01|49.5267ms|200|GET|/api/v1/postinfo/info/2|::1|id=2|0 B|539 B||
+2021-01-23 22:38:04|0s|200|OPTIONS|/api/v1/postinfo/edit/2|::1|0 B|0 B||
+2021-01-23 22:38:04|50.9842ms|200|PUT|/api/v1/postinfo/edit/2|::1|id=2|360 B|39 B|{"ID":2,"CreatedAt":"2021-01-23T22:09:59.31+08:00","UpdatedAt":"2021-01-23T22:36:05.992+08:00","DeletedAt":null,"app_name":"ww","app_version":"","app_webpage":"","app_desc":"ww","app_developer":"ww","user_name":"weject","email":"w@w","category_id":2,"tag_id":3,"Category":{"id":2,"name":"摄影与录像"},"Tag":{"id":1,"tag_name":"✅已原生支持"},"id":2}|
+2021-01-23 22:38:04|0s|200|OPTIONS|/api/v1/postinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|0 B||
+2021-01-23 22:38:04|120.8621ms|200|GET|/api/v1/postinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|1.1 KB||
+2021-01-23 22:39:17|0s|200|OPTIONS|/api/v1/postinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|0 B||
+2021-01-23 22:39:17|999.6µs|200|OPTIONS|/api/v1/category/list|::1|0 B|0 B||
+2021-01-23 22:39:17|0s|200|OPTIONS|/api/v1/tag/list|::1|0 B|0 B||
+2021-01-23 22:39:17|256.1503ms|200|GET|/api/v1/category/list|::1|0 B|480 B||
+2021-01-23 22:39:17|268.187ms|200|GET|/api/v1/tag/list|::1|0 B|524 B||
+2021-01-23 22:39:18|410.179ms|200|GET|/api/v1/postinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|1.1 KB||
+2021-01-23 22:39:36|0s|200|OPTIONS|/api/v1/postinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|0 B||
+2021-01-23 22:39:36|0s|200|OPTIONS|/api/v1/category/list|::1|0 B|0 B||
+2021-01-23 22:39:36|0s|200|OPTIONS|/api/v1/tag/list|::1|0 B|0 B||
+2021-01-23 22:39:36|32.1954ms|200|GET|/api/v1/category/list|::1|0 B|480 B||
+2021-01-23 22:39:37|64.1931ms|200|GET|/api/v1/tag/list|::1|0 B|524 B||
+2021-01-23 22:39:37|146.166ms|200|GET|/api/v1/postinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|1.1 KB||
+2021-01-23 22:39:38|0s|200|OPTIONS|/api/v1/postinfo/info/2|::1|0 B|0 B||
+2021-01-23 22:39:38|49.7589ms|200|GET|/api/v1/postinfo/info/2|::1|id=2|0 B|539 B||
+2021-01-23 22:39:42|0s|200|OPTIONS|/api/v1/postinfo/edit/undefined|::1|0 B|0 B||
+2021-01-23 22:39:42|0s|404|PUT|/api/v1/postinfo/edit/undefined|::1|353 B|0 B|{"ID":2,"CreatedAt":"2021-01-23T22:09:59.31+08:00","UpdatedAt":"2021-01-23T22:38:04.285+08:00","DeletedAt":null,"app_name":"ww","app_version":"","app_webpage":"","app_desc":"ww","app_developer":"ww","user_name":"weject","email":"w@w","category_id":2,"tag_id":2,"Category":{"id":2,"name":"摄影与录像"},"Tag":{"id":1,"tag_name":"✅已原生支持"}}|
+2021-01-23 22:40:08|0s|200|OPTIONS|/api/v1/postinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|0 B||
+2021-01-23 22:40:08|0s|200|OPTIONS|/api/v1/category/list|::1|0 B|0 B||
+2021-01-23 22:40:08|0s|200|OPTIONS|/api/v1/tag/list|::1|0 B|0 B||
+2021-01-23 22:40:08|55.3175ms|200|GET|/api/v1/tag/list|::1|0 B|524 B||
+2021-01-23 22:40:08|64.3749ms|200|GET|/api/v1/category/list|::1|0 B|480 B||
+2021-01-23 22:40:08|185.0298ms|200|GET|/api/v1/postinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|1.1 KB||
+2021-01-23 22:40:10|0s|200|OPTIONS|/api/v1/postinfo/info/2|::1|0 B|0 B||
+2021-01-23 22:40:10|71.0481ms|200|GET|/api/v1/postinfo/info/2|::1|id=2|0 B|539 B||
+2021-01-23 22:40:55|0s|200|OPTIONS|/api/v1/postinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|0 B||
+2021-01-23 22:40:55|0s|200|OPTIONS|/api/v1/category/list|::1|0 B|0 B||
+2021-01-23 22:40:55|0s|200|OPTIONS|/api/v1/tag/list|::1|0 B|0 B||
+2021-01-23 22:40:55|252.8793ms|200|GET|/api/v1/tag/list|::1|0 B|524 B||
+2021-01-23 22:40:55|267.8756ms|200|GET|/api/v1/category/list|::1|0 B|480 B||
+2021-01-23 22:40:55|363.6098ms|200|GET|/api/v1/postinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|1.1 KB||
+2021-01-23 22:40:57|0s|200|OPTIONS|/api/v1/postinfo/info/2|::1|0 B|0 B||
+2021-01-23 22:40:57|52.256ms|200|GET|/api/v1/postinfo/info/2|::1|id=2|0 B|539 B||
+2021-01-23 22:40:59|0s|200|OPTIONS|/api/v1/postinfo/edit/2|::1|0 B|0 B||
+2021-01-23 22:40:59|52.6851ms|200|PUT|/api/v1/postinfo/edit/2|::1|id=2|353 B|39 B|{"ID":2,"CreatedAt":"2021-01-23T22:09:59.31+08:00","UpdatedAt":"2021-01-23T22:38:04.285+08:00","DeletedAt":null,"app_name":"ww","app_version":"","app_webpage":"","app_desc":"ww","app_developer":"ww","user_name":"weject","email":"w@w","category_id":2,"tag_id":2,"Category":{"id":2,"name":"摄影与录像"},"Tag":{"id":1,"tag_name":"✅已原生支持"}}|
+2021-01-23 22:41:00|120.7577ms|200|GET|/api/v1/postinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|1.1 KB||
+2021-01-23 22:41:04|0s|200|OPTIONS|/api/v1/postinfo/info/2|::1|0 B|0 B||
+2021-01-23 22:41:04|58.5406ms|200|GET|/api/v1/postinfo/info/2|::1|id=2|0 B|539 B||
+2021-01-23 22:41:07|0s|200|OPTIONS|/api/v1/postinfo/edit/2|::1|0 B|0 B||
+2021-01-23 22:41:07|71.1331ms|200|PUT|/api/v1/postinfo/edit/2|::1|id=2|353 B|39 B|{"ID":2,"CreatedAt":"2021-01-23T22:09:59.31+08:00","UpdatedAt":"2021-01-23T22:40:59.963+08:00","DeletedAt":null,"app_name":"ww","app_version":"","app_webpage":"","app_desc":"ww","app_developer":"ww","user_name":"weject","email":"w@w","category_id":2,"tag_id":2,"Category":{"id":2,"name":"摄影与录像"},"Tag":{"id":1,"tag_name":"✅已原生支持"}}|
+2021-01-23 22:41:07|0s|200|OPTIONS|/api/v1/postinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|0 B||
+2021-01-23 22:41:07|95.628ms|200|GET|/api/v1/postinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|1.1 KB||
+2021-01-23 22:41:44|0s|200|OPTIONS|/api/v1/postinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|0 B||
+2021-01-23 22:41:44|0s|200|OPTIONS|/api/v1/category/list|::1|0 B|0 B||
+2021-01-23 22:41:44|0s|200|OPTIONS|/api/v1/tag/list|::1|0 B|0 B||
+2021-01-23 22:41:44|51.997ms|200|GET|/api/v1/category/list|::1|0 B|480 B||
+2021-01-23 22:41:44|51.9971ms|200|GET|/api/v1/tag/list|::1|0 B|524 B||
+2021-01-23 22:41:44|151.9493ms|200|GET|/api/v1/postinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|1.1 KB||
+2021-01-23 22:41:46|0s|200|OPTIONS|/api/v1/postinfo/info/2|::1|0 B|0 B||
+2021-01-23 22:41:46|48.7755ms|200|GET|/api/v1/postinfo/info/2|::1|id=2|0 B|539 B||
+2021-01-23 22:41:54|0s|200|OPTIONS|/api/v1/postinfo/edit/2|::1|0 B|0 B||
+2021-01-23 22:41:55|91.6722ms|200|PUT|/api/v1/postinfo/edit/2|::1|id=2|353 B|39 B|{"ID":2,"CreatedAt":"2021-01-23T22:09:59.31+08:00","UpdatedAt":"2021-01-23T22:41:07.386+08:00","DeletedAt":null,"app_name":"ww","app_version":"","app_webpage":"","app_desc":"ww","app_developer":"ww","user_name":"weject","email":"w@w","category_id":2,"tag_id":3,"Category":{"id":2,"name":"摄影与录像"},"Tag":{"id":1,"tag_name":"✅已原生支持"}}|
+2021-01-23 22:41:55|0s|200|OPTIONS|/api/v1/postinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|0 B||
+2021-01-23 22:41:55|123.1713ms|200|GET|/api/v1/postinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|1.1 KB||
+2021-01-23 22:41:57|0s|200|OPTIONS|/api/v1/postinfo/info/2|::1|0 B|0 B||
+2021-01-23 22:41:58|52.0152ms|200|GET|/api/v1/postinfo/info/2|::1|id=2|0 B|535 B||
+2021-01-23 22:42:01|0s|200|OPTIONS|/api/v1/postinfo/edit/2|::1|0 B|0 B||
+2021-01-23 22:42:01|50.3227ms|200|PUT|/api/v1/postinfo/edit/2|::1|id=2|349 B|39 B|{"ID":2,"CreatedAt":"2021-01-23T22:09:59.31+08:00","UpdatedAt":"2021-01-23T22:41:55+08:00","DeletedAt":null,"app_name":"ww","app_version":"","app_webpage":"","app_desc":"ww","app_developer":"ww","user_name":"weject","email":"w@w","category_id":4,"tag_id":1,"Category":{"id":2,"name":"摄影与录像"},"Tag":{"id":1,"tag_name":"✅已原生支持"}}|
+2021-01-23 22:42:01|0s|200|OPTIONS|/api/v1/postinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|0 B||
+2021-01-23 22:42:01|117.9983ms|200|GET|/api/v1/postinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|1.1 KB||
+2021-01-23 22:44:43|0s|200|OPTIONS|/api/v1/postinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|0 B||
+2021-01-23 22:44:43|0s|200|OPTIONS|/api/v1/category/list|::1|0 B|0 B||
+2021-01-23 22:44:43|0s|200|OPTIONS|/api/v1/tag/list|::1|0 B|0 B||
+2021-01-23 22:44:43|238.5856ms|200|GET|/api/v1/tag/list|::1|0 B|524 B||
+2021-01-23 22:44:43|260.5804ms|200|GET|/api/v1/category/list|::1|0 B|480 B||
+2021-01-23 22:44:43|401.7552ms|200|GET|/api/v1/postinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|1.1 KB||
+2021-01-23 22:45:39|0s|200|OPTIONS|/api/v1/postinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|0 B||
+2021-01-23 22:45:39|0s|200|OPTIONS|/api/v1/category/list|::1|0 B|0 B||
+2021-01-23 22:45:39|0s|200|OPTIONS|/api/v1/tag/list|::1|0 B|0 B||
+2021-01-23 22:45:39|28.5499ms|200|GET|/api/v1/tag/list|::1|0 B|524 B||
+2021-01-23 22:45:39|62.0982ms|200|GET|/api/v1/category/list|::1|0 B|480 B||
+2021-01-23 22:45:39|140.6743ms|200|GET|/api/v1/postinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|1.1 KB||
+2021-01-23 22:45:50|0s|200|OPTIONS|/api/v1/postinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|0 B||
+2021-01-23 22:45:50|0s|200|OPTIONS|/api/v1/category/list|::1|0 B|0 B||
+2021-01-23 22:45:50|0s|200|OPTIONS|/api/v1/tag/list|::1|0 B|0 B||
+2021-01-23 22:45:50|246.0108ms|200|GET|/api/v1/category/list|::1|0 B|480 B||
+2021-01-23 22:45:50|254.0076ms|200|GET|/api/v1/tag/list|::1|0 B|524 B||
+2021-01-23 22:45:50|383.0276ms|200|GET|/api/v1/postinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|1.1 KB||
+2021-01-23 22:45:52|0s|200|OPTIONS|/api/v1/postinfo/info/2|::1|0 B|0 B||
+2021-01-23 22:45:52|63.9891ms|200|GET|/api/v1/postinfo/info/2|::1|id=2|0 B|539 B||
+2021-01-23 22:45:54|0s|200|OPTIONS|/api/v1/postinfo/edit/undefined|::1|0 B|0 B||
+2021-01-23 22:45:54|0s|404|PUT|/api/v1/postinfo/edit/undefined|::1|353 B|0 B|{"ID":2,"CreatedAt":"2021-01-23T22:09:59.31+08:00","UpdatedAt":"2021-01-23T22:42:01.372+08:00","DeletedAt":null,"app_name":"ww","app_version":"","app_webpage":"","app_desc":"ww","app_developer":"ww","user_name":"weject","email":"w@w","category_id":2,"tag_id":2,"Category":{"id":2,"name":"摄影与录像"},"Tag":{"id":1,"tag_name":"✅已原生支持"}}|
+2021-01-23 22:48:28|999.5µs|200|OPTIONS|/api/v1/postinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|0 B||
+2021-01-23 22:48:28|0s|200|OPTIONS|/api/v1/category/list|::1|0 B|0 B||
+2021-01-23 22:48:28|0s|200|OPTIONS|/api/v1/tag/list|::1|0 B|0 B||
+2021-01-23 22:48:28|253.2217ms|200|GET|/api/v1/category/list|::1|0 B|480 B||
+2021-01-23 22:48:28|257.2395ms|200|GET|/api/v1/tag/list|::1|0 B|524 B||
+2021-01-23 22:48:28|351.8459ms|200|GET|/api/v1/postinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|1.1 KB||
+2021-01-23 22:48:32|19.9926ms|200|GET|/api/v1/category/list|::1|0 B|480 B||
+2021-01-23 22:48:32|18.9934ms|200|GET|/api/v1/tag/list|::1|0 B|524 B||
+2021-01-23 22:48:32|119.9625ms|200|GET|/api/v1/postinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|1.1 KB||
+2021-01-23 22:48:34|0s|200|OPTIONS|/api/v1/postinfo/info/2|::1|0 B|0 B||
+2021-01-23 22:48:34|49.9833ms|200|GET|/api/v1/postinfo/info/2|::1|id=2|0 B|539 B||
+2021-01-23 22:48:37|0s|200|OPTIONS|/api/v1/postinfo/edit/2|::1|0 B|0 B||
+2021-01-23 22:48:37|49.1036ms|200|PUT|/api/v1/postinfo/edit/2|::1|id=2|353 B|39 B|{"ID":2,"CreatedAt":"2021-01-23T22:09:59.31+08:00","UpdatedAt":"2021-01-23T22:42:01.372+08:00","DeletedAt":null,"app_name":"ww","app_version":"","app_webpage":"","app_desc":"ww","app_developer":"ww","user_name":"weject","email":"w@w","category_id":2,"tag_id":3,"Category":{"id":2,"name":"摄影与录像"},"Tag":{"id":1,"tag_name":"✅已原生支持"}}|
+2021-01-23 22:48:37|0s|200|OPTIONS|/api/v1/postinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|0 B||
+2021-01-23 22:48:37|120.1178ms|200|GET|/api/v1/postinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|1.1 KB||
+2021-01-23 22:48:40|0s|200|OPTIONS|/api/v1/postinfo/info/2|::1|0 B|0 B||
+2021-01-23 22:48:41|82.1264ms|200|GET|/api/v1/postinfo/info/2|::1|id=2|0 B|539 B||
+2021-01-23 22:48:43|0s|200|OPTIONS|/api/v1/postinfo/edit/2|::1|0 B|0 B||
+2021-01-23 22:48:43|48.1995ms|200|PUT|/api/v1/postinfo/edit/2|::1|id=2|353 B|39 B|{"ID":2,"CreatedAt":"2021-01-23T22:09:59.31+08:00","UpdatedAt":"2021-01-23T22:48:37.414+08:00","DeletedAt":null,"app_name":"ww","app_version":"","app_webpage":"","app_desc":"ww","app_developer":"ww","user_name":"weject","email":"w@w","category_id":2,"tag_id":2,"Category":{"id":2,"name":"摄影与录像"},"Tag":{"id":1,"tag_name":"✅已原生支持"}}|
+2021-01-23 22:48:43|0s|200|OPTIONS|/api/v1/postinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|0 B||
+2021-01-23 22:48:44|112.1239ms|200|GET|/api/v1/postinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|1.1 KB||
+2021-01-23 22:51:17|999.4µs|200|OPTIONS|/api/v1/postinfo/info/2|::1|0 B|0 B||
+2021-01-23 22:51:17|23.9939ms|200|GET|/api/v1/postinfo/info/2|::1|id=2|0 B|506 B||
+2021-01-23 22:51:19|0s|200|OPTIONS|/api/v1/postinfo/edit/2|::1|0 B|0 B||
+2021-01-23 22:51:20|23.5781ms|200|PUT|/api/v1/postinfo/edit/2|::1|id=2|320 B|39 B|{"ID":2,"CreatedAt":"2021-01-23T22:09:59.31+08:00","UpdatedAt":"2021-01-23T22:48:43.859+08:00","DeletedAt":null,"app_name":"ww","app_version":"","app_webpage":"","app_desc":"ww","app_developer":"ww","user_name":"weject","email":"w@w","category_id":2,"tag_id":3,"Category":{"id":0,"name":""},"Tag":{"id":0,"tag_name":""}}|
+2021-01-23 22:51:20|0s|200|OPTIONS|/api/v1/postinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|0 B||
+2021-01-23 22:51:20|157.5772ms|200|GET|/api/v1/postinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|1.1 KB||
+2021-01-23 22:51:29|0s|200|OPTIONS|/api/v1/postinfo/info/2|::1|0 B|0 B||
+2021-01-23 22:51:29|32.8817ms|200|GET|/api/v1/postinfo/info/2|::1|id=2|0 B|506 B||
+2021-01-23 22:51:32|0s|200|OPTIONS|/api/v1/postinfo/edit/2|::1|0 B|0 B||
+2021-01-23 22:51:32|13.0459ms|200|PUT|/api/v1/postinfo/edit/2|::1|id=2|320 B|39 B|{"ID":2,"CreatedAt":"2021-01-23T22:09:59.31+08:00","UpdatedAt":"2021-01-23T22:51:20.003+08:00","DeletedAt":null,"app_name":"ww","app_version":"","app_webpage":"","app_desc":"ww","app_developer":"ww","user_name":"weject","email":"w@w","category_id":1,"tag_id":3,"Category":{"id":0,"name":""},"Tag":{"id":0,"tag_name":""}}|
+2021-01-23 22:51:32|0s|200|OPTIONS|/api/v1/postinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|0 B||
+2021-01-23 22:51:33|73.8914ms|200|GET|/api/v1/postinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|1.1 KB||
+2021-01-23 22:52:07|1.9888ms|200|OPTIONS|/api/v1/appinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|0 B||
+2021-01-23 22:52:07|998.8µs|200|OPTIONS|/api/v1/category/list|::1|0 B|0 B||
+2021-01-23 22:52:07|0s|200|OPTIONS|/api/v1/tag/list|::1|0 B|0 B||
+2021-01-23 22:52:08|45.3143ms|200|GET|/api/v1/tag/list|::1|0 B|524 B||
+2021-01-23 22:52:08|140.3277ms|200|GET|/api/v1/appinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|7.9 KB||
+2021-01-23 22:52:08|281.3004ms|200|GET|/api/v1/category/list|::1|0 B|480 B||
+2021-01-23 22:52:10|0s|200|OPTIONS|/api/v1/appinfo/info/10|::1|0 B|0 B||
+2021-01-23 22:52:10|22.9956ms|200|GET|/api/v1/appinfo/info/10|::1|id=10|0 B|610 B||
+2021-01-23 22:52:14|0s|200|OPTIONS|/api/v1/appinfo/edit/10|::1|0 B|0 B||
+2021-01-23 22:52:14|16.7842ms|200|PUT|/api/v1/appinfo/edit/10|::1|id=10|432 B|39 B|{"ID":10,"CreatedAt":"2021-01-23T21:50:41.292+08:00","UpdatedAt":"2021-01-23T22:33:13.213+08:00","DeletedAt":null,"app_name":"Golang","app_version":"1.16beta1","app_webpage":"https://golang.org/dl/#go1.16beta1","app_developer":"Google","app_desc":"Golang language,预览版原生支持。","user_name":"weject","email":"weject@gmail.com","category_id":1,"tag_id":2,"Category":{"id":0,"name":""},"Tag":{"id":0,"tag_name":""},"id":10}|
+2021-01-23 22:52:14|0s|200|OPTIONS|/api/v1/appinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|0 B||
+2021-01-23 22:52:14|142.4879ms|200|GET|/api/v1/appinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|7.9 KB||
+2021-01-23 22:52:43|0s|200|OPTIONS|/api/v1/appinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|0 B||
+2021-01-23 22:52:43|0s|200|OPTIONS|/api/v1/category/list|::1|0 B|0 B||
+2021-01-23 22:52:43|0s|200|OPTIONS|/api/v1/tag/list|::1|0 B|0 B||
+2021-01-23 22:52:43|269.5632ms|200|GET|/api/v1/category/list|::1|0 B|480 B||
+2021-01-23 22:52:43|269.5632ms|200|GET|/api/v1/tag/list|::1|0 B|524 B||
+2021-01-23 22:52:43|272.5622ms|200|GET|/api/v1/appinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|7.9 KB||
+2021-01-23 22:53:28|0s|200|OPTIONS|/api/v1/appinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|0 B||
+2021-01-23 22:53:28|0s|200|OPTIONS|/api/v1/category/list|::1|0 B|0 B||
+2021-01-23 22:53:28|0s|200|OPTIONS|/api/v1/tag/list|::1|0 B|0 B||
+2021-01-23 22:53:28|53.9829ms|200|GET|/api/v1/category/list|::1|0 B|480 B||
+2021-01-23 22:53:28|67.9789ms|200|GET|/api/v1/tag/list|::1|0 B|524 B||
+2021-01-23 22:53:29|98.9679ms|200|GET|/api/v1/appinfo/list|::1|app_name= pagenum=1 pagesize=10|0 B|7.9 KB||
+2021-01-23 22:55:37|222.9269ms|200|GET|/api/v1/tag/list|::1|0 B|524 B||
+2021-01-23 22:55:37|9.9968ms|200|GET|/api/v1/tag/list|::1|0 B|524 B||
+2021-01-23 22:55:37|259.9153ms|200|GET|/api/v1/category/list|::1|0 B|480 B||
+2021-01-23 22:55:38|120.9591ms|200|GET|/api/v1/appinfo/list|::1|pagenum=1 pagesize=10|0 B|7.9 KB||

@@ -36,7 +36,7 @@ func GetPostAppInfoList(c iris.Context) {
 		pageNum = 1
 	}
 
-	data, total, code := model.GetPostInfoList(appName,pageSize, pageNum)
+	data, total, code := model.GetPostInfoList(appName, pageSize, pageNum)
 
 	c.JSON(iris.Map{
 		"data":    data,
@@ -47,8 +47,8 @@ func GetPostAppInfoList(c iris.Context) {
 }
 
 // 查询分类下的表单
-func GetPostInfoCateList(c iris.Context)  {
-	categoryId,_ := c.Params().GetInt("id")
+func GetPostInfoCateList(c iris.Context) {
+	categoryId, _ := c.Params().GetInt("id")
 	pageSize, _ := c.URLParamInt("pagesize")
 	pageNum, _ := c.URLParamInt("pagenum")
 	appName := c.URLParam("app_name")
@@ -65,7 +65,7 @@ func GetPostInfoCateList(c iris.Context)  {
 		pageNum = 1
 	}
 
-	data, total, code := model.GetPostInfoCateList(categoryId,appName,pageSize,pageNum)
+	data, total, code := model.GetPostInfoCateList(categoryId, appName, pageSize, pageNum)
 
 	c.JSON(iris.Map{
 		"data":    data,
@@ -93,7 +93,6 @@ func GetPostInfo(c iris.Context) {
 // 编辑表单
 func EditPostInfo(c iris.Context) {
 	var data model.PostInfo
-
 	id, _ := c.Params().GetInt("id")
 	_ = c.ReadJSON(&data)
 

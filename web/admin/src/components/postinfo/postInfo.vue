@@ -145,16 +145,16 @@
       @cancel="editPostInfoCancel"
       destroyOnClose
     >
-      <a-form-model v-model="PostInfo">
+      <a-form-model v-model="EditPostInfo">
         <a-row :gutter="20">
           <a-col :span="6">
             <a-form-model-item label="提供人">
-              <a-input v-model="PostInfo.user_name"></a-input>
+              <a-input v-model="EditPostInfo.user_name"></a-input>
             </a-form-model-item>
           </a-col>
           <a-col :span="6" :offset="4">
             <a-form-model-item label="提供人邮箱">
-              <a-input v-model="PostInfo.email"></a-input>
+              <a-input v-model="EditPostInfo.email"></a-input>
             </a-form-model-item>
           </a-col>
         </a-row>
@@ -162,7 +162,7 @@
         <a-row :gutter="20">
           <a-col :span="6">
             <a-form-model-item label="App分类">
-              <a-select v-model="PostInfo.category_id" @change="cateChange">
+              <a-select v-model="EditPostInfo.category_id" @change="cateEditChange">
                 <a-select-option v-for="item in Catelist" :key="item.id">{{item.name}}</a-select-option>
               </a-select>
             </a-form-model-item>
@@ -170,26 +170,26 @@
 
           <a-col :span="6" :offset="4">
             <a-form-model-item label="状态">
-              <a-select v-model="PostInfo.tag_id" @change="tagChange">
+              <a-select v-model="EditPostInfo.tag_id" @change="tagEditChange">
                 <a-select-option v-for="item in Taglist" :key="item.id">{{item.tag_name}}</a-select-option>
               </a-select>
             </a-form-model-item>
           </a-col>
         </a-row>
         <a-form-model-item label="App名称">
-          <a-input v-model="PostInfo.app_name"></a-input>
+          <a-input v-model="EditPostInfo.app_name"></a-input>
         </a-form-model-item>
         <a-form-model-item label="App版本">
-          <a-input v-model="PostInfo.app_verison"></a-input>
+          <a-input v-model="EditPostInfo.app_verison"></a-input>
         </a-form-model-item>
         <a-form-model-item label="App网站">
-          <a-input v-model="PostInfo.app_website"></a-input>
+          <a-input v-model="EditPostInfo.app_website"></a-input>
         </a-form-model-item>
         <a-form-model-item label="开发者">
-          <a-input v-model="PostInfo.app_developer"></a-input>
+          <a-input v-model="EditPostInfo.app_developer"></a-input>
         </a-form-model-item>
         <a-form-model-item label="App描述">
-          <a-input type="textarea" v-model="PostInfo.app_desc"></a-input>
+          <a-input type="textarea" v-model="EditPostInfo.app_desc"></a-input>
         </a-form-model-item>
       </a-form-model>
     </a-modal>
@@ -308,10 +308,11 @@ export default {
         app_developer: '',
         user_name: '',
         email: '',
-        category_id: 2,
-        tag_id: 1,
+        category_id: undefined,
+        tag_id: undefined,
       },
       PostInfo: {
+        ID: undefined,
         app_name: '',
         app_version: '',
         app_webpage: '',
@@ -319,8 +320,20 @@ export default {
         app_developer: '',
         user_name: '',
         email: '',
-        category_id: 2,
-        tag_id: 1,
+        category_id: undefined,
+        tag_id: undefined,
+      },
+      EditPostInfo: {
+        ID: undefined,
+        app_name: '',
+        app_version: '',
+        app_webpage: '',
+        app_desc: '',
+        app_developer: '',
+        user_name: '',
+        email: '',
+        category_id: undefined,
+        tag_id: undefined,
       },
     }
   },
@@ -402,6 +415,12 @@ export default {
       this.newPostInfo.tag_id = value
     },
 
+    cateEditChange(value) {
+      this.PostInfo.category_id = value
+    },
+    tagEditChange(value) {
+      this.PostInfo.tag_id = value
+    },
     // 删除表单
     deletePostInfo(id) {
       this.$confirm({
@@ -443,11 +462,11 @@ export default {
     async editPostInfo(id) {
       this.editPostInfoVisible = true
       const { data: res } = await this.$http.get(`postinfo/info/${id}`)
-      this.PostInfo = res.data
-      this.PostInfo.id = id
+      this.EditPostInfo = res.data
+      this.PostInfo.ID = res.data.ID
     },
     async editPostInfoOk() {
-      const { data: res } = await this.$http.put(`postinfo/edit/${this.PostInfo.id}`, this.PostInfo)
+      const { data: res } = await this.$http.put(`postinfo/edit/${this.PostInfo.ID}`, this.EditPostInfo)
       if (res.status != 200) return this.$message.error(res.message)
       this.editPostInfoVisible = false
       this.$message.success('更新分类信息成功')
