@@ -79,7 +79,7 @@ func GetPostInfoCateList(cateID int, appName string, pageSize int, pageNum int) 
 // 查询单个表单
 func GetPostInfo(id int) (PostInfo, int) {
 	var postInfo PostInfo
-	err = db.Preload("category").Preload("Tag").Where("id = ?", id).First(&postInfo).Error
+	err = db.Preload("Category").Preload("Tag").Where("id = ?", id).First(&postInfo).Error
 	if err != nil {
 		return postInfo, message.ERROR
 	}

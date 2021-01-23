@@ -40,6 +40,7 @@
               >
             </v-row>
           </v-card-text>
+
           <v-card-subtitle class="font-weight-bold"
             >简短描述：{{ item.app_desc }}</v-card-subtitle
           >
@@ -47,7 +48,7 @@
           <v-divider class="mx-3"></v-divider>
           <v-card-actions>
             <v-row align="center" justify="space-around">
-              <v-col cols="6">
+              <v-col cols="5" offset="1">
                 <v-btn :href="item.app_webpage" target="_blank" outlined
                   >下载地址</v-btn
                 >

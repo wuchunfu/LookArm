@@ -1,7 +1,7 @@
 <template>
-  <v-app app>
+  <v-main app>
     <TopBar></TopBar>
-    <v-main>
+    <v-container>
       <v-row align="center" justify="center">
         <v-col cols="12" sm="4">
           <div class="mt-16 text-center text-h3">
@@ -21,14 +21,10 @@
         </v-col>
       </v-row>
 
-      <v-row
-        class="mt-6"
-        justify="center"
-        align="center"
-        align-content="center"
-      >
+      <v-row class="mt-6" justify="center" align="center">
         <v-col cols="6">
           <v-text-field
+            max-width="800"
             color="indigo"
             outlined
             clearable
@@ -42,10 +38,10 @@
       <v-divider class="mx-14"></v-divider>
 
       <router-view :key="$route.path"></router-view>
-    </v-main>
+    </v-container>
 
     <Footer></Footer>
-  </v-app>
+  </v-main>
 </template>
 
 <script>

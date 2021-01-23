@@ -17,11 +17,7 @@
 
         <a-col :span="3">
           <a-select placeholder="请选择分类" style="width: 200px" @change="gotoCatePage">
-            <a-select-option
-              v-for="item in Catelist"
-              :key="item.id"
-              :value="item.id"
-            >{{ item.name }}</a-select-option>
+            <a-select-option v-for="item in Catelist" :key="item.id" :value="item.id">{{ item.name }}</a-select-option>
           </a-select>
         </a-col>
         <a-col :span="1">
@@ -30,11 +26,9 @@
 
         <a-col :span="3" :offset="2">
           <a-select placeholder="请选择状态" style="width: 200px" @change="gotoTagPage">
-            <a-select-option
-              v-for="item in Taglist"
-              :key="item.id"
-              :value="item.id"
-            >{{ item.tag_name }}</a-select-option>
+            <a-select-option v-for="item in Taglist" :key="item.id" :value="item.id">{{
+              item.tag_name
+            }}</a-select-option>
           </a-select>
         </a-col>
         <a-col :span="1">
@@ -52,20 +46,17 @@
       >
         <template slot="action" slot-scope="data">
           <div class="actionSlot">
-            <a-button
-              size="small"
-              type="primary"
-              icon="edit"
-              style="margin-right: 15px"
-              @click="editAppInfo(data.ID)"
-            >编辑</a-button>
+            <a-button size="small" type="primary" icon="edit" style="margin-right: 15px" @click="editAppInfo(data.ID)"
+              >编辑</a-button
+            >
             <a-button
               size="small"
               type="danger"
               icon="delete"
               style="margin-right: 15px"
               @click="deleteAppInfo(data.ID)"
-            >删除</a-button>
+              >删除</a-button
+            >
           </div>
         </template>
       </a-table>
@@ -98,7 +89,7 @@
           <a-col :span="6">
             <a-form-model-item label="App分类">
               <a-select v-model="newAppInfo.category_id" @change="cateChange">
-                <a-select-option v-for="item in Catelist" :key="item.id">{{item.name}}</a-select-option>
+                <a-select-option v-for="item in Catelist" :key="item.id">{{ item.name }}</a-select-option>
               </a-select>
             </a-form-model-item>
           </a-col>
@@ -106,7 +97,7 @@
           <a-col :span="6" :offset="4">
             <a-form-model-item label="状态">
               <a-select v-model="newAppInfo.tag_id" @change="tagChange">
-                <a-select-option v-for="item in Taglist" :key="item.id">{{item.tag_name}}</a-select-option>
+                <a-select-option v-for="item in Taglist" :key="item.id">{{ item.tag_name }}</a-select-option>
               </a-select>
             </a-form-model-item>
           </a-col>
@@ -115,10 +106,10 @@
           <a-input v-model="newAppInfo.app_name"></a-input>
         </a-form-model-item>
         <a-form-model-item label="App版本">
-          <a-input v-model="newAppInfo.app_verison"></a-input>
+          <a-input v-model="newAppInfo.app_version"></a-input>
         </a-form-model-item>
         <a-form-model-item label="App网站">
-          <a-input v-model="newAppInfo.app_website"></a-input>
+          <a-input v-model="newAppInfo.app_webpage"></a-input>
         </a-form-model-item>
         <a-form-model-item label="开发者">
           <a-input v-model="newAppInfo.app_developer"></a-input>
@@ -155,16 +146,16 @@
         <a-row :gutter="20">
           <a-col :span="6">
             <a-form-model-item label="App分类">
-              <a-select v-model="AppInfo.category_id" @change="cateChange">
-                <a-select-option v-for="item in Catelist" :key="item.id">{{item.name}}</a-select-option>
+              <a-select v-model="AppInfo.category_id" @change="editCateChange">
+                <a-select-option v-for="item in Catelist" :key="item.id">{{ item.name }}</a-select-option>
               </a-select>
             </a-form-model-item>
           </a-col>
 
           <a-col :span="6" :offset="4">
             <a-form-model-item label="状态">
-              <a-select v-model="AppInfo.tag_id" @change="tagChange">
-                <a-select-option v-for="item in Taglist" :key="item.id">{{item.tag_name}}</a-select-option>
+              <a-select v-model="AppInfo.tag_id" @change="editTagChange">
+                <a-select-option v-for="item in Taglist" :key="item.id">{{ item.tag_name }}</a-select-option>
               </a-select>
             </a-form-model-item>
           </a-col>
@@ -173,10 +164,10 @@
           <a-input v-model="AppInfo.app_name"></a-input>
         </a-form-model-item>
         <a-form-model-item label="App版本">
-          <a-input v-model="AppInfo.app_verison"></a-input>
+          <a-input v-model="AppInfo.app_version"></a-input>
         </a-form-model-item>
         <a-form-model-item label="App网站">
-          <a-input v-model="AppInfo.app_website"></a-input>
+          <a-input v-model="AppInfo.app_webpage"></a-input>
         </a-form-model-item>
         <a-form-model-item label="开发者">
           <a-input v-model="AppInfo.app_developer"></a-input>
@@ -288,22 +279,12 @@ export default {
         app_webpage: '',
         app_desc: '',
         app_developer: '',
-        user_name: '',
-        email: '',
-        category_id: 2,
-        tag_id: 1,
+        user_name: 'weject',
+        email: 'weject@gmail.com',
+        category_id: undefined,
+        tag_id: undefined,
       },
-      appInfo: {
-        app_name: '',
-        app_version: '',
-        app_webpage: '',
-        app_desc: '',
-        app_developer: '',
-        user_name: '',
-        email: '',
-        category_id: 2,
-        tag_id: 1,
-      },
+
       AppInfo: {
         app_name: '',
         app_version: '',
@@ -312,8 +293,8 @@ export default {
         app_developer: '',
         user_name: '',
         email: '',
-        category_id: 2,
-        tag_id: 1,
+        category_id: undefined,
+        tag_id: undefined,
       },
     }
   },
@@ -423,13 +404,25 @@ export default {
       const { data: res } = await this.$http.put(`appinfo/edit/${this.AppInfo.id}`, this.AppInfo)
       if (res.status != 200) return this.$message.error(res.message)
       this.editAppInfoVisible = false
-      this.$message.success('更新分类信息成功')
+      this.$message.success('更新APP信息成功')
       this.getAppInfoList()
     },
     editAppInfoCancel() {
       this.editAppInfoVisible = false
       this.$message.info('编辑已取消')
     },
+
+    // 编辑选择分类
+    editCateChange(value) {
+      this.AppInfo.category_id = value
+      console.log(this.AppInfo.category_id)
+    },
+
+    // 编辑状态选择
+    editTagChange(value) {
+      this.AppInfo.tag_id = value
+    },
+
     // 查询分类下的表单
     gotoCatePage(value) {
       this.$router.push(`/appinfo/catelist/${value}`)
