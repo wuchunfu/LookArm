@@ -11,11 +11,11 @@
             @search="getPostInfoList"
           />
         </a-col>
-        <a-col :span="4">
+        <!-- <a-col :span="4">
           <a-button type="primary" @click="addPostInfoVisible = true">新增</a-button>
-        </a-col>
+        </a-col>-->
 
-        <a-col :span="3">
+        <a-col :span="3" :offset="2">
           <a-select placeholder="请选择分类" style="width: 200px" @change="gotoCatePage">
             <a-select-option
               v-for="item in Catelist"
@@ -77,64 +77,6 @@
         </template>
       </a-table>
     </a-card>
-
-    <!-- 新增表单区域 -->
-    <a-modal
-      closable
-      :visible="addPostInfoVisible"
-      width="60%"
-      @ok="addPostInfoOk"
-      @cancel="addPostInfoCancel"
-      destroyOnClose
-    >
-      <a-form-model v-model="newPostInfo">
-        <a-row :gutter="20">
-          <a-col :span="6">
-            <a-form-model-item label="提供人">
-              <a-input v-model="newPostInfo.user_name"></a-input>
-            </a-form-model-item>
-          </a-col>
-          <a-col :span="6" :offset="4">
-            <a-form-model-item label="提供人邮箱">
-              <a-input v-model="newPostInfo.email"></a-input>
-            </a-form-model-item>
-          </a-col>
-        </a-row>
-
-        <a-row :gutter="20">
-          <a-col :span="6">
-            <a-form-model-item label="App分类">
-              <a-select v-model="newPostInfo.category_id" @change="cateChange">
-                <a-select-option v-for="item in Catelist" :key="item.id">{{item.name}}</a-select-option>
-              </a-select>
-            </a-form-model-item>
-          </a-col>
-
-          <a-col :span="6" :offset="4">
-            <a-form-model-item label="状态">
-              <a-select v-model="newPostInfo.tag_id" @change="tagChange">
-                <a-select-option v-for="item in Taglist" :key="item.id">{{item.tag_name}}</a-select-option>
-              </a-select>
-            </a-form-model-item>
-          </a-col>
-        </a-row>
-        <a-form-model-item label="App名称">
-          <a-input v-model="newPostInfo.app_name"></a-input>
-        </a-form-model-item>
-        <a-form-model-item label="App版本">
-          <a-input v-model="newPostInfo.app_verison"></a-input>
-        </a-form-model-item>
-        <a-form-model-item label="App网站">
-          <a-input v-model="newPostInfo.app_website"></a-input>
-        </a-form-model-item>
-        <a-form-model-item label="开发者">
-          <a-input v-model="newPostInfo.app_developer"></a-input>
-        </a-form-model-item>
-        <a-form-model-item label="App描述">
-          <a-input type="textarea" v-model="newPostInfo.app_desc"></a-input>
-        </a-form-model-item>
-      </a-form-model>
-    </a-modal>
 
     <!-- 编辑表单区域 -->
     <a-modal
@@ -392,9 +334,6 @@ export default {
     },
 
     // 新增表单
-    //  this.$refs.addTagRef.validate(async (valid) => {
-    //     if (!valid) return this.$message.error('参数不符合要求，请重新输入'）
-    //   })
     async addPostInfoOk() {
       const { data: res } = await this.$http.post('postinfo/add', this.newPostInfo)
       if (res.status != 200) return this.$message.error(res.message)
@@ -442,6 +381,7 @@ export default {
     async appPost(id) {
       const { data: res } = await this.$http.get(`postinfo/info/${id}`)
       this.appInfo = res.data
+      console.log('res.data: ', res.data)
       this.appInfo.ID = 0
       this.$confirm({
         title: '提示：请再次确认',
@@ -459,18 +399,20 @@ export default {
       })
     },
 
-    // 编辑分类
+    // 编辑表单
     async editPostInfo(id) {
       this.editPostInfoVisible = true
       const { data: res } = await this.$http.get(`postinfo/info/${id}`)
       this.EditPostInfo = res.data
+      console.log(' this.EditPostInfo: ', this.EditPostInfo)
+      console.log('res.data: ', res.data)
       this.PostInfo.ID = res.data.ID
     },
     async editPostInfoOk() {
       const { data: res } = await this.$http.put(`postinfo/edit/${this.PostInfo.ID}`, this.EditPostInfo)
       if (res.status != 200) return this.$message.error(res.message)
       this.editPostInfoVisible = false
-      this.$message.success('更新分类信息成功')
+      this.$message.success('更新表单信息成功')
       this.getPostInfoList()
     },
     editPostInfoCancel() {

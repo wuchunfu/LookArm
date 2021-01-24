@@ -11,12 +11,9 @@
             @search="getPostInfoCateList"
           />
         </a-col>
-        <a-col :span="4">
-          <a-button type="primary" @click="addPostInfoCateVisible = true">新增</a-button>
-        </a-col>
 
-        <a-col :span="3">
-          <a-select :default-value="请选择分类" style="width: 200px" @change="gotoCatePage">
+        <a-col :span="3" :offset="1">
+          <a-select placeholder="请选择分类" style="width: 200px" @change="gotoCatePage">
             <a-select-option
               v-for="item in Catelist"
               :key="item.id"
@@ -24,11 +21,7 @@
             >{{ item.name }}</a-select-option>
           </a-select>
         </a-col>
-        <a-col :span="1">
-          <a-button type="info" @click="$router.push('/postinfo')">显示全部</a-button>
-        </a-col>
-
-        <a-col :span="3" :offset="2">
+        <a-col :span="3" :offset="1">
           <a-select placeholder="请选择状态" style="width: 200px" @change="gotoTagPage">
             <a-select-option
               v-for="item in Taglist"
@@ -37,8 +30,8 @@
             >{{ item.tag_name }}</a-select-option>
           </a-select>
         </a-col>
-        <a-col :span="1">
-          <a-button type="info" @click="router.push('postinfo')">显示全部</a-button>
+        <a-col :span="1" :offset="1">
+          <a-button type="info" @click="$router.push('/postinfo')">显示全部</a-button>
         </a-col>
       </a-row>
 
@@ -70,64 +63,6 @@
         </template>
       </a-table>
     </a-card>
-
-    <!-- 新增表单区域 -->
-    <a-modal
-      closable
-      :visible="addPostInfoCateVisible"
-      width="60%"
-      @ok="addPostInfoCateOk"
-      @cancel="addPostInfoCateCancel"
-      destroyOnClose
-    >
-      <a-form-model v-model="newPostInfoCate">
-        <a-row :gutter="20">
-          <a-col :span="6">
-            <a-form-model-item label="提供人">
-              <a-input v-model="newPostInfoCate.user_name"></a-input>
-            </a-form-model-item>
-          </a-col>
-          <a-col :span="6" :offset="4">
-            <a-form-model-item label="提供人邮箱">
-              <a-input v-model="newPostInfoCate.email"></a-input>
-            </a-form-model-item>
-          </a-col>
-        </a-row>
-
-        <a-row :gutter="20">
-          <a-col :span="6">
-            <a-form-model-item label="App分类">
-              <a-select v-model="newPostInfoCate.category_id" @change="cateChange">
-                <a-select-option v-for="item in Catelist" :key="item.id">{{item.name}}</a-select-option>
-              </a-select>
-            </a-form-model-item>
-          </a-col>
-
-          <a-col :span="6" :offset="4">
-            <a-form-model-item label="状态">
-              <a-select v-model="newPostInfoCate.tag_id" @change="tagChange">
-                <a-select-option v-for="item in Taglist" :key="item.id">{{item.tag_name}}</a-select-option>
-              </a-select>
-            </a-form-model-item>
-          </a-col>
-        </a-row>
-        <a-form-model-item label="App名称">
-          <a-input v-model="newPostInfoCate.app_name"></a-input>
-        </a-form-model-item>
-        <a-form-model-item label="App版本">
-          <a-input v-model="newPostInfoCate.app_verison"></a-input>
-        </a-form-model-item>
-        <a-form-model-item label="App网站">
-          <a-input v-model="newPostInfoCate.app_website"></a-input>
-        </a-form-model-item>
-        <a-form-model-item label="开发者">
-          <a-input v-model="newPostInfoCate.app_developer"></a-input>
-        </a-form-model-item>
-        <a-form-model-item label="App描述">
-          <a-input type="textarea" v-model="newPostInfoCate.app_desc"></a-input>
-        </a-form-model-item>
-      </a-form-model>
-    </a-modal>
 
     <!-- 编辑表单区域 -->
     <a-modal
@@ -365,17 +300,17 @@ export default {
     //  this.$refs.addTagRef.validate(async (valid) => {
     //     if (!valid) return this.$message.error('参数不符合要求，请重新输入'）
     //   })
-    async addPostInfoCateOk() {
-      const { data: res } = await this.$http.post('PostInfoCate/add', this.newPostInfoCate)
-      if (res.status != 200) return this.$message.error(res.message)
-      this.addPostInfoCateVisible = false
-      this.$message.success('添加表单成功')
-      await this.getPostInfoCateList()
-    },
-    addPostInfoCateCancel() {
-      this.addPostInfoCateVisible = false
-      this.$message.info('新增表单已取消')
-    },
+    // async addPostInfoCateOk() {
+    //   const { data: res } = await this.$http.post('PostInfoCate/add', this.newPostInfoCate)
+    //   if (res.status != 200) return this.$message.error(res.message)
+    //   this.addPostInfoCateVisible = false
+    //   this.$message.success('添加表单成功')
+    //   await this.getPostInfoCateList()
+    // },
+    // addPostInfoCateCancel() {
+    //   this.addPostInfoCateVisible = false
+    //   this.$message.info('新增表单已取消')
+    // },
 
     cateChange(value) {
       this.newPostInfoCate.category_id = value

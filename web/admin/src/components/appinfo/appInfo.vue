@@ -17,7 +17,11 @@
 
         <a-col :span="3">
           <a-select placeholder="请选择分类" style="width: 200px" @change="gotoCatePage">
-            <a-select-option v-for="item in Catelist" :key="item.id" :value="item.id">{{ item.name }}</a-select-option>
+            <a-select-option
+              v-for="item in Catelist"
+              :key="item.id"
+              :value="item.id"
+            >{{ item.name }}</a-select-option>
           </a-select>
         </a-col>
         <a-col :span="1">
@@ -26,9 +30,11 @@
 
         <a-col :span="3" :offset="2">
           <a-select placeholder="请选择状态" style="width: 200px" @change="gotoTagPage">
-            <a-select-option v-for="item in Taglist" :key="item.id" :value="item.id">{{
+            <a-select-option v-for="item in Taglist" :key="item.id" :value="item.id">
+              {{
               item.tag_name
-            }}</a-select-option>
+              }}
+            </a-select-option>
           </a-select>
         </a-col>
         <a-col :span="1">
@@ -46,17 +52,20 @@
       >
         <template slot="action" slot-scope="data">
           <div class="actionSlot">
-            <a-button size="small" type="primary" icon="edit" style="margin-right: 15px" @click="editAppInfo(data.ID)"
-              >编辑</a-button
-            >
+            <a-button
+              size="small"
+              type="primary"
+              icon="edit"
+              style="margin-right: 15px"
+              @click="editAppInfo(data.ID)"
+            >编辑</a-button>
             <a-button
               size="small"
               type="danger"
               icon="delete"
               style="margin-right: 15px"
               @click="deleteAppInfo(data.ID)"
-              >删除</a-button
-            >
+            >删除</a-button>
           </div>
         </template>
       </a-table>
@@ -353,9 +362,6 @@ export default {
     },
 
     // 新增表单
-    //  this.$refs.addTagRef.validate(async (valid) => {
-    //     if (!valid) return this.$message.error('参数不符合要求，请重新输入'）
-    //   })
     async addAppInfoOk() {
       const { data: res } = await this.$http.post('appinfo/add', this.newAppInfo)
       if (res.status != 200) return this.$message.error(res.message)

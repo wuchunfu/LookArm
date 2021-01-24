@@ -12,5 +12,6 @@ func Cors() iris.Handler {
 			AllowedMethods: []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"},
 			AllowedHeaders: []string{"*"},
 			ExposedHeaders: []string{"Content-Length", "text/plain", "Authorization", "Content-Type"},
+			AllowCredentials: true,
 		})
 }
