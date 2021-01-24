@@ -9,7 +9,7 @@ OH！快速查看哪些应用支持Apple Silicon - m1芯片
 
 
 
-![admin](F:\WorkSpace\lookarm\admin.png)
+![admin](admin.png)
 
 #### 特色
 
