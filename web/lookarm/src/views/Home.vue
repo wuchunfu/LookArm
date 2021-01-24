@@ -6,7 +6,7 @@
         <v-col cols="12" sm="4">
           <div class="mt-16 text-center text-h3">
             <p>快速查看哪些应用支持</p>
-            <p>Apple Silicon - m1</p>
+            <p>Apple Silicon - M1</p>
           </div>
         </v-col>
       </v-row>

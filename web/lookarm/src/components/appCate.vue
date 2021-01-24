@@ -22,10 +22,11 @@
             </v-col>
           </v-row>
           <v-card-text>
-            <v-row align="center" justify="center">
-              <v-col class="font-weight-bold" cols="4">版本：{{ item.app_version }}</v-col>
-              <v-col class="font-weight-bold" cols="4">当前状态: {{ item.Tag.tag_name }}</v-col>
-              <v-col class="font-weight-bold" cols="4">开发商: {{ item.app_developer }}</v-col>
+            <v-row align="center">
+              <v-col class="font-weight-bold" cols="3">📋版本：{{ item.app_version }}</v-col>
+              <v-col class="font-weight-bold" cols="4">💡状态: {{ item.Tag.tag_name }}</v-col>
+              <v-col class="font-weight-bold" cols="3">🖥️开发: {{ item.app_developer }}</v-col>
+              <v-col class="font-weight-bold" cols="2">🕒更新: {{ item.UpdatedAt | dateFormat}}</v-col>
             </v-row>
           </v-card-text>
 

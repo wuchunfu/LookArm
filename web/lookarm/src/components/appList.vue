@@ -2,8 +2,15 @@
   <div class="mt-2" app>
     <v-row justify="center" align="center">
       <v-col cols="6">
-        <v-card outlined elevation="2" class="my-4" v-for="item in appInfoList" :key="item.id">
-          <v-row class="mt-3" align="center" justify="space-around" no-gutters>
+        <v-card
+          outlined
+          elevation="2"
+          class="my-4"
+          justify-center
+          v-for="item in appInfoList"
+          :key="item.id"
+        >
+          <v-row class="mt-3" align="center" justify="center" no-gutters>
             <v-col cols="9">
               <v-card-title class="title text-h5 font-weight-bold headline">
                 {{
@@ -16,10 +23,11 @@
             </v-col>
           </v-row>
           <v-card-text>
-            <v-row align="center" justify="center">
-              <v-col class="font-weight-bold" cols="4">版本：{{ item.app_version }}</v-col>
-              <v-col class="font-weight-bold" cols="4">当前状态: {{ item.Tag.tag_name }}</v-col>
-              <v-col class="font-weight-bold" cols="4">开发商: {{ item.app_developer }}</v-col>
+            <v-row align="center">
+              <v-col class="font-weight-bold" cols="3">📋版本：{{ item.app_version }}</v-col>
+              <v-col class="font-weight-bold" cols="4">💡状态: {{ item.Tag.tag_name }}</v-col>
+              <v-col class="font-weight-bold" cols="3">🖥️开发: {{ item.app_developer }}</v-col>
+              <v-col class="font-weight-bold" cols="2">🕒更新: {{ item.UpdatedAt | dateFormat}}</v-col>
             </v-row>
           </v-card-text>
 
@@ -77,6 +85,7 @@ export default {
         },
       })
       this.appInfoList = res.data
+      console.log('this.appInfoList: ', this.appInfoList)
       this.total = res.total
     },
   },

@@ -5,11 +5,12 @@ import vuetify from './plugins/vuetify'
 
 import './assets/style/style.css'
 import './plugins/http'
+import './plugins/day'
 
 Vue.config.productionTip = false
 
 new Vue({
   router,
   vuetify,
-  render: (h) => h(App),
+  render: h => h(App)
 }).$mount('#app')
