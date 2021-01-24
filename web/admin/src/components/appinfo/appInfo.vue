@@ -399,7 +399,7 @@ export default {
       })
     },
 
-    // 编辑分类
+    // 编辑App信息
     async editAppInfo(id) {
       this.editAppInfoVisible = true
       const { data: res } = await this.$http.get(`appinfo/info/${id}`)
