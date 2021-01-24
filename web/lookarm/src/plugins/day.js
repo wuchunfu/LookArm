@@ -5,6 +5,6 @@ import 'dayjs/locale/zh-cn'
 dayjs.locale('zh-cn')
 dayjs.extend(relativeTime)
 
-Vue.filter('dateFormat', function(indate) {
-  return dayjs(indate).toNow(true)
+Vue.filter('dateFormat', value => {
+  return dayjs(value).fromNow()
 })
