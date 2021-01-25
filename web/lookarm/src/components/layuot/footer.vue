@@ -1,5 +1,5 @@
 <template>
-  <v-footer color="grey darken-4" class="text-center">
+  <v-footer padless max-height="150" color="grey darken-4" class="text-center">
     <v-card width="100%" color="grey darken-4" class="text-center">
       <v-card-text dark width="100%">
         <v-btn text dark href="/">
@@ -23,7 +23,7 @@
       <v-divider color="grey"></v-divider>
       <v-card-text>
         <p class="text-center white--text">Made With ❤️ By ©LookArm 🎉</p>
-        <p class="text-center white--text">备案信息</p>
+        <p class="mb-4 text-center white--text">备案信息</p>
       </v-card-text>
     </v-card>
   </v-footer>

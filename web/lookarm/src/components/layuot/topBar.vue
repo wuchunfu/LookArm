@@ -1,37 +1,52 @@
 <template>
   <div>
-    <v-app-bar mobile-breakpoint="sm" flat app color="grey darken-4">
+    <v-app-bar mobile-breakpoint="xs" dark flat app color="grey darken-4">
+      <v-app-bar-nav-icon
+        class="hidden-md-and-up"
+        @click.stop="drawer = !drawer"
+      ></v-app-bar-nav-icon>
       <v-toolbar-title dark>
         <v-avatar class="mx-15" size="43">
           <v-img src="../../assets/CPU.png"></v-img>
         </v-avatar>
       </v-toolbar-title>
 
-      <div class="d-flex justify-center align-center">
-        <v-btn href="/" dark text>
-          <v-icon small>mdi-home</v-icon>首页
-        </v-btn>
-        <v-btn
-          dark
-          v-for="item in CateList"
-          :key="item.id"
-          text
-          @click="gotoCate(item.id)"
-        >{{ item.name }}</v-btn>
-      </div>
+      <v-toolbar-title>
+        <v-toolbar-items>
+          <v-btn href="/" dark text>
+            <v-icon small>mdi-home</v-icon>首页
+          </v-btn>
+          <v-btn
+            dark
+            v-for="item in CateList"
+            :key="item.id"
+            text
+            @click="gotoCate(item.id)"
+            >{{ item.name }}</v-btn
+          ></v-toolbar-items
+        >
+      </v-toolbar-title>
 
       <v-spacer></v-spacer>
 
       <v-dialog max-width="800" v-model="dialog">
         <template v-slot:activator="{ on, attrs }">
-          <v-btn outlined color="orange lighten-3" dark v-bind="attrs" v-on="on">
+          <v-btn
+            outlined
+            color="orange lighten-3"
+            dark
+            v-bind="attrs"
+            v-on="on"
+          >
             <v-icon left>mdi-post-outline</v-icon>OH!帮助我们更新数据
           </v-btn>
         </template>
         <template v-slot:default="dialog">
           <v-form ref="postInfoformRef" v-model="valid">
             <v-card flat>
-              <v-toolbar flat color="grey darken-3" dark>欢迎提交App表单，如通过，该条信息将标识由您提供</v-toolbar>
+              <v-toolbar flat color="grey darken-3" dark
+                >欢迎提交App表单，如通过，该条信息将标识由您提供</v-toolbar
+              >
               <v-card-text class="mt-5">
                 <v-row>
                   <v-col cols="6">
@@ -107,15 +122,42 @@
         </template>
       </v-dialog>
 
-      <v-btn text dark href="https://gitee.com/wejectchan/lookarm/issues" target="blank">
+      <v-btn
+        text
+        dark
+        href="https://gitee.com/wejectchan/lookarm/issues"
+        target="blank"
+      >
         <v-icon left>mdi-information-outline</v-icon>有建议？提交Issue
       </v-btn>
     </v-app-bar>
+    <v-navigation-drawer v-model="drawer" dark absolute temporary>
+      <v-list>
+        <v-list-item-title
+          ><v-btn href="/" dark text>
+            <v-icon small>mdi-home</v-icon>首页
+          </v-btn>
+        </v-list-item-title>
+
+        <v-list-item
+          v-model="group"
+          active-class="deep-purple--text text--accent-4"
+          v-for="item in CateList"
+          :key="item.id"
+        >
+          <v-list-item-title>
+            <v-btn dark text @click="gotoCate(item.id)">{{ item.name }}</v-btn>
+          </v-list-item-title>
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
   </div>
 </template>
 <script>
 export default {
   data: () => ({
+    drawer: false,
+    group: null,
     valid: true,
     CateList: [],
     TagList: [],
@@ -163,6 +205,11 @@ export default {
   created() {
     this.getCateList()
     this.getTagList()
+  },
+  watch: {
+    group() {
+      this.drawer = false
+    },
   },
   methods: {
     // 获取分类列表
