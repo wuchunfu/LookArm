@@ -21,17 +21,17 @@
             </v-col>
           </v-row>
           <v-card-text>
-            <v-row align="center" justify="start">
-              <v-col class="font-weight-bold" cols="6"
+            <v-row align="center" justify="start" dense>
+              <v-col class="font-weight-bold" cols="4"
                 >📋版本：{{ item.app_version }}</v-col
               >
-              <v-col class="font-weight-bold" cols="6"
+              <v-col class="font-weight-bold" cols="4"
                 >💡状态: {{ item.Tag.tag_name }}</v-col
               >
-              <v-col class="font-weight-bold" cols="6"
+              <v-col class="font-weight-bold" cols="2"
                 >🖥️开发: {{ item.app_developer }}</v-col
               >
-              <v-col class="font-weight-bold" cols="6"
+              <v-col class="font-weight-bold" cols="2"
                 >🕒更新: {{ item.UpdatedAt | dateFormat }}</v-col
               >
             </v-row>
