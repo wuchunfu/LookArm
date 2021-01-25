@@ -12,7 +12,7 @@
       <v-col cols="6">
         <v-card
           outlined
-          elevation="2"
+          elevation="3"
           class="my-4"
           v-for="item in appInfoList"
           :key="item.id"
