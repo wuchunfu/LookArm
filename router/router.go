@@ -9,9 +9,11 @@ import (
 
 func InitRouter() {
 	app := iris.Default()
-
+	
+	app.HandleDir("/","web/lookarm/dist")
+	app.HandleDir("/admin","web/admin/dist")
 	app.UseRouter(middleware.Cors())
-
+	
 	v1 := app.Party("api/v1/")
 	v1.Use(middleware.JwtToken())
 	{
