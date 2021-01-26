@@ -1,8 +1,8 @@
 <template>
   <div>
-    <v-app-bar mobile-breakpoint="xs" dark flat app color="grey darken-4">
+    <v-app-bar mobileBreakpoint="sm" dark flat app color="grey darken-4">
       <v-app-bar-nav-icon
-        class="hidden-md-and-up"
+        class="hidden-sm-and-up"
         @click.stop="drawer = !drawer"
       ></v-app-bar-nav-icon>
       <v-toolbar-title dark>
@@ -11,7 +11,7 @@
         </v-avatar>
       </v-toolbar-title>
 
-      <v-toolbar-title>
+      <v-toolbar-title class="hidden-md-and-down">
         <v-toolbar-items>
           <v-btn href="/" dark text>
             <v-icon small>mdi-home</v-icon>首页
@@ -32,6 +32,17 @@
       <v-dialog max-width="800" v-model="dialog">
         <template v-slot:activator="{ on, attrs }">
           <v-btn
+            class="hidden-md-and-up"
+            outlined
+            color="orange lighten-3"
+            dark
+            v-bind="attrs"
+            v-on="on"
+          >
+            <v-icon left>mdi-post-outline</v-icon>更新数据
+          </v-btn>
+          <v-btn
+            class="hidden-md-and-down"
             outlined
             color="orange lighten-3"
             dark
@@ -206,6 +217,7 @@ export default {
     this.getCateList()
     this.getTagList()
   },
+
   watch: {
     group() {
       this.drawer = false
