@@ -11,21 +11,15 @@
         </v-avatar>
       </v-toolbar-title>
 
-      <v-toolbar-title class="hidden-md-and-down">
-        <v-toolbar-items>
-          <v-btn href="/" dark text>
-            <v-icon small>mdi-home</v-icon>首页
-          </v-btn>
-          <v-btn
-            dark
-            v-for="item in CateList"
-            :key="item.id"
-            text
-            @click="gotoCate(item.id)"
-            >{{ item.name }}</v-btn
-          ></v-toolbar-items
+      <v-tabs center-active centered class="hidden-md-and-down">
+        <v-tab href="/"> <v-icon small>mdi-home</v-icon>首页 </v-tab>
+        <v-tab
+          v-for="item in CateList"
+          :key="item.id"
+          @click="gotoCate(item.id)"
+          >{{ item.name }}</v-tab
         >
-      </v-toolbar-title>
+      </v-tabs>
 
       <v-spacer></v-spacer>
 

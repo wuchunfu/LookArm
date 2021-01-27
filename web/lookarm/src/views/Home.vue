@@ -43,7 +43,7 @@
           <v-divider class="mx-10"></v-divider>
         </v-container>
 
-        <router-view :key="$route.path"></router-view>
+        <router-view :key="$route.fullPath"></router-view>
       </v-main>
     </v-sheet>
     <Footer></Footer>
