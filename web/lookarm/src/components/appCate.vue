@@ -85,7 +85,7 @@
           total-visible="7"
           v-model="queryParam.pagenum"
           :length="Math.ceil(total / queryParam.pagesize)"
-          @input="getAppInfoList()"
+          @input="getAppInfoCateList()"
         ></v-pagination>
       </div>
     </v-sheet>
