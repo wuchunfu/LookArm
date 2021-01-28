@@ -29,7 +29,7 @@ func CheckAppName(AppName string) int {
 	if appInfo.ID > 0 {
 		return message.ErrorAppExist
 	}
-	return message.SUCCSES
+	return message.SUCCESS
 }
 
 // 提交app信息
@@ -50,7 +50,7 @@ func GetAppInfoList(appName string, pageSize int, pageNum int) ([]AppInfo, int64
 	if err != nil {
 		return appInfoList, 0, message.ERROR
 	}
-	return appInfoList, total, message.SUCCSES
+	return appInfoList, total, message.SUCCESS
 }
 
 // 查询分类下的App信息
@@ -64,7 +64,7 @@ func GetAppInfoCateList(cateID int, pageSize int, pageNum int) ([]AppInfo, int64
 	if err != nil {
 		return appInfoList, 0, message.ERROR
 	}
-	return appInfoList, total, message.SUCCSES
+	return appInfoList, total, message.SUCCESS
 }
 
 // 查询单个表单
@@ -74,7 +74,7 @@ func GetAppInfo(id int) (AppInfo, int) {
 	if err != nil {
 		return appInfo, message.ERROR
 	}
-	return appInfo, message.SUCCSES
+	return appInfo, message.SUCCESS
 }
 
 // 编辑表单
@@ -83,7 +83,7 @@ func EditAppInfo(id int, data *AppInfo) int {
 	if err != nil {
 		return message.ERROR
 	}
-	return message.SUCCSES
+	return message.SUCCESS
 }
 
 // 删除表单
@@ -93,5 +93,5 @@ func DeleteAppInfo(id int) int {
 	if err != nil {
 		return message.ERROR
 	}
-	return message.SUCCSES
+	return message.SUCCESS
 }

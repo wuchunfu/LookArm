@@ -14,7 +14,7 @@ func AddAppInfo(c iris.Context) {
 
 	code = model.CheckAppName(data.AppName)
 	fmt.Println(data.AppName)
-	if code == message.SUCCSES {
+	if code == message.SUCCESS {
 		model.AddAppInfo(&data)
 	}
 
@@ -41,7 +41,7 @@ func GetAppInfoList(c iris.Context) {
 		pageNum = 1
 	}
 
-	data, total, code := model.GetAppInfoList(appName,pageSize, pageNum)
+	data, total, code := model.GetAppInfoList(appName, pageSize, pageNum)
 
 	c.JSON(iris.Map{
 		"data":    data,
@@ -52,8 +52,8 @@ func GetAppInfoList(c iris.Context) {
 }
 
 // 查询分类下的APP信息
-func GetAppInfoCateList(c iris.Context)  {
-	categoryId,_ := c.Params().GetInt("id")
+func GetAppInfoCateList(c iris.Context) {
+	categoryId, _ := c.Params().GetInt("id")
 	pageSize, _ := c.URLParamInt("pagesize")
 	pageNum, _ := c.URLParamInt("pagenum")
 
@@ -68,7 +68,7 @@ func GetAppInfoCateList(c iris.Context)  {
 		pageNum = 1
 	}
 
-	data, total, code := model.GetAppInfoCateList(categoryId,pageSize,pageNum)
+	data, total, code := model.GetAppInfoCateList(categoryId, pageSize, pageNum)
 
 	c.JSON(iris.Map{
 		"data":    data,

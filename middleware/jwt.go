@@ -32,7 +32,7 @@ func SetToken(username string) (string, int) {
 	if err != nil {
 		return "", message.ERROR
 	}
-	return token, message.SUCCSES
+	return token, message.SUCCESS
 
 }
 
@@ -48,22 +48,22 @@ func CheckToken(token string) (*MyClaims, int) {
 	if err != nil {
 		if ve, ok := err.(*jwt.ValidationError); ok {
 			if ve.Errors&jwt.ValidationErrorMalformed != 0 {
-				return nil, message.ERROR_TOKEN_WRONG
+				return nil, message.ErrorTokenWrong
 			} else if ve.Errors&(jwt.ValidationErrorExpired|jwt.ValidationErrorNotValidYet) != 0 {
-				return nil, message.ERROR_TOKEN_RUNTIME
+				return nil, message.ErrorTokenRuntime
 			} else {
-				return nil, message.ERROR_TOKEN_TYPE_WRONG
+				return nil, message.ErrorTokenTypeWrong
 			}
 		}
 	}
 	if setToken != nil {
 		if key, ok := setToken.Claims.(*MyClaims); ok && setToken.Valid {
-			return key, message.SUCCSES
+			return key, message.SUCCESS
 		} else {
-			return nil, message.ERROR_TOKEN_WRONG
+			return nil, message.ErrorTokenWrong
 		}
 	}
-	return nil, message.ERROR_TOKEN_WRONG
+	return nil, message.ErrorTokenWrong
 }
 
 // jwt中间件
@@ -72,7 +72,7 @@ func JwtToken() iris.Handler {
 		var code int
 		tokenHeader := c.GetHeader("Authorization")
 		if tokenHeader == "" {
-			code = message.ERROR_TOKEN_EXIST
+			code = message.ErrorTokenExist
 			c.JSON(iris.Map{
 				"status":  code,
 				"message": message.GetErrMsg(code),
@@ -82,7 +82,7 @@ func JwtToken() iris.Handler {
 		}
 		checkToken := strings.Split(tokenHeader, " ")
 		if len(checkToken) == 0 {
-			code = message.ERROR_TOKEN_TYPE_WRONG
+			code = message.ErrorTokenTypeWrong
 			c.JSON(iris.Map{
 				"status":  code,
 				"message": message.GetErrMsg(code),
@@ -92,7 +92,7 @@ func JwtToken() iris.Handler {
 		}
 
 		if len(checkToken) != 2 && checkToken[0] != "Bearer" {
-			code = message.ERROR_TOKEN_TYPE_WRONG
+			code = message.ErrorTokenTypeWrong
 			c.JSON(iris.Map{
 				"status":  code,
 				"message": message.GetErrMsg(code),
@@ -101,7 +101,7 @@ func JwtToken() iris.Handler {
 			return
 		}
 		_, tCode := CheckToken(checkToken[1])
-		if tCode != message.SUCCSES {
+		if tCode != message.SUCCESS {
 			code = tCode
 			c.JSON(iris.Map{
 				"status":  code,

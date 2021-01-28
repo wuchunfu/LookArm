@@ -3,7 +3,7 @@ package model
 import "lookarm/utils/message"
 
 type Category struct {
-	ID   uint    `gorm:"primaryKey" json:"id"`
+	ID   uint   `gorm:"primaryKey" json:"id"`
 	Name string `gorm:"type:varchar(200)" json:"name"`
 }
 
@@ -16,7 +16,7 @@ func GetCategories(pageSize int, pageNum int) ([]Category, int64, int) {
 		return cates, 0, message.ERROR
 	}
 
-	return cates, total, message.SUCCSES
+	return cates, total, message.SUCCESS
 }
 
 // 获取标签
@@ -26,7 +26,7 @@ func GetCategory(id int) (Category, int) {
 	if err != nil {
 		return cate, message.ERROR
 	}
-	return cate, message.SUCCSES
+	return cate, message.SUCCESS
 
 }
 
@@ -36,7 +36,7 @@ func CreateCategory(data *Category) int {
 	if err != nil {
 		return message.ERROR
 	}
-	return message.SUCCSES
+	return message.SUCCESS
 }
 
 // 修改标签
@@ -45,7 +45,7 @@ func EditCategory(id int, data *Category) int {
 	if err != nil {
 		return message.ERROR
 	}
-	return message.SUCCSES
+	return message.SUCCESS
 }
 
 // 删除标签
@@ -55,5 +55,5 @@ func DeteleCategory(id int) int {
 	if err != nil {
 		return message.ERROR
 	}
-	return message.SUCCSES
+	return message.SUCCESS
 }

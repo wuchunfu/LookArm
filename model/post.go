@@ -26,7 +26,7 @@ func PostAppInfo(data *PostInfo) int {
 	if err != nil {
 		return message.ERROR
 	}
-	return message.SUCCSES
+	return message.SUCCESS
 }
 
 // 查询表单列表
@@ -42,7 +42,7 @@ func GetPostInfoList(appName string, pageSize int, pageNum int) ([]PostInfo, int
 	if err != nil {
 		return postInfoList, 0, message.ERROR
 	}
-	return postInfoList, total, message.SUCCSES
+	return postInfoList, total, message.SUCCESS
 }
 
 // 查询分类下的表单
@@ -58,7 +58,7 @@ func GetPostInfoCateList(cateID int, appName string, pageSize int, pageNum int) 
 	if err != nil {
 		return postInfoList, 0, message.ERROR
 	}
-	return postInfoList, total, message.SUCCSES
+	return postInfoList, total, message.SUCCESS
 }
 
 // 查询单个表单
@@ -68,7 +68,7 @@ func GetPostInfo(id int) (PostInfo, int) {
 	if err != nil {
 		return postInfo, message.ERROR
 	}
-	return postInfo, message.SUCCSES
+	return postInfo, message.SUCCESS
 }
 
 // 编辑表单
@@ -77,7 +77,7 @@ func EditPostInfo(id int, data *PostInfo) int {
 	if err != nil {
 		return message.ERROR
 	}
-	return message.SUCCSES
+	return message.SUCCESS
 }
 
 // 删除表单
@@ -87,5 +87,5 @@ func DeletePostInfo(id int) int {
 	if err != nil {
 		return message.ERROR
 	}
-	return message.SUCCSES
+	return message.SUCCESS
 }

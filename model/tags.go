@@ -18,7 +18,7 @@ func GetTags(pageSize int, pageNum int) ([]Tag, int64, int) {
 	if err != nil {
 		return nil, 0, message.ERROR
 	}
-	return tags, total, message.SUCCSES
+	return tags, total, message.SUCCESS
 }
 
 // 获取标签
@@ -28,7 +28,7 @@ func GetTag(id int) (Tag, int) {
 	if err != nil {
 		return tag, message.ERROR
 	}
-	return tag, message.SUCCSES
+	return tag, message.SUCCESS
 
 }
 
@@ -38,7 +38,7 @@ func CreateTag(data *Tag) int {
 	if err != nil {
 		return message.ERROR
 	}
-	return message.SUCCSES
+	return message.SUCCESS
 }
 
 // 修改标签
@@ -47,7 +47,7 @@ func EditTag(id int, data *Tag) int {
 	if err != nil {
 		return message.ERROR
 	}
-	return message.SUCCSES
+	return message.SUCCESS
 }
 
 // 删除标签
@@ -57,5 +57,5 @@ func DeteleTag(id int) int {
 	if err != nil {
 		return message.ERROR
 	}
-	return message.SUCCSES
+	return message.SUCCESS
 }

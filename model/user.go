@@ -20,7 +20,7 @@ func CreateUser(data *User) int {
 	if err != nil {
 		return message.ERROR
 	}
-	return message.SUCCSES
+	return message.SUCCESS
 }
 
 // 查询用户列表
@@ -32,16 +32,17 @@ func GetUsers(pageSize int, pageNum int) (int, []User, int64) {
 	if err != nil {
 		return message.ERROR, users, 0
 	}
-	return message.SUCCSES, users, total
+	return message.SUCCESS, users, total
 }
+
 // 查询单个用户
-func GetUserInfo(id int) (User,int) {
+func GetUserInfo(id int) (User, int) {
 	var user User
-	err = db.Where("id = ?",id).First(&user).Error
+	err = db.Where("id = ?", id).First(&user).Error
 	if err != nil {
-		return user,message.ERROR
+		return user, message.ERROR
 	}
-	return user,message.SUCCSES
+	return user, message.SUCCESS
 }
 
 // 编辑用户
@@ -51,7 +52,7 @@ func (u User) EditUserInfo() int {
 	if err != nil {
 		return message.ERROR
 	}
-	return message.SUCCSES
+	return message.SUCCESS
 }
 
 // 删除用户
@@ -60,7 +61,7 @@ func (u User) DeleteUser() int {
 	if err != nil {
 		return message.ERROR
 	}
-	return message.SUCCSES
+	return message.SUCCESS
 }
 
 func (u *User) BeforeCreate(*gorm.DB) error {
@@ -80,7 +81,7 @@ func SetPassword(password string) string {
 }
 
 // 登录验证
-func CheckLogin(username string, password string) (User,int) {
+func CheckLogin(username string, password string) (User, int) {
 	var user User
 	var PasswordErr error
 
@@ -89,10 +90,10 @@ func CheckLogin(username string, password string) (User,int) {
 	PasswordErr = bcrypt.CompareHashAndPassword([]byte(user.Password), []byte(password))
 
 	if user.ID == 0 {
-		return user, message.ERROR_USER_NOT_EXIST
+		return user, message.ErrorUserNotExist
 	}
 	if PasswordErr != nil {
-		return user, message.ERROR_PASSWORD_WRONG
+		return user, message.ErrorPasswordWrong
 	}
-	return user,message.SUCCSES
+	return user, message.SUCCESS
 }
