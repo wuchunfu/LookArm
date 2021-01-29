@@ -131,7 +131,7 @@
         text
         dark
         href="https://gitee.com/wejectchan/lookarm/issues"
-        target="blank"
+        target="_blank"
       >
         <v-icon left>mdi-information-outline</v-icon>有建议？提交Issue
       </v-btn>

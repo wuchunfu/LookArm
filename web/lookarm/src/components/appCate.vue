@@ -99,10 +99,10 @@ export default {
       appInfoList: [],
       queryParam: {
         pagesize: 10,
-        pagenum: 1,
+        pagenum: 1
       },
       total: 0,
-      isLoad: false,
+      isLoad: false
     }
   },
   created() {
@@ -116,16 +116,15 @@ export default {
         {
           params: {
             pagesize: this.queryParam.pagesize,
-            pagenum: this.queryParam.pagenum,
-          },
+            pagenum: this.queryParam.pagenum
+          }
         }
       )
       this.appInfoList = res.data
       this.total = res.total
       this.isLoad = true
-    },
-  },
+    }
+  }
 }
 </script>
-<style>
-</style>
+<style></style>

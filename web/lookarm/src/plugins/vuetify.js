@@ -14,5 +14,5 @@ export default new Vuetify({
   },
   breakpoint: {
     mobileBreakpoint: 'sm' // 这个值等于960
-  },
+  }
 })

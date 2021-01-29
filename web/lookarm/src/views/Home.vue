@@ -59,7 +59,7 @@ export default {
     return {
       total: 0,
       tagList: [],
-      searchName: '',
+      searchName: ''
     }
   },
   created() {
@@ -74,7 +74,7 @@ export default {
     // 查找App信息
     searchTitle(title) {
       this.$router.push(`/appinfo/${title}`)
-    },
-  },
+    }
+  }
 }
 </script>

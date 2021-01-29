@@ -85,9 +85,9 @@ export default {
       appInfoList: [],
       queryParam: {
         pagesize: 5,
-        pagenum: 1,
+        pagenum: 1
       },
-      total: 0,
+      total: 0
     }
   },
   created() {
@@ -99,14 +99,13 @@ export default {
       const { data: res } = await this.$http.get('appinfo/list', {
         params: {
           pagesize: this.queryParam.pagesize,
-          pagenum: this.queryParam.pagenum,
-        },
+          pagenum: this.queryParam.pagenum
+        }
       })
       this.appInfoList = res.data
       this.total = res.total
-    },
-  },
+    }
+  }
 }
 </script>
-<style>
-</style>
+<style></style>

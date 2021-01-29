@@ -100,10 +100,10 @@ export default {
       queryParam: {
         app_name: '',
         pagesize: 10,
-        pagenum: 1,
+        pagenum: 1
       },
       total: 0,
-      isLoad: false,
+      isLoad: false
     }
   },
   created() {
@@ -116,15 +116,14 @@ export default {
         params: {
           app_name: this.title,
           pagesize: this.queryParam.pagesize,
-          pagenum: this.queryParam.pagenum,
-        },
+          pagenum: this.queryParam.pagenum
+        }
       })
       this.appInfoList = res.data
       this.total = res.total
       this.isLoad = true
-    },
-  },
+    }
+  }
 }
 </script>
-<style>
-</style>
+<style></style>
