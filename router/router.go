@@ -9,11 +9,10 @@ import (
 
 func InitRouter() {
 	app := iris.Default()
-	
-	app.HandleDir("/","web/lookarm/dist")
-	app.HandleDir("/admin","web/admin/dist")
 	app.UseRouter(middleware.Cors())
-	
+	//app.HandleDir("/","web/lookarm/dist")
+	//app.HandleDir("/admin","web/admin/dist")
+
 	v1 := app.Party("api/v1/")
 	v1.Use(middleware.JwtToken())
 	{
@@ -21,7 +20,7 @@ func InitRouter() {
 		v1.Post("adduser", api.AddUser)
 		v1.Delete("delete_user/{id:uint}", api.DeleteUser)
 		v1.Get("users", api.GetUsers)
-		v1.Get("user/info/{id:int}",api.GetUserInfo)
+		v1.Get("user/info/{id:int}", api.GetUserInfo)
 		v1.Put("user/{id:uint}", api.EditUser)
 		// 标签管理模块
 		v1.Post("tag/add", api.AddTag)
@@ -36,12 +35,12 @@ func InitRouter() {
 		// 表单管理模块
 		v1.Put("postinfo/edit/{id:int}", api.EditPostInfo)
 		v1.Delete("postinfo/delete/{id:int}", api.DeletePostInfo)
-		v1.Get("postinfo/category/{id}",api.GetPostInfoCateList)
+		v1.Get("postinfo/category/{id}", api.GetPostInfoCateList)
 
 		// App信息管理模块
-		v1.Post("appinfo/add",api.AddAppInfo)
-		v1.Put("appinfo/edit/{id:int}",api.EditAppInfo)
-		v1.Delete("appinfo/delete/{id:int}",api.DeleteAppInfo)
+		v1.Post("appinfo/add", api.AddAppInfo)
+		v1.Put("appinfo/edit/{id:int}", api.EditAppInfo)
+		v1.Delete("appinfo/delete/{id:int}", api.DeleteAppInfo)
 	}
 
 	pub := app.Party("api/v1/")
@@ -59,13 +58,13 @@ func InitRouter() {
 
 		// 表单
 		pub.Post("postinfo/add", api.PostAppInfo)
-		pub.Get("postinfo/list",api.GetPostAppInfoList)
-		pub.Get("postinfo/info/{id:int}",api.GetPostInfo)
+		pub.Get("postinfo/list", api.GetPostAppInfoList)
+		pub.Get("postinfo/info/{id:int}", api.GetPostInfo)
 
 		// app信息
-		pub.Get("appinfo/list",api.GetAppInfoList)
-		pub.Get("appinfo/info/{id:int}",api.GetAppInfo)
-		pub.Get("appinfo/category/{id:int}",api.GetAppInfoCateList)
+		pub.Get("appinfo/list", api.GetAppInfoList)
+		pub.Get("appinfo/info/{id:int}", api.GetAppInfo)
+		pub.Get("appinfo/category/{id:int}", api.GetAppInfoCateList)
 	}
 	_ = app.Listen(config.ServerPort)
 
