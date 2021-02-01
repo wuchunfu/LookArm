@@ -23,7 +23,15 @@
       <v-divider color="grey"></v-divider>
       <v-card-text>
         <p class="text-center white--text">Made With ❤️ By ©LookArm 🎉</p>
-        <p class="mb-4 text-center white--text">备案信息</p>
+        <p class="mb-4 text-center white--text">
+          <a
+            class="beian"
+            style=" text-decoration: none"
+            href="https://beian.miit.gov.cn"
+            target="_blank"
+            >蜀ICP备19035448号-2</a
+          >
+        </p>
       </v-card-text>
     </v-card>
   </v-footer>
@@ -37,4 +45,17 @@ export default {}
   padding: 0;
   margin: 0;
 }
+
+a:link {
+  color: white;
+} /* 未访问的链接 */
+a:visited {
+  color: white;
+} /* 已访问的链接 */
+a:hover {
+  color: rgb(216, 206, 69);
+} /* 鼠标移动到链接上 */
+a:active {
+  color: yellow;
+} /* 选定的链接，即鼠标按下去的时候不松开显示的状态 */
 </style>
