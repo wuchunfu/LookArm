@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import axios from 'axios'
 
-let Url = 'http://lookarm.cn:8000/api/v1/'
+let Url = 'http://lookarm.cn/api/v1/'
 
 axios.defaults.baseURL = Url
 

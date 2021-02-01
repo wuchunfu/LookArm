@@ -136,6 +136,7 @@
         <v-icon left>mdi-information-outline</v-icon>有建议？提交Issue
       </v-btn>
     </v-app-bar>
+
     <v-navigation-drawer v-model="drawer" dark absolute temporary>
       <v-list>
         <v-list-item-title
