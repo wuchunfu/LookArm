@@ -1,5 +1,5 @@
 <template>
-  <v-sheet min-height="400px">
+  <v-container>
     <v-row justify="center" align="center">
       <v-col cols="11" md="7">
         <v-card
@@ -76,7 +76,7 @@
         @input="getAppInfoList()"
       ></v-pagination>
     </div>
-  </v-sheet>
+  </v-container>
 </template>
 <script>
 export default {
