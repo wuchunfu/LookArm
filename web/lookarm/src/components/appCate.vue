@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-5" app>
+  <v-container>
     <div
       v-if="total == 0 && isLoad"
       class="d-flex mt-5 justify-center align-center"
@@ -89,7 +89,7 @@
         ></v-pagination>
       </div>
     </v-sheet>
-  </div>
+  </v-container>
 </template>
 <script>
 export default {

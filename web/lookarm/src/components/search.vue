@@ -6,7 +6,7 @@
     >
       <div>
         <v-alert class="ma-5" dense outlined type="error"
-          >抱歉，你搜索的APP还未收录P，提交个表单告诉我们吧！</v-alert
+          >抱歉，你搜索的APP还未收录，提交个表单告诉我们吧！</v-alert
         >
       </div>
     </div>

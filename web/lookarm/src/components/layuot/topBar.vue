@@ -175,37 +175,37 @@ export default {
       user_name: 'LookArm',
       email: 'Unkown@LookArm.cn',
       category_id: 0,
-      tag_id: 0,
+      tag_id: 0
     },
     dialog: false,
-    user_nameRules: [(v) => (v && v.length <= 20) || '昵称不能大于20个字符'],
-    emailRules: [(v) => /.+@.+/.test(v) || 'E-mail需填入有效的形式'],
+    user_nameRules: [v => (v && v.length <= 20) || '昵称不能大于20个字符'],
+    emailRules: [v => /.+@.+/.test(v) || 'E-mail需填入有效的形式'],
     app_nameRules: [
-      (v) => !!v || 'APP名称不能为空',
-      (v) => (v && v.length <= 50) || 'APP名不能大于50个字符',
+      v => !!v || 'APP名称不能为空',
+      v => (v && v.length <= 50) || 'APP名不能大于50个字符'
     ],
 
     app_versionRules: [
-      (v) => !!v || 'APP版本不能为空',
-      (v) => (v && v.length <= 50) || 'APP版本不能大于50个字符',
+      v => !!v || 'APP版本不能为空',
+      v => (v && v.length <= 50) || 'APP版本不能大于50个字符'
     ],
-    category_idRules: [(v) => !!v || '请选择APP分类'],
-    tag_idRules: [(v) => !!v || '请选择APP状态'],
+    category_idRules: [v => !!v || '请选择APP分类'],
+    tag_idRules: [v => !!v || '请选择APP状态'],
     app_webpageRules: [
-      (v) => !!v || '请提供APP官网或下载地址',
-      (v) =>
+      v => !!v || '请提供APP官网或下载地址',
+      v =>
         /(http|https):\/\/([\w.]+\/?)\S*/.test(v) ||
         '请以以http:// 或 https:// 开头',
-      (v) => (v && v.length <= 200) || '网址不能大于200个字符',
+      v => (v && v.length <= 200) || '网址不能大于200个字符'
     ],
     app_descRules: [
-      (v) => !!v || '请给APP一个简短的用途描述吧',
-      (v) => (v && v.length <= 300) || '不能大于300个字符',
+      v => !!v || '请给APP一个简短的用途描述吧',
+      v => (v && v.length <= 300) || '不能大于300个字符'
     ],
     app_developerRules: [
-      (v) => !!v || '请提供APP的开发商或者开发者吧',
-      (v) => (v && v.length <= 20) || '不能大于20个字符',
-    ],
+      v => !!v || '请提供APP的开发商或者开发者吧',
+      v => (v && v.length <= 20) || '不能大于20个字符'
+    ]
   }),
   created() {
     this.getCateList()
@@ -215,7 +215,7 @@ export default {
   watch: {
     group() {
       this.drawer = false
-    },
+    }
   },
   methods: {
     // 获取分类列表
@@ -239,10 +239,9 @@ export default {
     },
     // 前往分类
     gotoCate(id) {
-      this.$router.push(`/appinfo/category/${id}`).catch((err) => err)
-    },
-  },
+      this.$router.push(`/appinfo/category/${id}`).catch(err => err)
+    }
+  }
 }
 </script>
-<style lang="">
-</style>
+<style lang=""></style>

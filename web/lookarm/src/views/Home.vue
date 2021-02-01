@@ -30,7 +30,7 @@
 
             <v-col cols="8" md="6" class="mt-5">
               <v-text-field
-                color="indigo"
+                color="indigo darken-3"
                 outlined
                 clearable
                 prepend-inner-icon="mdi-feature-search-outline"
