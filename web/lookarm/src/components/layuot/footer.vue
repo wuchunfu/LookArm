@@ -53,9 +53,9 @@ a:visited {
   color: white;
 } /* 已访问的链接 */
 a:hover {
-  color: rgb(216, 206, 69);
+  color: rgb(199, 188, 40);
 } /* 鼠标移动到链接上 */
 a:active {
-  color: yellow;
+  color: rgb(199, 188, 40);
 } /* 选定的链接，即鼠标按下去的时候不松开显示的状态 */
 </style>
