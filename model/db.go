@@ -36,6 +36,7 @@ func InitDatabase() {
 
 	if err != nil {
 		fmt.Println("连接数据库失败，请检查参数：", err)
+		return
 	}
 
 	_ = db.AutoMigrate(&User{}, &Category{}, &Tag{}, &PostInfo{}, &AppInfo{})

@@ -100,7 +100,7 @@ func JwtToken() iris.Handler {
 
 			return
 		}
-		_, tCode := CheckToken(checkToken[1])
+		key, tCode := CheckToken(checkToken[1])
 		if tCode != message.SUCCESS {
 			code = tCode
 			c.JSON(iris.Map{
@@ -111,6 +111,7 @@ func JwtToken() iris.Handler {
 			return
 		}
 		//c.Set("username", key)
+		c.Values().Set("username",key)
 		c.Next()
 	}
 }
