@@ -1,7 +1,10 @@
 <template>
   <div>
     <v-app-bar mobileBreakpoint="sm" dark flat app color="grey darken-4">
-      <v-app-bar-nav-icon class="hidden-md-and-up" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon
+        class="hidden-md-and-up"
+        @click.stop="drawer = !drawer"
+      ></v-app-bar-nav-icon>
       <v-toolbar-title dark>
         <v-avatar class="mx-15 hidden-sm-and-down" size="43">
           <v-img src="../../assets/CPU.png"></v-img>
@@ -9,10 +12,13 @@
       </v-toolbar-title>
 
       <v-tabs center-active centered class="hidden-sm-and-down">
-        <v-tab href="/">
-          <v-icon small>mdi-home</v-icon>首页
-        </v-tab>
-        <v-tab v-for="item in CateList" :key="item.id" @click="gotoCate(item.id)">{{ item.name }}</v-tab>
+        <v-tab href="/"> <v-icon small>mdi-home</v-icon>首页 </v-tab>
+        <v-tab
+          v-for="item in CateList"
+          :key="item.id"
+          @click="gotoCate(item.id)"
+          >{{ item.name }}</v-tab
+        >
       </v-tabs>
 
       <v-spacer></v-spacer>
@@ -43,7 +49,9 @@
         <template v-slot:default="dialog">
           <v-form ref="postInfoformRef" v-model="valid">
             <v-card flat>
-              <v-toolbar flat color="grey darken-3" dark>欢迎提交App表单，如通过，该条信息将标识由您提供</v-toolbar>
+              <v-toolbar flat color="grey darken-3" dark
+                >欢迎提交App表单，如通过，该条信息将标识由您提供</v-toolbar
+              >
               <v-card-text class="mt-5">
                 <v-row>
                   <v-col cols="6">
@@ -119,7 +127,12 @@
         </template>
       </v-dialog>
 
-      <v-btn text dark href="https://gitee.com/wejectchan/lookarm/issues" target="_blank">
+      <v-btn
+        text
+        dark
+        href="https://gitee.com/wejectchan/lookarm/issues"
+        target="_blank"
+      >
         <v-icon left>mdi-information-outline</v-icon>有建议？提交Issue
       </v-btn>
     </v-app-bar>
@@ -163,37 +176,37 @@ export default {
       user_name: 'LookArm',
       email: 'Unkown@LookArm.cn',
       category_id: 0,
-      tag_id: 0,
+      tag_id: 0
     },
     dialog: false,
-    user_nameRules: [(v) => (v && v.length <= 20) || '昵称不能大于20个字符'],
-    emailRules: [(v) => /.+@.+/.test(v) || 'E-mail需填入有效的形式'],
+    user_nameRules: [v => (v && v.length <= 20) || '昵称不能大于20个字符'],
+    emailRules: [v => /.+@.+/.test(v) || 'E-mail需填入有效的形式'],
     app_nameRules: [
-      (v) => !!v || 'APP名称不能为空',
-      (v) => (v && v.length <= 50) || 'APP名不能大于50个字符',
+      v => !!v || 'APP名称不能为空',
+      v => (v && v.length <= 50) || 'APP名不能大于50个字符'
     ],
 
     app_versionRules: [
-      (v) => !!v || 'APP版本不能为空',
-      (v) => (v && v.length <= 50) || 'APP版本不能大于50个字符',
+      v => !!v || 'APP版本不能为空',
+      v => (v && v.length <= 50) || 'APP版本不能大于50个字符'
     ],
-    category_idRules: [(v) => !!v || '请选择APP分类'],
-    tag_idRules: [(v) => !!v || '请选择APP状态'],
+    category_idRules: [v => !!v || '请选择APP分类'],
+    tag_idRules: [v => !!v || '请选择APP状态'],
     app_webpageRules: [
-      (v) => !!v || '请提供APP官网或下载地址',
-      (v) =>
+      v => !!v || '请提供APP官网或下载地址',
+      v =>
         /(http|https):\/\/([\w.]+\/?)\S*/.test(v) ||
         '请以以http:// 或 https:// 开头',
-      (v) => (v && v.length <= 200) || '网址不能大于200个字符',
+      v => (v && v.length <= 200) || '网址不能大于200个字符'
     ],
     app_descRules: [
-      (v) => !!v || '请给APP一个简短的用途描述吧',
-      (v) => (v && v.length <= 300) || '不能大于300个字符',
+      v => !!v || '请给APP一个简短的用途描述吧',
+      v => (v && v.length <= 300) || '不能大于300个字符'
     ],
     app_developerRules: [
-      (v) => !!v || '请提供APP的开发商或者开发者吧',
-      (v) => (v && v.length <= 20) || '不能大于20个字符',
-    ],
+      v => !!v || '请提供APP的开发商或者开发者吧',
+      v => (v && v.length <= 20) || '不能大于20个字符'
+    ]
   }),
   created() {
     this.getCateList()
@@ -203,7 +216,7 @@ export default {
   watch: {
     group() {
       this.drawer = false
-    },
+    }
   },
   methods: {
     // 获取分类列表
@@ -227,9 +240,9 @@ export default {
     },
     // 前往分类
     gotoCate(id) {
-      this.$router.push(`/appinfo/category/${id}`).catch((err) => err)
-    },
-  },
+      this.$router.push(`/appinfo/category/${id}`).catch(err => err)
+    }
+  }
 }
 </script>
 <style lang=""></style>

@@ -26,14 +26,14 @@ func init() {
 }
 
 func LoadServer(file *ini.File) {
-	ServerPort = file.Section("server").Key("server_port").String()
-	JwtKey = file.Section("server").Key("jwtKey").String()
+	ServerPort = file.Section("Server").Key("serverPort").String()
+	JwtKey = file.Section("Server").Key("jwtKey").String()
 }
 
 func LoadData(file *ini.File) {
-	DbHost = file.Section("database").Key("db_host").String()
-	DbPort = file.Section("database").Key("db_port").String()
-	DbUser = file.Section("database").Key("db_user").String()
-	DbPassword = file.Section("database").Key("db_password").String()
-	DbName = file.Section("database").Key("db_name").String()
+	DbHost = file.Section("Database").Key("db_host").String()
+	DbPort = file.Section("Database").Key("db_port").String()
+	DbUser = file.Section("Database").Key("db_user").String()
+	DbPassword = file.Section("Database").Key("db_password").String()
+	DbName = file.Section("Database").Key("db_name").String()
 }

@@ -11,7 +11,12 @@
         <v-btn text dark href="https://github.com/wejectchen" target="blank">
           <v-icon size="24px">mdi-github</v-icon>
         </v-btn>
-        <v-btn text dark href="https://space.bilibili.com/402177130" target="blank">
+        <v-btn
+          text
+          dark
+          href="https://space.bilibili.com/402177130"
+          target="blank"
+        >
           <v-icon size="24px">mdi-blogger</v-icon>
         </v-btn>
       </v-card-text>
@@ -24,7 +29,8 @@
             style=" text-decoration: none"
             href="https://beian.miit.gov.cn"
             target="_blank"
-          >蜀ICP备19035448号-2</a>
+            >蜀ICP备19035448号-2</a
+          >
         </p>
       </v-card-text>
     </v-card>

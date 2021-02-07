@@ -112,7 +112,7 @@ export default {
   methods: {
     // 获取app信息列表
     async getAppInfoList() {
-      const { data: res } = await this.$http.get('appinfo/list', {
+      const { data: res } = await this.$http.get('appinfo/', {
         params: {
           app_name: this.title,
           pagesize: this.queryParam.pagesize,
