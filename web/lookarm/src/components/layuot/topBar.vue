@@ -5,10 +5,12 @@
         class="hidden-md-and-up"
         @click.stop="drawer = !drawer"
       ></v-app-bar-nav-icon>
-      <v-toolbar-title dark>
-        <v-avatar class="mx-15 hidden-sm-and-down" size="43">
-          <v-img src="../../assets/CPU.png"></v-img>
-        </v-avatar>
+      <v-toolbar-title dark
+        ><router-link to="/">
+          <v-avatar class="mx-15 hidden-sm-and-down" size="43">
+            <v-img src="../../assets/CPU.png"></v-img>
+          </v-avatar>
+        </router-link>
       </v-toolbar-title>
 
       <v-tabs center-active centered class="hidden-sm-and-down">
