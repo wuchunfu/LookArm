@@ -168,7 +168,7 @@ export default {
     group: null,
     valid: true,
     CateList: [],
-    TagList: [],
+    TagList: window.sessionStorage.getItem('tag'),
     postInfo: {
       app_name: '',
       app_version: '',
@@ -212,7 +212,7 @@ export default {
   }),
   created() {
     this.getCateList()
-    this.getTagList()
+    // this.getTagList()
   },
 
   watch: {
@@ -227,10 +227,10 @@ export default {
       this.CateList = res.data
     },
     // 获取状态列表
-    async getTagList() {
-      const { data: res } = await this.$http.get('tag/list')
-      this.TagList = res.data
-    },
+    // async getTagList() {
+    //   const { data: res } = await this.$http.get('tag/list')
+    //   this.TagList = res.data
+    // },
     // 提交表单
     async postInfoForm() {
       if (!this.$refs.postInfoformRef.validate())

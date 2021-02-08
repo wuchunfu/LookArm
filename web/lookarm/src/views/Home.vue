@@ -70,6 +70,7 @@ export default {
     async getTaglist() {
       const { data: res } = await this.$http.get('tag/list')
       this.tagList = res.data
+      window.sessionStorage.setItem('tag', JSON.stringify(res.data))
     },
     // 查找App信息
     searchTitle(title) {
