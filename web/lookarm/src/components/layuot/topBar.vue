@@ -95,7 +95,7 @@
                 ></v-select>
                 <v-select
                   v-model="postInfo.tag_id"
-                  label="请选择APP分类"
+                  label="请选择APP当前状态"
                   :items="TagList"
                   :rules="tag_idRules"
                   item-text="tag_name"
@@ -168,7 +168,7 @@ export default {
     group: null,
     valid: true,
     CateList: [],
-    TagList: window.sessionStorage.getItem('tag'),
+    TagList: JSON.parse(window.sessionStorage.getItem('tag')),
     postInfo: {
       app_name: '',
       app_version: '',
