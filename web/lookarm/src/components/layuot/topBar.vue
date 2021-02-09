@@ -229,11 +229,6 @@ export default {
       const { data: res } = await this.$http.get('category/list')
       this.CateList = res.data
     },
-    // 获取状态列表
-    // async getTagList() {
-    //   const { data: res } = await this.$http.get('tag/list')
-    //   this.TagList = res.data
-    // },
     // 提交表单
     async postInfoForm() {
       if (!this.$refs.postInfoformRef.validate())
@@ -250,4 +245,4 @@ export default {
   }
 }
 </script>
-<style lang=""></style>
+<style></style>
