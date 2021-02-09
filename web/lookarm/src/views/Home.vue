@@ -1,6 +1,6 @@
 <template>
   <v-app app>
-    <TopBar></TopBar>
+    <TopBar :tagList="tagList"></TopBar>
     <v-sheet min-height="900px">
       <v-main app>
         <v-container>
@@ -70,7 +70,6 @@ export default {
     async getTaglist() {
       const { data: res } = await this.$http.get('tag/list')
       this.tagList = res.data
-      window.sessionStorage.setItem('tag', JSON.stringify(res.data))
     },
     // 查找App信息
     searchTitle(title) {

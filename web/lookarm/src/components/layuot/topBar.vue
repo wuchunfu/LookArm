@@ -96,7 +96,7 @@
                 <v-select
                   v-model="postInfo.tag_id"
                   label="请选择APP当前状态"
-                  :items="TagList"
+                  :items="tagList"
                   :rules="tag_idRules"
                   item-text="tag_name"
                   item-value="id"
@@ -163,12 +163,16 @@
 </template>
 <script>
 export default {
+  props: {
+    tagList: {
+      type: Array
+    }
+  },
   data: () => ({
     drawer: false,
     group: null,
     valid: true,
     CateList: [],
-    TagList: JSON.parse(window.sessionStorage.getItem('tag')),
     postInfo: {
       app_name: '',
       app_version: '',
@@ -212,7 +216,6 @@ export default {
   }),
   created() {
     this.getCateList()
-    // this.getTagList()
   },
 
   watch: {
