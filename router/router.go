@@ -10,6 +10,8 @@ import (
 func InitRouter() {
 	app := iris.Default()
 	app.UseRouter(middleware.Cors())
+	
+	//静态资源托管
 	//app.HandleDir("/","web/lookarm/dist")
 	//app.HandleDir("/admin","web/admin/dist")
 	
