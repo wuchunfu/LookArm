@@ -7,7 +7,7 @@ export default {
   methods: {
     loginOut() {
       window.sessionStorage.clear('token')
-      this.$router.push('/login')
+      this.$router.push('/')
     }
   }
 }

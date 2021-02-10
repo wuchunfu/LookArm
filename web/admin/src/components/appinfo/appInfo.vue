@@ -8,7 +8,7 @@
             placeholder="输入App名查找"
             enter-button
             allowClear
-            @search="getAppInfoList"
+            @search="searchAppInfo"
           />
         </a-col>
         <a-col :span="4">
@@ -17,11 +17,7 @@
 
         <a-col :span="3">
           <a-select placeholder="请选择分类" style="width: 200px" @change="gotoCatePage">
-            <a-select-option
-              v-for="item in Catelist"
-              :key="item.id"
-              :value="item.id"
-            >{{ item.name }}</a-select-option>
+            <a-select-option v-for="item in Catelist" :key="item.id" :value="item.id">{{ item.name }}</a-select-option>
           </a-select>
         </a-col>
         <a-col :span="1">
@@ -31,9 +27,7 @@
         <a-col :span="3" :offset="2">
           <a-select placeholder="请选择状态" style="width: 200px" @change="gotoTagPage">
             <a-select-option v-for="item in Taglist" :key="item.id" :value="item.id">
-              {{
-              item.tag_name
-              }}
+              {{ item.tag_name }}
             </a-select-option>
           </a-select>
         </a-col>
@@ -52,20 +46,17 @@
       >
         <template slot="action" slot-scope="data">
           <div class="actionSlot">
-            <a-button
-              size="small"
-              type="primary"
-              icon="edit"
-              style="margin-right: 15px"
-              @click="editAppInfo(data.ID)"
-            >编辑</a-button>
+            <a-button size="small" type="primary" icon="edit" style="margin-right: 15px" @click="editAppInfo(data.ID)"
+              >编辑</a-button
+            >
             <a-button
               size="small"
               type="danger"
               icon="delete"
               style="margin-right: 15px"
               @click="deleteAppInfo(data.ID)"
-            >删除</a-button>
+              >删除</a-button
+            >
           </div>
         </template>
       </a-table>
@@ -198,7 +189,7 @@ const columns = [
     dataIndex: 'ID',
     width: '5%',
     key: 'id',
-    align: 'center',
+    align: 'center'
   },
   {
     title: '提交日期',
@@ -206,59 +197,59 @@ const columns = [
     width: '10%',
     key: 'CreatedAt',
     align: 'center',
-    customRender: (val) => {
+    customRender: val => {
       return val ? moment(val).format('YYYY年MM月DD日') : '暂无'
-    },
+    }
   },
   {
     title: '分类',
     dataIndex: 'Category.name',
     width: '10%',
     key: 'Category.name',
-    align: 'center',
+    align: 'center'
   },
   {
     title: 'App名称',
     dataIndex: 'app_name',
     width: '10%',
     key: 'app_name',
-    align: 'center',
+    align: 'center'
   },
   {
     title: 'App状态',
     dataIndex: 'Tag.tag_name',
     width: '15%',
     key: 'Tag.tag_name',
-    align: 'center',
+    align: 'center'
   },
   {
     title: '开发者',
     dataIndex: 'app_developer',
     width: '10%',
     key: 'app_developer',
-    align: 'center',
+    align: 'center'
   },
   {
     title: '提交者',
     dataIndex: 'user_name',
     width: '10%',
     key: 'user_name',
-    align: 'center',
+    align: 'center'
   },
   {
     title: '提交者邮箱',
     dataIndex: 'email',
     width: '10%',
     key: 'email',
-    align: 'center',
+    align: 'center'
   },
   {
     title: '操作',
     width: '15%',
     key: 'action',
     align: 'center',
-    scopedSlots: { customRender: 'action' },
-  },
+    scopedSlots: { customRender: 'action' }
+  }
 ]
 
 export default {
@@ -269,7 +260,7 @@ export default {
         pageSize: 10,
         total: 0,
         showSizeChanger: true,
-        showTotal: (total) => `共${total}条`,
+        showTotal: total => `共${total}条`
       },
       AppInfolist: [],
       Catelist: [],
@@ -280,7 +271,7 @@ export default {
       queryParam: {
         app_name: '',
         pagesize: 10,
-        pagenum: 1,
+        pagenum: 1
       },
       newAppInfo: {
         app_name: '',
@@ -291,7 +282,7 @@ export default {
         user_name: 'weject',
         email: 'weject@gmail.com',
         category_id: undefined,
-        tag_id: undefined,
+        tag_id: undefined
       },
 
       AppInfo: {
@@ -303,8 +294,8 @@ export default {
         user_name: '',
         email: '',
         category_id: undefined,
-        tag_id: undefined,
-      },
+        tag_id: undefined
+      }
     }
   },
   created() {
@@ -317,10 +308,9 @@ export default {
     async getAppInfoList() {
       const { data: res } = await this.$http.get('appinfo/list', {
         params: {
-          app_name: this.queryParam.app_name,
           pagesize: this.queryParam.pagesize,
-          pagenum: this.queryParam.pagenum,
-        },
+          pagenum: this.queryParam.pagenum
+        }
       })
       if (res.status !== 200) {
         if (res.status === 1004 || 1005 || 1006 || 1007) {
@@ -333,6 +323,20 @@ export default {
       this.AppInfolist = res.data
       this.pagination.total = res.total
     },
+
+    // 搜索app信息
+    async searchAppInfo() {
+      const { data: res } = await this.$http.get('appinfo/info', {
+        params: {
+          app_name: this.queryParam.app_name,
+          pagesize: this.queryParam.pagesize,
+          pagenum: this.queryParam.pagenum
+        }
+      })
+      if (res.status !== 200) return this.$message.error(res.message)
+      this.AppInfolist = res.data
+    },
+
     // 获取分类
     async getCateList() {
       const { data: res } = await this.$http.get('category/list')
@@ -395,7 +399,7 @@ export default {
         },
         onCancel: () => {
           this.$message.info('已取消删除')
-        },
+        }
       })
     },
 
@@ -436,8 +440,8 @@ export default {
     // 查询状态下的表单
     gotoTagPage(value) {
       this.$router.push(`/appinfo/taglist/${value}`)
-    },
-  },
+    }
+  }
 }
 </script>
 
