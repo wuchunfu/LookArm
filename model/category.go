@@ -49,7 +49,7 @@ func EditCategory(id int, data *Category) int {
 }
 
 // 删除标签
-func DeteleCategory(id int) int {
+func DeleteCategory(id int) int {
 	var cate Category
 	err = db.Where("id = ?", id).Delete(&cate).Error
 	if err != nil {

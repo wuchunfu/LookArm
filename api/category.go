@@ -88,7 +88,7 @@ func EditCategory(c iris.Context) {
 // 删除标签
 func DeleteCategory(c iris.Context) {
 	id, _ := c.Params().GetInt("id")
-	code = model.DeteleCategory(id)
+	code = model.DeleteCategory(id)
 	c.JSON(
 		iris.Map{
 			"status":  code,
