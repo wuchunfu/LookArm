@@ -20,7 +20,6 @@ type AppInfo struct {
 	Tag          Tag      `gorm:"foreignKey:TagID"`
 }
 
-// 以下是app信息的接口模块
 
 // 查询app名是否重名
 func CheckAppName(AppName string) int {

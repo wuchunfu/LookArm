@@ -17,7 +17,7 @@ const (
 	ErrorAppExist    = 2002
 	ErrorAppNotExist = 2001
 	// code= 3000... 分类模块的错误
-	ErrorCatenameUsed = 3001
+	ErrorCateNameUsed = 3001
 	ErrorCateNotExist = 3002
 )
 
@@ -35,7 +35,7 @@ var codeMsg = map[int]string{
 
 	ErrorAppNotExist:  "还没有该App信息",
 	ErrorAppExist:     "该App已存在",
-	ErrorCatenameUsed: "该分类已存在",
+	ErrorCateNameUsed: "该分类已存在",
 	ErrorCateNotExist: "该分类不存在",
 }
 
