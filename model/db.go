@@ -24,7 +24,7 @@ func InitDatabase() {
 
 	db, err = gorm.Open(mysql.Open(dsn), &gorm.Config{
 		// gorm日志模式：silent
-		Logger: logger.Default.LogMode(logger.Silent),
+		Logger: logger.Default.LogMode(logger.Info),
 		// 外键约束
 		DisableForeignKeyConstraintWhenMigrating: true,
 		// 禁用默认事务（提高运行速度）
@@ -39,7 +39,7 @@ func InitDatabase() {
 		return
 	}
 
-	_ = db.AutoMigrate(&User{}, &Category{}, &Tag{}, &PostInfo{}, &AppInfo{})
+	//_ = db.AutoMigrate(&User{}, &Category{}, &Tag{}, &PostInfo{}, &AppInfo{})
 
 	sqlDB, _ := db.DB()
 	// SetMaxIdleCons 设置连接池中的最大闲置连接数。

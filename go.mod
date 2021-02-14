@@ -9,6 +9,7 @@ require (
 	github.com/google/uuid v1.2.0 // indirect
 	github.com/iris-contrib/middleware/cors v0.0.0-20210110101738-6d0a4d799b5d
 	github.com/k0kubun/colorstring v0.0.0-20150214042306-9440f1994b88 // indirect
+	github.com/kataras/golog v0.1.7 // indirect
 	github.com/kataras/iris/v12 v12.2.0-alpha2.0.20210115205746-6d10b014859c
 	github.com/klauspost/compress v1.11.7 // indirect
 	github.com/mailru/easyjson v0.7.7 // indirect
@@ -17,6 +18,7 @@ require (
 	github.com/modern-go/reflect2 v1.0.1 // indirect
 	github.com/smartystreets/goconvey v1.6.4 // indirect
 	github.com/tdewolff/minify/v2 v2.9.12 // indirect
+	github.com/tdewolff/parse/v2 v2.5.10 // indirect
 	github.com/vmihailenco/msgpack/v5 v5.2.0 // indirect
 	github.com/yudai/pp v2.0.1+incompatible // indirect
 	golang.org/x/crypto v0.0.0-20201221181555-eec23a3978ad
