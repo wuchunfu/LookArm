@@ -39,6 +39,7 @@ func InitDatabase() {
 		return
 	}
 
+	// 自动迁移数据表
 	//_ = db.AutoMigrate(&User{}, &Category{}, &Tag{}, &PostInfo{}, &AppInfo{})
 
 	sqlDB, _ := db.DB()
