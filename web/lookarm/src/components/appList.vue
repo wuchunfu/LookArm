@@ -66,7 +66,7 @@
       </v-col>
     </v-row>
 
-    <div v-if="total >= 0" class="mt-2 text-center">
+    <div v-if="total > 0" class="mt-2 text-center">
       <v-pagination
         color="grey darken-1"
         dark
@@ -104,6 +104,7 @@ export default {
       })
       this.appInfoList = res.data
       this.total = res.total
+      console.log('this.total: ', this.total)
     }
   }
 }
