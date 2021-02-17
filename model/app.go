@@ -52,7 +52,7 @@ func SearchAppInfo(appName string, pageSize int, pageNum int) ([]AppInfo, int64,
 	var appInfoList []AppInfo
 	var total int64
 	err = db.Joins("Category").Joins("Tag").Order("Updated_At DESC").Where("app_name LIKE ?", "%"+appName+"%").Limit(pageSize).Offset((pageNum - 1) * pageSize).Find(&appInfoList).Error
-	db.Model(&appInfoList).Where("app_name LIKE ?", "%"+appName+"%")
+	db.Model(&appInfoList).Where("app_name LIKE ?", "%"+appName+"%").Count(&total)
 	if err != nil {
 		return appInfoList, 0, message.ERROR
 	}
@@ -64,8 +64,8 @@ func GetAppInfoCateList(cateID int, pageSize int, pageNum int) ([]AppInfo, int64
 	var appInfoList []AppInfo
 	var total int64
 
-	err = db.Where("category_id = ?", cateID).Order("Updated_At DESC").Joins("Category").Joins("Tag").Limit(pageSize).Offset((pageNum - 1) * pageSize).Find(&appInfoList).Count(&total).Error
-	//db.Model(&appInfoList).Where("category_id = ?", cateID)
+	err = db.Where("category_id = ?", cateID).Order("Updated_At DESC").Joins("Category").Joins("Tag").Limit(pageSize).Offset((pageNum - 1) * pageSize).Find(&appInfoList).Error
+	db.Model(&appInfoList).Where("category_id = ?", cateID).Count(&total)
 	if err != nil {
 		return appInfoList, 0, message.ERROR
 	}
