@@ -425,7 +425,6 @@ export default {
     // 编辑选择分类
     editCateChange(value) {
       this.AppInfo.category_id = value
-      console.log(this.AppInfo.category_id)
     },
 
     // 编辑状态选择

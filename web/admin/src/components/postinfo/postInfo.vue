@@ -11,35 +11,26 @@
             @search="getPostInfoList"
           />
         </a-col>
-        <!-- <a-col :span="4">
-          <a-button type="primary" @click="addPostInfoVisible = true">新增</a-button>
-        </a-col>-->
 
         <a-col :span="3" :offset="2">
           <a-select placeholder="请选择分类" style="width: 200px" @change="gotoCatePage">
-            <a-select-option
-              v-for="item in Catelist"
-              :key="item.id"
-              :value="item.id"
-            >{{ item.name }}</a-select-option>
+            <a-select-option v-for="item in Catelist" :key="item.id" :value="item.id">{{ item.name }}</a-select-option>
           </a-select>
         </a-col>
         <a-col :span="1">
           <a-button type="info" @click="router.push('postinfo')">显示全部</a-button>
         </a-col>
 
-        <a-col :span="3" :offset="2">
+        <!-- <a-col :span="3" :offset="2">
           <a-select placeholder="请选择状态" style="width: 200px" @change="gotoTagPage">
-            <a-select-option
-              v-for="item in Taglist"
-              :key="item.id"
-              :value="item.id"
-            >{{ item.tag_name }}</a-select-option>
+            <a-select-option v-for="item in Taglist" :key="item.id" :value="item.id">{{
+              item.tag_name
+            }}</a-select-option>
           </a-select>
         </a-col>
         <a-col :span="1">
           <a-button type="info" @click="router.push('postinfo')">显示全部</a-button>
-        </a-col>
+        </a-col> -->
       </a-row>
 
       <a-table
@@ -52,27 +43,20 @@
       >
         <template slot="action" slot-scope="data">
           <div class="actionSlot">
-            <a-button
-              size="small"
-              type="danger"
-              icon="edit"
-              style="margin-right: 15px"
-              @click="appPost(data.ID)"
-            >提交</a-button>
-            <a-button
-              size="small"
-              type="primary"
-              icon="edit"
-              style="margin-right: 15px"
-              @click="editPostInfo(data.ID)"
-            >编辑</a-button>
+            <a-button size="small" type="danger" icon="edit" style="margin-right: 15px" @click="appPost(data.ID)"
+              >提交</a-button
+            >
+            <a-button size="small" type="primary" icon="edit" style="margin-right: 15px" @click="editPostInfo(data.ID)"
+              >编辑</a-button
+            >
             <a-button
               size="small"
               type="danger"
               icon="delete"
               style="margin-right: 15px"
               @click="deletePostInfo(data.ID)"
-            >删除</a-button>
+              >删除</a-button
+            >
           </div>
         </template>
       </a-table>
@@ -105,7 +89,7 @@
           <a-col :span="6">
             <a-form-model-item label="App分类">
               <a-select v-model="EditPostInfo.category_id" @change="cateEditChange">
-                <a-select-option v-for="item in Catelist" :key="item.id">{{item.name}}</a-select-option>
+                <a-select-option v-for="item in Catelist" :key="item.id">{{ item.name }}</a-select-option>
               </a-select>
             </a-form-model-item>
           </a-col>
@@ -113,7 +97,7 @@
           <a-col :span="6" :offset="4">
             <a-form-model-item label="状态">
               <a-select v-model="EditPostInfo.tag_id" @change="tagEditChange">
-                <a-select-option v-for="item in Taglist" :key="item.id">{{item.tag_name}}</a-select-option>
+                <a-select-option v-for="item in Taglist" :key="item.id">{{ item.tag_name }}</a-select-option>
               </a-select>
             </a-form-model-item>
           </a-col>
@@ -122,10 +106,10 @@
           <a-input v-model="EditPostInfo.app_name"></a-input>
         </a-form-model-item>
         <a-form-model-item label="App版本">
-          <a-input v-model="EditPostInfo.app_verison"></a-input>
+          <a-input v-model="EditPostInfo.app_version"></a-input>
         </a-form-model-item>
         <a-form-model-item label="App网站">
-          <a-input v-model="EditPostInfo.app_website"></a-input>
+          <a-input v-model="EditPostInfo.app_webpage"></a-input>
         </a-form-model-item>
         <a-form-model-item label="开发者">
           <a-input v-model="EditPostInfo.app_developer"></a-input>
@@ -147,7 +131,7 @@ const columns = [
     dataIndex: 'ID',
     width: '5%',
     key: 'id',
-    align: 'center',
+    align: 'center'
   },
   {
     title: '提交日期',
@@ -155,59 +139,59 @@ const columns = [
     width: '10%',
     key: 'CreatedAt',
     align: 'center',
-    customRender: (val) => {
+    customRender: val => {
       return val ? moment(val).format('YYYY年MM月DD日') : '暂无'
-    },
+    }
   },
   {
     title: '分类',
     dataIndex: 'Category.name',
     width: '10%',
     key: 'Category.name',
-    align: 'center',
+    align: 'center'
   },
   {
     title: 'App名称',
     dataIndex: 'app_name',
     width: '10%',
     key: 'app_name',
-    align: 'center',
+    align: 'center'
   },
   {
     title: 'App状态',
     dataIndex: 'Tag.tag_name',
     width: '15%',
     key: 'Tag.tag_name',
-    align: 'center',
+    align: 'center'
   },
   {
     title: '开发者',
     dataIndex: 'app_developer',
     width: '10%',
     key: 'app_developer',
-    align: 'center',
+    align: 'center'
   },
   {
     title: '提交者',
     dataIndex: 'user_name',
     width: '10%',
     key: 'user_name',
-    align: 'center',
+    align: 'center'
   },
   {
     title: '提交者邮箱',
     dataIndex: 'email',
     width: '10%',
     key: 'email',
-    align: 'center',
+    align: 'center'
   },
   {
     title: '操作',
     width: '15%',
     key: 'action',
     align: 'center',
-    scopedSlots: { customRender: 'action' },
-  },
+    scopedSlots: { customRender: 'action' }
+  }
 ]
 
 export default {
@@ -218,7 +202,7 @@ export default {
         pageSize: 10,
         total: 0,
         showSizeChanger: true,
-        showTotal: (total) => `共${total}条`,
+        showTotal: total => `共${total}条`
       },
       PostInfolist: [],
       Catelist: [],
@@ -229,7 +213,7 @@ export default {
       queryParam: {
         app_name: '',
         pagesize: 10,
-        pagenum: 1,
+        pagenum: 1
       },
       newPostInfo: {
         app_name: '',
@@ -240,7 +224,7 @@ export default {
         user_name: '',
         email: '',
         category_id: 2,
-        tag_id: 1,
+        tag_id: 1
       },
       appInfo: {
         app_name: '',
@@ -251,7 +235,7 @@ export default {
         user_name: '',
         email: '',
         category_id: undefined,
-        tag_id: undefined,
+        tag_id: undefined
       },
       PostInfo: {
         ID: undefined,
@@ -263,7 +247,7 @@ export default {
         user_name: '',
         email: '',
         category_id: undefined,
-        tag_id: undefined,
+        tag_id: undefined
       },
       EditPostInfo: {
         ID: undefined,
@@ -275,8 +259,8 @@ export default {
         user_name: '',
         email: '',
         category_id: undefined,
-        tag_id: undefined,
-      },
+        tag_id: undefined
+      }
     }
   },
   created() {
@@ -291,8 +275,8 @@ export default {
         params: {
           app_name: this.queryParam.app_name,
           pagesize: this.queryParam.pagesize,
-          pagenum: this.queryParam.pagenum,
-        },
+          pagenum: this.queryParam.pagenum
+        }
       })
       if (res.status !== 200) {
         if (res.status === 1004 || 1005 || 1006 || 1007) {
@@ -373,7 +357,7 @@ export default {
         },
         onCancel: () => {
           this.$message.info('已取消删除')
-        },
+        }
       })
     },
 
@@ -395,7 +379,7 @@ export default {
         },
         onCancel: () => {
           this.$message.info('已取消提交')
-        },
+        }
       })
     },
 
@@ -426,8 +410,8 @@ export default {
     // 查询状态下的表单
     gotoTagPage(value) {
       this.$router.push(`/postinfo/taglist/${value}`)
-    },
-  },
+    }
+  }
 }
 </script>
 
