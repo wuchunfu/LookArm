@@ -37,6 +37,7 @@
                 label="输入App名查找"
                 v-model="searchName"
                 @change="searchTitle(searchName)"
+                @click:clear="$router.push('/')"
               ></v-text-field>
             </v-col>
           </v-row>
