@@ -22,7 +22,13 @@ func InitDatabase() {
 		config.DbPort,
 		config.DbName)
 
-	db, err = gorm.Open(mysql.Open(dsn), &gorm.Config{
+	db, err = gorm.Open(mysql.New(mysql.Config{
+		DSN: dsn,
+		// 禁用 datetime 精度，MySQL 5.6 之前的数据库不支持
+		DisableDatetimePrecision: true,
+		// 重命名索引时采用删除并新建的方式
+		DontSupportRenameIndex: true,
+	}), &gorm.Config{
 		// gorm日志模式：silent
 		Logger: logger.Default.LogMode(logger.Silent),
 		// 外键约束
