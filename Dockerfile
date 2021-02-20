@@ -1,7 +1,10 @@
 FROM golang:alpine as builder
 
-RUN go env -w GO111MODULE=on
-RUN go env -w GOPROXY=https://goproxy.cn,https://goproxy.io,direct
+RUN  apk add --update --no-cache yarn make g++
+
+ENV GOPROXY=https://goproxy.cn,https://goproxy.io,direct \
+    GO111MODULE=on \
+    CGO_ENABLED=1
 
 RUN apk add --no-cache  gettext tzdata   && \
     cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
