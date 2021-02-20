@@ -1,16 +1,11 @@
 FROM golang:alpine as builder
 
-RUN  apk add --update --no-cache yarn make g++
-
 ENV GOPROXY=https://goproxy.cn,https://goproxy.io,direct \
     GO111MODULE=on \
     CGO_ENABLED=1
 
-RUN apk add --no-cache  gettext tzdata   && \
-    cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
-    echo "Asia/Shanghai" >  /etc/timezone && \
-    date && \
-    apk del tzdata
+RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+RUN echo 'Asia/Shanghai' >/etc/timezone
 
 WORKDIR /app/lookarm
 COPY . /app/lookarm
