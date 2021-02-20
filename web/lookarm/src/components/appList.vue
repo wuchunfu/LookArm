@@ -104,7 +104,6 @@ export default {
       })
       this.appInfoList = res.data
       this.total = res.total
-      console.log('this.total: ', this.total)
     }
   }
 }

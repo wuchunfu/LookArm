@@ -40,8 +40,11 @@ func InitDatabase() {
 	}
 
 	// 自动迁移数据表
-	//_ = db.AutoMigrate(&User{}, &Category{}, &Tag{}, &PostInfo{}, &AppInfo{})
-
+	err = db.AutoMigrate(&User{}, &Category{}, &Tag{}, &PostInfo{}, &AppInfo{})
+	if err != nil {
+		panic("数据表迁移失败")
+		return
+	}
 	sqlDB, _ := db.DB()
 	// SetMaxIdleCons 设置连接池中的最大闲置连接数。
 	sqlDB.SetMaxIdleConns(20)
