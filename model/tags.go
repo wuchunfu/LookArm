@@ -24,7 +24,7 @@ func GetTags(pageSize int, pageNum int) ([]Tag, int64, int) {
 // 获取标签
 func GetTag(id int) (Tag, int) {
 	var tag Tag
-	err = db.Where("id = ?", id).First(&tag).Error
+	err = db.Where("id = ?", id).Limit(1).Find(&tag).Error
 	if err != nil {
 		return tag, message.ERROR
 	}

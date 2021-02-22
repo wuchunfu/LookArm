@@ -22,7 +22,7 @@ func GetCategories(pageSize int, pageNum int) ([]Category, int64, int) {
 // 获取标签
 func GetCategory(id int) (Category, int) {
 	var cate Category
-	err = db.Where("id = ?", id).First(&cate).Error
+	err = db.Where("id = ?", id).Limit(1).Find(&cate).Error
 	if err != nil {
 		return cate, message.ERROR
 	}

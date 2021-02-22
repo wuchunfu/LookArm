@@ -23,7 +23,7 @@ type AppInfo struct {
 // 查询app名是否重名
 func CheckAppName(AppName string) int {
 	var appInfo AppInfo
-	db.Select("id").Where("app_name", AppName).First(&appInfo)
+	db.Select("id").Where("app_name", AppName).Limit(1).Find(&appInfo)
 	if appInfo.ID > 0 {
 		return message.ErrorAppExist
 	}
