@@ -11,7 +11,9 @@ func InitRouter() {
 	app := iris.Default()
 	app.UseRouter(middleware.Cors())
 
+	// 定义icon文件路径和访问路径
 	app.Favicon("web/lookarm/dist/favicon.ico", "/favicon.ico")
+	
 	//静态资源托管
 	//app.HandleDir("/","web/lookarm/dist")
 	//app.HandleDir("/admin","web/admin/dist")
