@@ -1,7 +1,6 @@
 package api
 
 import (
-	"fmt"
 	"github.com/kataras/iris/v12"
 	"lookarm/model"
 	"lookarm/utils/message"
@@ -14,24 +13,8 @@ import (
 
 // 获取分类列表
 func GetCategoryList(c iris.Context) {
-
-	pageNum, err := c.URLParamInt("pagenum")
-	if err != nil {
-		pageNum = 1
-		fmt.Println(err)
-	}
-	if pageNum == 0 {
-		pageNum = 1
-	}
-	pageSize, _ := c.URLParamInt("pagesize")
-	switch {
-	case pageSize >= 100:
-		pageSize = 100
-	case pageSize <= 0:
-		pageSize = 10
-	}
-
-	data, total, code := model.GetCategories(pageSize, pageNum)
+	
+	data, total, code := model.GetCategories()
 	c.JSON(
 		iris.Map{
 			"status":  code,

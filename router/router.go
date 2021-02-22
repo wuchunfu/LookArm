@@ -9,17 +9,14 @@ import (
 
 func InitRouter() {
 	app := iris.Default()
-	app.UseRouter(middleware.Cors())
-
-	// 定义icon文件路径和访问路径
-	app.Favicon("web/lookarm/dist/favicon.ico", "/favicon.ico")
+	app.Use(middleware.Cors())
 	
 	//静态资源托管
 	//app.HandleDir("/","web/lookarm/dist")
 	//app.HandleDir("/admin","web/admin/dist")
 
-	v1 := app.Party("api/v1/")
-	v1.Use(middleware.JwtToken())
+	v1 := app.Party("api/v1/",middleware.JwtToken())
+	
 	{
 		// 管理员模块
 		v1.Post("adduser", api.AddUser)
@@ -52,26 +49,25 @@ func InitRouter() {
 	{
 		// 登录
 		pub.Post("login", api.Login)
-
 		// 标签
 		pub.Get("tag/list", api.GetTagList)
 		pub.Get("tag/info/{id:int}", api.GetTagInfo)
-
 		// 分类
 		pub.Get("category/list", api.GetCategoryList)
 		pub.Get("category/info/{id:int}", api.GetCategory)
-
 		// 表单
 		pub.Post("postinfo/add", api.PostAppInfo)
 		pub.Get("postinfo/list", api.GetPostAppInfoList)
 		pub.Get("postinfo/info/{id:int}", api.GetPostInfo)
-
 		// app信息
 		pub.Get("appinfo/list", api.GetAppInfoList)
 		pub.Get("appinfo/info", api.SearchAppInfo)
 		pub.Get("appinfo/info/{id:int}", api.GetAppInfo)
 		pub.Get("appinfo/category/{id:int}", api.GetAppInfoCateList)
 	}
-	_ = app.Listen(config.ServerPort)
+	
+	// 启动iris
+	_ = app.Run(iris.Addr(config.ServerPort))
 
 }
+
