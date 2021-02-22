@@ -9,7 +9,9 @@ import (
 
 func InitRouter() {
 	app := iris.Default()
+	app.Logger().SetLevel(config.LogLevel)
 	app.Use(middleware.Cors())
+	
 	
 	//静态资源托管
 	//app.HandleDir("/","web/lookarm/dist")
@@ -67,7 +69,10 @@ func InitRouter() {
 	}
 	
 	// 启动iris
-	_ = app.Run(iris.Addr(config.ServerPort))
+	_ = app.Run(iris.Addr(config.ServerPort),iris.WithConfiguration(iris.Configuration{
+	
+		
+	}))
 
 }
 
