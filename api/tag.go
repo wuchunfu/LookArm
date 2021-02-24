@@ -8,8 +8,8 @@ import (
 
 // 获取标签列表
 func GetTagList(c iris.Context) {
-	pageSize, _ := c.URLParamInt("pagesize")
-	pageNum, _ := c.URLParamInt("pagenum")
+	pageSize := c.URLParamIntDefault("pagesize",10)
+	pageNum := c.URLParamIntDefault("pagenum",1)
 	
 	switch {
 	case pageSize >= 100:

@@ -8,10 +8,10 @@ type Category struct {
 }
 
 // 获取分类列表
-func GetCategories() ([]Category, int64, int) {
+func GetCategories(pageSize int, pageNum int) ([]Category, int64, int) {
 	var cates []Category
 	var total int64
-	err = db.Find(&cates).Error
+	err = db.Limit(pageSize).Offset((pageNum - 1) * pageSize).Find(&cates).Error
 	db.Model(&cates).Count(&total)
 	if err != nil {
 		return cates, 0, message.ERROR
@@ -28,7 +28,6 @@ func GetCategory(id int) (Category, int) {
 		return cate, message.ERROR
 	}
 	return cate, message.SUCCESS
-
 }
 
 // 新增标签

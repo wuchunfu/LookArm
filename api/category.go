@@ -13,8 +13,10 @@ import (
 
 // 获取分类列表
 func GetCategoryList(c iris.Context) {
+	pageSize := c.URLParamIntDefault("pagesize",10)
+	pageNum := c.URLParamIntDefault("pagenum",1)
 	
-	data, total, code := model.GetCategories()
+	data, total, code := model.GetCategories(pageSize,pageNum)
 	c.JSON(
 		iris.Map{
 			"status":  code,

@@ -70,8 +70,6 @@ func InitRouter() {
 	
 	// 启动iris
 	_ = app.Run(iris.Addr(config.ServerPort),iris.WithConfiguration(iris.Configuration{
-	
-		
 	}))
 
 }

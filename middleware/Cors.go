@@ -8,10 +8,11 @@ import (
 func Cors() iris.Handler {
 	return cors.New(
 		cors.Options{
-			AllowedOrigins: []string{"*"},
+			AllowedOrigins: []string{"https://lookarm.cn","http://lookarm.cn"},
 			AllowedMethods: []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"},
 			AllowedHeaders: []string{"*"},
-			ExposedHeaders: []string{"Content-Length", "text/plain", "Authorization", "Content-Type"},
+			// , "Content-Type"
+			ExposedHeaders: []string{"Content-Length", "text/plain", "Authorization"},
 			AllowCredentials: true,
 		})
 }
