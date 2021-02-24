@@ -11,7 +11,7 @@ type Category struct {
 func GetCategories(pageSize int, pageNum int) ([]Category, int64, int) {
 	var cates []Category
 	var total int64
-	err = db.Limit(pageSize).Offset((pageNum - 1) * pageSize).Find(&cates).Error
+	err = db.Select("id","name").Limit(pageSize).Offset((pageNum - 1) * pageSize).Find(&cates).Error
 	db.Model(&cates).Count(&total)
 	if err != nil {
 		return cates, 0, message.ERROR

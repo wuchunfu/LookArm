@@ -9,7 +9,7 @@ import (
 
 func InitRouter() {
 	app := iris.Default()
-	app.Logger().SetLevel(config.LogLevel)
+	app.Logger().SetLevel("debug")
 	app.Use(middleware.Cors())
 	
 	

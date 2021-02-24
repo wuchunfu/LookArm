@@ -13,7 +13,7 @@ type Tag struct {
 func GetTags(pageSize int, pageNum int) ([]Tag, int64, int) {
 	var tags []Tag
 	var total int64
-	err = db.Limit(pageSize).Offset((pageNum - 1) * pageSize).Find(&tags).Error
+	err = db.Select("id","tag_name").Limit(pageSize).Offset((pageNum - 1) * pageSize).Find(&tags).Error
 	db.Model(&tags).Count(&total)
 	if err != nil {
 		return nil, 0, message.ERROR
