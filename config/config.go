@@ -8,7 +8,7 @@ import (
 var (
 	ServerPort string
 	JwtKey     string
-	LogLevel string
+	//LogLevel string
 
 	DbHost     string
 	DbPort     string
@@ -29,7 +29,7 @@ func init() {
 func LoadServer(file *ini.File) {
 	ServerPort = file.Section("Server").Key("serverPort").String()
 	JwtKey = file.Section("Server").Key("jwtKey").String()
-	LogLevel = file.Section("Server").Key("logLevel").String()
+	//LogLevel = file.Section("Server").Key("logLevel").String()
 }
 
 func LoadData(file *ini.File) {

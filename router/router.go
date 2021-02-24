@@ -2,22 +2,25 @@ package router
 
 import (
 	"github.com/kataras/iris/v12"
+	"github.com/kataras/iris/v12/middleware/recover"
 	"lookarm/api"
 	"lookarm/config"
 	"lookarm/middleware"
 )
 
 func InitRouter() {
-	app := iris.Default()
-	app.Logger().SetLevel("debug")
-	app.Use(middleware.Cors())
+	ac := middleware.Logger()
 	
+	app := iris.New()
+	app.UseRouter(ac.Handler)
+	app.UseRouter(recover.New())
+	app.UseRouter(middleware.Cors())
 	
 	//静态资源托管
 	//app.HandleDir("/","web/lookarm/dist")
 	//app.HandleDir("/admin","web/admin/dist")
-
-	v1 := app.Party("api/v1/",middleware.JwtToken())
+	
+	v1 := app.Party("api/v1/", middleware.JwtToken())
 	
 	{
 		// 管理员模块
@@ -30,23 +33,23 @@ func InitRouter() {
 		v1.Post("tag/add", api.AddTag)
 		v1.Put("tag/edit/{id:int}", api.EditTag)
 		v1.Delete("tag/delete/{id:int}", api.DeleteTag)
-
+		
 		// 分类管理模块
 		v1.Post("category/add", api.AddCategory)
 		v1.Put("category/edit/{id:int}", api.EditCategory)
 		v1.Delete("category/delete/{id:int}", api.DeleteCategory)
-
+		
 		// 表单管理模块
 		v1.Put("postinfo/edit/{id:int}", api.EditPostInfo)
 		v1.Delete("postinfo/delete/{id:int}", api.DeletePostInfo)
 		v1.Get("postinfo/category/{id}", api.GetPostInfoCateList)
-
+		
 		// App信息管理模块
 		v1.Post("appinfo/add", api.AddAppInfo)
 		v1.Put("appinfo/edit/{id:int}", api.EditAppInfo)
 		v1.Delete("appinfo/delete/{id:int}", api.DeleteAppInfo)
 	}
-
+	
 	pub := app.Party("api/v1/")
 	{
 		// 登录
@@ -69,8 +72,9 @@ func InitRouter() {
 	}
 	
 	// 启动iris
-	_ = app.Run(iris.Addr(config.ServerPort),iris.WithConfiguration(iris.Configuration{
+	_ = app.Run(iris.Addr(config.ServerPort), iris.WithConfiguration(iris.Configuration{
+		DisableAutoFireStatusCode: true,
+		DisableBodyConsumptionOnUnmarshal: true,
 	}))
-
+	
 }
-
