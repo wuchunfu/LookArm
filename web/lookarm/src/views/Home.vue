@@ -21,9 +21,11 @@
             <v-col cols="6" md="12">
               <div class="d-flex justify-center align-center">
                 <div>
-                  <v-btn v-for="item in tagList" :key="item.id" text>{{
+                  <v-btn v-for="item in tagList" :key="item.id" text>
+                    {{
                     item.tag_name
-                  }}</v-btn>
+                    }}
+                  </v-btn>
                 </div>
               </div>
             </v-col>
@@ -60,7 +62,11 @@ export default {
     return {
       total: 0,
       tagList: [],
-      searchName: ''
+      searchName: '',
+      queryParam: {
+        pagesize: 10,
+        pagenum: 1,
+      },
     }
   },
   created() {
@@ -69,13 +75,18 @@ export default {
   methods: {
     // 获取tag信息列表
     async getTaglist() {
-      const { data: res } = await this.$http.get('tag/list')
+      const { data: res } = await this.$http.get('tag/list', {
+        params: {
+          pagesize: this.queryParam.pagesize,
+          pagenum: this.queryParam.pagenum,
+        },
+      })
       this.tagList = res.data
     },
     // 查找App信息
     searchTitle(title) {
       this.$router.push(`/appinfo/${title}`)
-    }
-  }
+    },
+  },
 }
 </script>
