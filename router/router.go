@@ -10,6 +10,7 @@ import (
 
 func InitRouter() {
 	ac := middleware.Logger()
+	defer ac.Close()
 	
 	app := iris.New()
 	app.UseRouter(ac.Handler)
