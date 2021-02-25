@@ -2,14 +2,16 @@ package middleware
 
 import (
 	"github.com/kataras/iris/v12/middleware/accesslog"
+	"os"
 )
 
 func Logger() *accesslog.AccessLog {
 	
 	ac := accesslog.File("./access.log")
 	
+	
 	// 输出到控制台
-	//ac.AddOutput(os.Stdout)
+	ac.AddOutput(os.Stdout)
 	
 	// The default configuration:
 	ac.Delim = '|'
