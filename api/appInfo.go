@@ -1,7 +1,6 @@
 package api
 
 import (
-	"fmt"
 	"github.com/kataras/iris/v12"
 	"lookarm/model"
 	"lookarm/utils/message"
@@ -10,10 +9,11 @@ import (
 // 提交App信息
 func AddAppInfo(c iris.Context) {
 	var data model.AppInfo
+	
 	_ = c.ReadJSON(&data)
 	
 	code = model.CheckAppName(data.AppName)
-	fmt.Println(data.AppName)
+	
 	if code == message.SUCCESS {
 		model.AddAppInfo(&data)
 	}
