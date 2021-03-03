@@ -35,7 +35,7 @@ const routes = [
     path: '/',
     name: 'admin',
     meta: {
-      title: 'GinBlog 后台管理页面'
+      title: '后台管理'
     },
     component: Admin,
     children: [
