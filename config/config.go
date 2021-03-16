@@ -3,6 +3,7 @@ package config
 import (
 	"fmt"
 	"gopkg.in/ini.v1"
+	"os"
 )
 
 var (
@@ -21,6 +22,7 @@ func init() {
 	file, err := ini.Load("config/config.ini")
 	if err != nil {
 		fmt.Println("配置文件读取错误，请检查文件路径:", err)
+		os.Exit(1)
 	}
 	LoadServer(file)
 	LoadData(file)

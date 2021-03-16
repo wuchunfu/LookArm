@@ -13,6 +13,7 @@ func InitRouter() {
 	defer ac.Close()
 	
 	app := iris.New()
+	
 	app.UseRouter(ac.Handler)
 	app.UseRouter(recover.New())
 	app.UseRouter(middleware.Cors())
@@ -74,7 +75,7 @@ func InitRouter() {
 	
 	// 启动iris
 	_ = app.Run(iris.Addr(config.ServerPort), iris.WithConfiguration(iris.Configuration{
-		DisableAutoFireStatusCode: true,
+		DisableAutoFireStatusCode:         true,
 		DisableBodyConsumptionOnUnmarshal: true,
 	}))
 	
