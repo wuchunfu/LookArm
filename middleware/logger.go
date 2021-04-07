@@ -2,21 +2,21 @@ package middleware
 
 import (
 	"github.com/kataras/iris/v12/middleware/accesslog"
-	"os"
 )
 
 func Logger() *accesslog.AccessLog {
+	filePath := "access.log"
 	
-	ac := accesslog.File("./access.log")
+	ac := accesslog.File(filePath)
 	
-	
+	ac.Flush()
 	// 输出到控制台
-	ac.AddOutput(os.Stdout)
+	//ac.SetOutput(ac.Writer)
 	
 	// The default configuration:
 	ac.Delim = '|'
 	ac.TimeFormat = "2006-01-02 15:04:05"
-	ac.Async = false
+	ac.Async = true
 	ac.IP = true
 	ac.BytesReceivedBody = true
 	ac.BytesSentBody = true
@@ -24,7 +24,7 @@ func Logger() *accesslog.AccessLog {
 	ac.BytesSent = false
 	ac.BodyMinify = true
 	ac.RequestBody = true
-	ac.ResponseBody = false
+	ac.ResponseBody = true
 	ac.KeepMultiLineError = true
 	ac.PanicLog = accesslog.LogHandler
 	

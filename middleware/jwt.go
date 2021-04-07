@@ -110,7 +110,7 @@ func JwtToken() iris.Handler {
 
 			return
 		}
-		//c.Set("username", key)
+		
 		c.Values().Set("username",key)
 		c.Next()
 	}

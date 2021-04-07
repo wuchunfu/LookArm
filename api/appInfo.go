@@ -68,7 +68,7 @@ func SearchAppInfo(c iris.Context) {
 		pageNum = 1
 	}
 	
-	if appName == "null" {
+	if appName == "null" || len(appName) == 0 {
 		data, total, code = model.GetAppInfoList(pageSize, pageNum)
 		c.JSON(iris.Map{
 			"data":    data,
