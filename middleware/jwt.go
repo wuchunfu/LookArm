@@ -26,25 +26,25 @@ func SetToken(username string) (string, int) {
 			Issuer:    "ginblog",
 		},
 	}
-
+	
 	reqClaim := jwt.NewWithClaims(jwt.SigningMethodHS256, SetClaims)
 	token, err := reqClaim.SignedString(JwtKey)
 	if err != nil {
 		return "", message.ERROR
 	}
 	return token, message.SUCCESS
-
+	
 }
 
 // 验证token
 
 func CheckToken(token string) (*MyClaims, int) {
 	var claims MyClaims
-
+	
 	setToken, err := jwt.ParseWithClaims(token, &claims, func(token *jwt.Token) (i interface{}, e error) {
 		return JwtKey, nil
 	})
-
+	
 	if err != nil {
 		if ve, ok := err.(*jwt.ValidationError); ok {
 			if ve.Errors&jwt.ValidationErrorMalformed != 0 {
