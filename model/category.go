@@ -7,7 +7,7 @@ type Category struct {
 	Name string `gorm:"type:varchar(200)" json:"name"`
 }
 
-// 获取分类列表
+// GetCategories 获取分类列表
 func GetCategories(pageSize int, pageNum int) ([]Category, int64, int) {
 	var cates []Category
 	var total int64
@@ -20,7 +20,7 @@ func GetCategories(pageSize int, pageNum int) ([]Category, int64, int) {
 	return cates, total, message.SUCCESS
 }
 
-// 获取标签
+// GetCategory 获取标签
 func GetCategory(id int) (Category, int) {
 	var cate Category
 	err = db.Where("id = ?", id).Limit(1).Find(&cate).Error
@@ -30,7 +30,7 @@ func GetCategory(id int) (Category, int) {
 	return cate, message.SUCCESS
 }
 
-// 新增标签
+// CreateCategory 新增标签
 func CreateCategory(data *Category) int {
 	err := db.Create(&data).Error
 	if err != nil {

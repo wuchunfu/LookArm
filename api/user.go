@@ -8,7 +8,7 @@ import (
 
 var code int
 
-// 添加管理员
+// AddUser 添加管理员
 func AddUser(c iris.Context) {
 	var data model.User
 	_ = c.ReadJSON(&data)
@@ -21,7 +21,7 @@ func AddUser(c iris.Context) {
 	})
 }
 
-// 查询管理员
+// GetUsers 查询管理员
 func GetUsers(c iris.Context) {
 	pageSize, _ := c.URLParamInt("pagesize")
 	pageNum, _ := c.URLParamInt("pagenum")
@@ -47,7 +47,7 @@ func GetUsers(c iris.Context) {
 	})
 }
 
-// 查询单个管理员
+// GetUserInfo 查询单个管理员
 func GetUserInfo(c iris.Context) {
 	id, _ := c.Params().GetInt("id")
 
@@ -61,7 +61,7 @@ func GetUserInfo(c iris.Context) {
 
 }
 
-// 编辑管理员
+// EditUser 编辑管理员
 func EditUser(c iris.Context) {
 
 	var data model.User
@@ -76,7 +76,7 @@ func EditUser(c iris.Context) {
 	})
 }
 
-// 删除管理员
+// DeleteUser 删除管理员
 func DeleteUser(c iris.Context) {
 	var user model.User
 	user.ID, _ = c.Params().GetUint("id")

@@ -20,7 +20,7 @@ type PostInfo struct {
 	Tag          Tag      `gorm:"foreignKey:TagID"`
 }
 
-// 提交表单
+// PostAppInfo 提交表单
 func PostAppInfo(data *PostInfo) int {
 	err = db.Create(&data).Error
 	if err != nil {
@@ -29,7 +29,7 @@ func PostAppInfo(data *PostInfo) int {
 	return message.SUCCESS
 }
 
-// 查询表单列表
+// GetPostInfoList 查询表单列表
 func GetPostInfoList(appName string, pageSize int, pageNum int) ([]PostInfo, int64, int) {
 	var postInfoList []PostInfo
 	var total int64
@@ -45,7 +45,7 @@ func GetPostInfoList(appName string, pageSize int, pageNum int) ([]PostInfo, int
 	return postInfoList, total, message.SUCCESS
 }
 
-// 查询分类下的表单
+// GetPostInfoCateList 查询分类下的表单
 func GetPostInfoCateList(cateID int, appName string, pageSize int, pageNum int) ([]PostInfo, int64, int) {
 	var postInfoList []PostInfo
 	var total int64
@@ -61,7 +61,7 @@ func GetPostInfoCateList(cateID int, appName string, pageSize int, pageNum int) 
 	return postInfoList, total, message.SUCCESS
 }
 
-// 查询单个表单
+// GetPostInfo 查询单个表单
 func GetPostInfo(id int) (PostInfo, int) {
 	var postInfo PostInfo
 	err = db.Where("id = ?", id).First(&postInfo).Error
@@ -71,7 +71,7 @@ func GetPostInfo(id int) (PostInfo, int) {
 	return postInfo, message.SUCCESS
 }
 
-// 编辑表单
+// EditPostInfo 编辑表单
 func EditPostInfo(id int, data *PostInfo) int {
 	err = db.Where("id = ?", id).Updates(&data).Error
 	if err != nil {
@@ -80,7 +80,7 @@ func EditPostInfo(id int, data *PostInfo) int {
 	return message.SUCCESS
 }
 
-// 删除表单
+// DeletePostInfo 删除表单
 func DeletePostInfo(id int) int {
 	var postInfo PostInfo
 	err = db.Where("id = ?", id).Delete(&postInfo).Error

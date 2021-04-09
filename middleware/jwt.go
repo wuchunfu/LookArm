@@ -66,7 +66,7 @@ func CheckToken(token string) (*MyClaims, int) {
 	return nil, message.ErrorTokenWrong
 }
 
-// jwt中间件
+// JwtToken jwt中间件
 func JwtToken() iris.Handler {
 	return func(c iris.Context) {
 		var code int
@@ -77,7 +77,7 @@ func JwtToken() iris.Handler {
 				"status":  code,
 				"message": message.GetErrMsg(code),
 			})
-
+			
 			return
 		}
 		checkToken := strings.Split(tokenHeader, " ")
@@ -87,17 +87,17 @@ func JwtToken() iris.Handler {
 				"status":  code,
 				"message": message.GetErrMsg(code),
 			})
-
+			
 			return
 		}
-
-		if len(checkToken) != 2 && checkToken[0] != "Bearer" {
+		
+		if len(checkToken) != 2 || checkToken[0] != "Bearer" {
 			code = message.ErrorTokenTypeWrong
 			c.JSON(iris.Map{
 				"status":  code,
 				"message": message.GetErrMsg(code),
 			})
-
+			
 			return
 		}
 		key, tCode := CheckToken(checkToken[1])
@@ -107,11 +107,11 @@ func JwtToken() iris.Handler {
 				"status":  code,
 				"message": message.GetErrMsg(code),
 			})
-
+			
 			return
 		}
 		
-		c.Values().Set("username",key)
+		c.Values().Set("username", key)
 		c.Next()
 	}
 }

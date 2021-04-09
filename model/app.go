@@ -20,7 +20,7 @@ type AppInfo struct {
 	Tag          Tag
 }
 
-// 查询app名是否重名
+// CheckAppName 查询app名是否重名
 func CheckAppName(AppName string) int {
 	var appInfo AppInfo
 	db.Select("id").Where("app_name", AppName).Limit(1).Find(&appInfo)
@@ -30,12 +30,12 @@ func CheckAppName(AppName string) int {
 	return message.SUCCESS
 }
 
-// 提交app信息
+// AddAppInfo 提交app信息
 func AddAppInfo(data *AppInfo) {
 	db.Create(&data)
 }
 
-// 查询app信息列表
+// GetAppInfoList 查询app信息列表
 func GetAppInfoList(pageSize int, pageNum int) ([]AppInfo, int64, int) {
 	var appInfoList []AppInfo
 	var total int64
@@ -47,7 +47,7 @@ func GetAppInfoList(pageSize int, pageNum int) ([]AppInfo, int64, int) {
 	return appInfoList, total, message.SUCCESS
 }
 
-// 查询app信息
+// SearchAppInfo 查询app信息
 func SearchAppInfo(appName string, pageSize int, pageNum int) ([]AppInfo, int64, int) {
 	var appInfoList []AppInfo
 	var total int64
@@ -60,7 +60,7 @@ func SearchAppInfo(appName string, pageSize int, pageNum int) ([]AppInfo, int64,
 	return appInfoList, total, message.SUCCESS
 }
 
-// 查询分类下的App信息
+// GetAppInfoCateList 查询分类下的App信息
 func GetAppInfoCateList(cateID int, pageSize int, pageNum int) ([]AppInfo, int64, int) {
 	var appInfoList []AppInfo
 	var total int64
@@ -73,7 +73,7 @@ func GetAppInfoCateList(cateID int, pageSize int, pageNum int) ([]AppInfo, int64
 	return appInfoList, total, message.SUCCESS
 }
 
-// 查询单个表单
+// GetAppInfo 查询单个表单
 func GetAppInfo(id int) (AppInfo, int) {
 	var appInfo AppInfo
 	err = db.Where("id = ?", id).First(&appInfo).Error
@@ -83,7 +83,7 @@ func GetAppInfo(id int) (AppInfo, int) {
 	return appInfo, message.SUCCESS
 }
 
-// 编辑表单
+// EditAppInfo 编辑表单
 func EditAppInfo(id int, data *AppInfo) int {
 	err = db.Where("id = ?", id).Updates(&data).Error
 	if err != nil {
@@ -92,7 +92,7 @@ func EditAppInfo(id int, data *AppInfo) int {
 	return message.SUCCESS
 }
 
-// 删除表单
+// DeleteAppInfo 删除表单
 func DeleteAppInfo(id int) int {
 	var appInfo AppInfo
 	err = db.Where("id = ?", id).Delete(&appInfo).Error

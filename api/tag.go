@@ -6,7 +6,7 @@ import (
 	"lookarm/utils/message"
 )
 
-// 获取标签列表
+// GetTagList 获取标签列表
 func GetTagList(c iris.Context) {
 	pageSize := c.URLParamIntDefault("pagesize",10)
 	pageNum := c.URLParamIntDefault("pagenum",1)
@@ -33,7 +33,7 @@ func GetTagList(c iris.Context) {
 	)
 }
 
-// 获取单个标签
+// GetTagInfo 获取单个标签
 func GetTagInfo(c iris.Context) {
 	id, _ := c.Params().GetInt("id")
 	
@@ -48,7 +48,7 @@ func GetTagInfo(c iris.Context) {
 	)
 }
 
-// 新增标签
+// AddTag 新增标签
 func AddTag(c iris.Context) {
 	var data model.Tag
 	_ = c.ReadJSON(&data)
@@ -61,7 +61,7 @@ func AddTag(c iris.Context) {
 	)
 }
 
-// 编辑标签
+// EditTag 编辑标签
 func EditTag(c iris.Context) {
 	var data model.Tag
 	id, _ := c.Params().GetInt("id")
@@ -76,10 +76,10 @@ func EditTag(c iris.Context) {
 	)
 }
 
-// 删除标签
+// DeleteTag 删除标签
 func DeleteTag(c iris.Context) {
 	id, _ := c.Params().GetInt("id")
-	code = model.DeteleTag(id)
+	code = model.DeleteTag(id)
 	c.JSON(
 		iris.Map{
 			"status":  code,

@@ -9,7 +9,7 @@ type Tag struct {
 	TagName string `gorm:"type:varchar(200)" json:"tag_name"`
 }
 
-// 获取标签列表
+// GetTags 获取标签列表
 func GetTags(pageSize int, pageNum int) ([]Tag, int64, int) {
 	var tags []Tag
 	var total int64
@@ -21,7 +21,7 @@ func GetTags(pageSize int, pageNum int) ([]Tag, int64, int) {
 	return tags, total, message.SUCCESS
 }
 
-// 获取标签
+// GetTag 获取标签
 func GetTag(id int) (Tag, int) {
 	var tag Tag
 	err = db.Where("id = ?", id).Limit(1).Find(&tag).Error
@@ -32,7 +32,7 @@ func GetTag(id int) (Tag, int) {
 
 }
 
-// 新增标签
+// CreateTag 新增标签
 func CreateTag(data *Tag) int {
 	err := db.Create(&data).Error
 	if err != nil {
@@ -41,7 +41,7 @@ func CreateTag(data *Tag) int {
 	return message.SUCCESS
 }
 
-// 修改标签
+// EditTag 修改标签
 func EditTag(id int, data *Tag) int {
 	err = db.Where("id = ?", id).Updates(&data).Error
 	if err != nil {
@@ -50,8 +50,8 @@ func EditTag(id int, data *Tag) int {
 	return message.SUCCESS
 }
 
-// 删除标签
-func DeteleTag(id int) int {
+// DeleteTag 删除标签
+func DeleteTag(id int) int {
 	var tag Tag
 	err = db.Where("id = ?", id).Delete(&tag).Error
 	if err != nil {
